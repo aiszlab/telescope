@@ -18,7 +18,7 @@ const App = () => {
         <h1 className='text-7xl p-20 font-bold'>
           🎉&nbsp;
           <span className='whitespace-nowrap bg-clip-text text-transparent from-green-700 to-cyan-200 bg-gradient-to-br '>
-            musae-ui&nbsp;2.0&nbsp;is&nbsp;out!️
+            musae-ui&nbsp;is&nbsp;out!️
           </span>
           &nbsp;🥳
         </h1>
