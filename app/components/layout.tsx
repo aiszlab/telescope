@@ -1,19 +1,32 @@
-import type { ReactNode } from 'react'
+'use client'
+
+import { useCallback, type ReactNode } from 'react'
+import { Menu } from 'musae'
+import { useComponentTree } from './hooks'
+import { useRouter } from 'next/navigation'
 
 interface Props {
   children: ReactNode
 }
 
 const Layout = (props: Props) => {
+  const menuItems = useComponentTree()
+  const router = useRouter()
+
+  const onMenuClick = useCallback(
+    (key: string) => {
+      router.push(key)
+    },
+    [router]
+  )
+
   return (
     <main className='flex-1 grid grid-cols-5 mt-10'>
-      <div className=''>
-        {/* TODO replace musae menu */}
-        <ul>
-          <li className='m-1 pl-10 pr-4'>组件总览</li>
-        </ul>
+      <div className='px-3'>
+        <Menu items={menuItems} onClick={onMenuClick} />
       </div>
-      <article className='col-start-2 col-end-6 px-16 pb-8'>{props.children}</article>
+
+      {props.children}
     </main>
   )
 }

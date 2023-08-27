@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { type MenuItemProps } from 'musae'
 
 /**
  * @author murukal
@@ -7,7 +8,22 @@ import { useMemo } from 'react'
  * 组件分类
  */
 export const useComponentTree = () => {
-  return useMemo(() => {
-    return []
+  return useMemo<MenuItemProps[]>(() => {
+    return [
+      {
+        key: '/components',
+        label: '组件总览'
+      },
+      {
+        key: '/components/input',
+        label: '输入',
+        children: [
+          {
+            key: '/components/button',
+            label: 'Button 按钮'
+          }
+        ]
+      }
+    ]
   }, [])
 }
