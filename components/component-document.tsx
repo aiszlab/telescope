@@ -1,10 +1,13 @@
+'use client'
+
+import CodeSandbox from './code-sandbox'
+
 interface Props {
   title: string
   description?: string
-  codeDemos: string[]
 }
 
-const PowerPoint = (props: Props) => {
+const ComponentDocument = (props: Props) => {
   return (
     <article className='col-start-2 col-end-6 px-16 pb-8'>
       {/* title */}
@@ -13,20 +16,11 @@ const PowerPoint = (props: Props) => {
       {/* description */}
       {!!props.description && <p>{props.description}</p>}
 
-      {/* code demos */}
-      {!!props.codeDemos.length && (
-        <>
-          <h2 className='font-semibold text-2xl'>代码演示</h2>
-
-          {props.codeDemos.map((codeDemo) => {
-            return <div key={codeDemo}>1</div>
-          })}
-        </>
-      )}
-
       <code>按钮类型</code>
+
+      <CodeSandbox />
     </article>
   )
 }
 
-export default PowerPoint
+export default ComponentDocument
