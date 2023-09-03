@@ -2,7 +2,7 @@
 
 import ComponentDocument from '@/components/component-document'
 import BasicReadme from './demo/basic/readme.mdx'
-import { Button } from 'musae'
+import BasicDemo from './demo/basic'
 
 const Page = () => {
   return (
@@ -10,7 +10,7 @@ const Page = () => {
       title='按钮'
       codeDemos={[
         {
-          example: <Button />,
+          example: <BasicDemo />,
           codeBlock: <BasicReadme />
         }
       ]}

@@ -21,6 +21,10 @@ export const useComponentTree = () => {
           {
             key: '/components/button',
             label: 'Button 按钮'
+          },
+          {
+            key: '/components/input',
+            label: 'Input 输入框'
           }
         ]
       }
