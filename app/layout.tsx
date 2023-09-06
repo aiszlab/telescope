@@ -19,6 +19,12 @@ interface Props {
 export default function Layout(props: Props) {
   return (
     <html lang='zh_CN'>
+      <head>
+        <link
+          rel='stylesheet'
+          href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css'
+        />
+      </head>
       <body className={clsx([inter.className, 'flex flex-col min-h-screen'])}>
         <header className='h-16 sticky top-0 flex items-center px-10 bg-slate-900'>
           <Link href='/'>
