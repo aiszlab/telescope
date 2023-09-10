@@ -1,24 +1,9 @@
-```js
-import { UploadOutlined } from '@ant-design/icons'
-import React from 'react'
-import { Button, Popconfirm, Space, Upload } from 'antd'
+```tsx
+import { Button } from 'musae'
 
-const App: React.FC = () => (
-  <Space>
-    Space
-    <Button type='primary'>Button</Button>
-    <Upload>
-      <Button icon={<UploadOutlined />}>Click to Upload</Button>
-    </Upload>
-    <Popconfirm title='Are you sure delete this task?' okText='Yes' cancelText='No'>
-      <Button>Confirm</Button>
-    </Popconfirm>
-  </Space>
-)
+const Basic = () => {
+  return <Button>基本用法</Button>
+}
 
-export default App
-```
-
-```js
-console.log(1)
+export default Basic
 ```

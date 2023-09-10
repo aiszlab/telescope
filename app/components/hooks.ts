@@ -15,7 +15,17 @@ export const useComponentTree = () => {
         label: '组件总览'
       },
       {
-        key: '/components/input',
+        key: '/components/layout-group',
+        label: '布局',
+        children: [
+          {
+            key: '/components/divider',
+            label: 'Divider 分割线'
+          }
+        ]
+      },
+      {
+        key: '/components/input-group',
         label: '输入',
         children: [
           {
