@@ -2,7 +2,7 @@
 
 import { useCallback, type ReactNode } from 'react'
 import { Menu } from 'musae'
-import { useComponentTree } from './hooks'
+import { useComponentTree } from '@/hooks/components.hook'
 import { useRouter } from 'next/navigation'
 
 interface Props {

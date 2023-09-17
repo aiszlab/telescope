@@ -1,8 +1,30 @@
 ```tsx
-import { Button } from 'musae'
+import { Button, Row, Col } from 'musae'
 
 const Basic = () => {
-  return <Button>基本用法</Button>
+  return (
+    <Row>
+      <Col span={4}>
+        <Button>基本用法</Button>
+      </Col>
+
+      <Col span={4}>
+        <Button variant='outlined'>基本用法</Button>
+      </Col>
+
+      <Col span={4}>
+        <Button variant='text'>基本用法</Button>
+      </Col>
+
+      <Col span={4}>
+        <Button variant='elevated'>基本用法</Button>
+      </Col>
+
+      <Col span={4}>
+        <Button variant='tonal'>基本用法</Button>
+      </Col>
+    </Row>
+  )
 }
 
 export default Basic
