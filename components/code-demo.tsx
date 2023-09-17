@@ -1,16 +1,15 @@
 import { ReactNode } from 'react'
-import { Divider } from 'musae'
 
 export interface Props {
-  example: ReactNode
-  codeBlock: ReactNode
+  demo: ReactNode
+  code: ReactNode
 }
 
 const CodeDemo = (props: Props) => {
   return (
     <div className='border-2 rounded-lg border-gray-600 w-full'>
-      <div className='p-6 flex justify-center'>{props.example}</div>
-      <div className='rounded-lg'>{props.codeBlock}</div>
+      <div className='p-6 flex justify-center'>{props.demo}</div>
+      <div className='rounded-lg'>{props.code}</div>
     </div>
   )
 }

@@ -1,17 +1,17 @@
 'use client'
 
 import ComponentDocument from '@/components/component-document'
-import BasicReadme from './demo/basic/readme.mdx'
-import BasicDemo from './demo/basic'
+import BasicDemo from '@/demos/input/basic'
+import BasicCode from '@/demo/basic/readme.mdx'
 
 const Page = () => {
   return (
     <ComponentDocument
-      title='按钮'
+      title='输入框'
       codeDemos={[
         {
-          example: <BasicDemo />,
-          codeBlock: <BasicReadme />
+          demo: <BasicDemo />,
+          code: <BasicCode />
         }
       ]}
     />

@@ -1,21 +1,16 @@
-'use client'
-
 import ComponentDocument from '@/components/component-document'
-import BasicReadme from './demo/basic/readme.mdx'
-import BasicDemo from './demo/basic'
-import * as Api from './demo/api.mdx'
+import BasicDemo from '@/demos/button/basic'
+import BasicCode from '@/demos/button/basic/demo.mdx'
 
-const Page = () => {
-  console.log('Api====', Api)
-
+const Page = async () => {
   return (
     <ComponentDocument
       title='按钮'
       description='按钮用于开始一个即时操作。'
       codeDemos={[
         {
-          example: <BasicDemo />,
-          codeBlock: <BasicReadme />
+          demo: <BasicDemo />,
+          code: <BasicCode />
         }
       ]}
     />
