@@ -2846,10 +2846,10 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musae@0.1.15-beta.1:
-  version "0.1.15-beta.1"
-  resolved "https://registry.yarnpkg.com/musae/-/musae-0.1.15-beta.1.tgz#da141d848c2b3a077e5810f7d4c29234ff11736a"
-  integrity sha512-en/kRBZh//YAxOaZrxwFexAc6SAQUcrPqAhjcQF8w4/JZ0wNERpkVIDrXqj9ytoNIa6RvCuxIzoQqBsN0oD96g==
+musae@^0.1.16:
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/musae/-/musae-0.1.16.tgz#12035c467683199a951b8569c96eac1c332524f5"
+  integrity sha512-mfx7B8YM0Eq9L44zqaZw8wsZ1UGCLPWNHmDMPTNFNyogBcFgCuciBkY4a1VBewFNlSrQyO7E3heoAJ11OjqaCw==
   dependencies:
     "@aiszlab/relax" "^1.0.14"
     "@emotion/react" "^11.11.1"
