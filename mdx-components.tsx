@@ -2,6 +2,7 @@ import type { MDXComponents } from 'mdx/types'
 import Td from '@/components/mdx/td'
 import Th from '@/components/mdx/th'
 import Table from '@/components/mdx/table'
+import Code from '@/components/mdx/code'
 
 // This file allows you to provide custom React components
 // to be used in MDX files. You can import and use any
@@ -12,10 +13,10 @@ import Table from '@/components/mdx/table'
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     // Allows customizing built-in components, e.g. to add styling.
-    // h1: ({ children }) => <h1 style={{ fontSize: "100px" }}>{children}</h1>,
     ...components,
     td: Td,
     th: Th,
-    table: Table
+    table: Table,
+    code: Code
   }
 }

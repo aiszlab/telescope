@@ -1,0 +1,7 @@
+.properties table {
+  width: 100%;
+}
+
+.properties table td:first-child {
+  font-weight: 600;
+}

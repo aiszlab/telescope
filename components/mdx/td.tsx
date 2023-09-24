@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Td: FC<Props> = ({ children }) => {
-  return <td className='min-w-[60px] px-6 py-3'>{children}</td>
+  return <td className='min-w-[60px] px-6 py-3 text-xs leading-7'>{children}</td>
 }
 
 export default Td

@@ -1,7 +1,8 @@
 'use client'
 
-import type { ReactNode } from 'react'
-import CodeDemo, { Props as CodeDemoProps } from './code-demo'
+import { type ReactNode } from 'react'
+import CodeDemo, { Props as CodeDemoProps } from '../code-demo'
+import styles from './styles.module.css'
 
 interface Props {
   title: string
@@ -26,7 +27,7 @@ const ComponentDocument = (props: Props) => {
       ))}
 
       {!!props.properties && (
-        <div>
+        <div className={styles.properties}>
           <h2 className='font-semibold text-2xl mt-8 mb-4'>API</h2>
           {props.properties}
         </div>

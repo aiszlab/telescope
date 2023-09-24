@@ -1,12 +1,12 @@
 import ComponentDocument from '@/components/component-document'
-import BasicDemo from '@/demos/input/basic'
-import BasicCode from '@/demos/input/basic/demo.mdx'
-import Properties from '@/demos/input/properties.mdx'
+import BasicDemo from '@/demos/divider/basic'
+import BasicCode from '@/demos/divider/basic/demo.mdx'
+import Properties from '@/demos/divider/properties.mdx'
 
 const Page = () => {
   return (
     <ComponentDocument
-      title='输入框'
+      title='分割线'
       codeDemos={[
         {
           demo: <BasicDemo />,

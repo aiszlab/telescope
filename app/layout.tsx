@@ -26,7 +26,7 @@ export default function Layout(props: Props) {
         />
       </head>
       <body className={clsx([inter.className, 'flex flex-col min-h-screen'])}>
-        <header className='h-16 sticky top-0 flex items-center px-10 bg-slate-900'>
+        <header className='h-16 sticky top-0 flex items-center px-10 bg-white z-10'>
           <Link href='/'>
             <span className='text-3xl'>asiz.dev</span>
           </Link>
