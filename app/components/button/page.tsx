@@ -1,6 +1,7 @@
 import ComponentDocument from '@/components/component-document'
 import BasicDemo from '@/demos/button/basic'
 import BasicCode from '@/demos/button/basic/demo.mdx'
+import Properties from '@/demos/button/properties.mdx'
 
 const Page = async () => {
   return (
@@ -13,6 +14,7 @@ const Page = async () => {
           code: <BasicCode />
         }
       ]}
+      properties={<Properties />}
     />
   )
 }

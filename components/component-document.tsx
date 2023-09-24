@@ -7,7 +7,7 @@ interface Props {
   title: string
   description?: string
   codeDemos?: CodeDemoProps[]
-  apiBlock?: ReactNode
+  properties?: ReactNode
 }
 
 const ComponentDocument = (props: Props) => {
@@ -25,10 +25,10 @@ const ComponentDocument = (props: Props) => {
         <CodeDemo key={index} {...codeDemoProps} />
       ))}
 
-      {!!props.apiBlock && (
+      {!!props.properties && (
         <div>
           <h2 className='font-semibold text-2xl mt-8 mb-4'>API</h2>
-          {props.apiBlock}
+          {props.properties}
         </div>
       )}
     </article>

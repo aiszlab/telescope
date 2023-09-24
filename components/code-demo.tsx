@@ -1,4 +1,6 @@
-import { ReactNode } from 'react'
+import { type ReactNode } from 'react'
+import { useTheme, Button, Divider } from 'musae'
+import { useBoolean } from '@aiszlab/relax'
 
 export interface Props {
   demo: ReactNode
@@ -6,10 +8,28 @@ export interface Props {
 }
 
 const CodeDemo = (props: Props) => {
+  const theme = useTheme()
+  const { isOn: isCollapsed, toggle } = useBoolean(true)
+
   return (
-    <div className='border-2 rounded-lg border-gray-600 w-full'>
+    <div
+      className='border-2 rounded-lg'
+      style={{
+        borderColor: theme.palettes.neutral[50]
+      }}
+    >
       <div className='p-6 flex justify-center'>{props.demo}</div>
-      <div className='rounded-lg'>{props.code}</div>
+      <div className='rounded-lg'>
+        {!isCollapsed && props.code}
+
+        <Divider />
+
+        <div className='flex flex-col items-center'>
+          <Button variant='text' onClick={toggle}>
+            {isCollapsed ? '展开' : '收起'}
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }

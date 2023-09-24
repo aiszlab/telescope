@@ -1,8 +1,7 @@
-'use client'
-
 import ComponentDocument from '@/components/component-document'
 import BasicDemo from '@/demos/input/basic'
-import BasicCode from '@/demo/basic/readme.mdx'
+import BasicCode from '@/demos/input/basic'
+import Properties from '@/demos/button/properties.mdx'
 
 const Page = () => {
   return (
@@ -14,6 +13,7 @@ const Page = () => {
           code: <BasicCode />
         }
       ]}
+      properties={<Properties />}
     />
   )
 }
