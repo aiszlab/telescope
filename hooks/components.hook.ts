@@ -19,8 +19,16 @@ export const useComponentTree = () => {
         label: '布局',
         children: [
           {
+            key: '/components/grid',
+            label: 'Grid 布局'
+          },
+          {
             key: '/components/divider',
             label: 'Divider 分割线'
+          },
+          {
+            key: '/components/menu',
+            label: 'Menu 菜单'
           }
         ]
       },
@@ -35,6 +43,40 @@ export const useComponentTree = () => {
           {
             key: '/components/input',
             label: 'Input 输入框'
+          },
+          {
+            key: '/components/checkbox',
+            label: 'Checkbox 复选框'
+          },
+          {
+            key: '/components/radio',
+            label: 'Radio 单选框'
+          },
+          {
+            key: '/components/select',
+            label: 'Select 下拉框'
+          },
+          {
+            key: '/components/switch',
+            label: 'Switch 开关'
+          }
+        ]
+      },
+      {
+        key: '/components/data-display',
+        label: '数据展示',
+        children: [
+          {
+            key: '/components/avatar',
+            label: 'Avatar 头像'
+          },
+          {
+            key: '/components/loading',
+            label: 'Loading 加载中'
+          },
+          {
+            key: '/components/message',
+            label: 'Message 消息'
           }
         ]
       }
