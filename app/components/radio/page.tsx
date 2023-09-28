@@ -1,12 +1,12 @@
 import ComponentDocument from '@/components/component-document'
-import BasicDemo from '@/demos/input/basic'
+import BasicDemo from '@/demos/radio/basic'
 import BasicCode from '@/demos/input/basic/demo.mdx'
-import Properties from '@/demos/input/properties.mdx'
+import Properties from '@/demos/radio/properties.mdx'
 
 const Page = () => {
   return (
     <ComponentDocument
-      title='输入框'
+      title='单选框'
       codeDemos={[
         {
           demo: <BasicDemo />,
