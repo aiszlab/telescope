@@ -1,6 +1,8 @@
 'use client'
 
-import { Button, Row, Col } from 'musae'
+import { Button, Grid } from 'musae'
+
+const { Row, Col } = Grid
 
 const Basic = () => {
   return (
@@ -15,14 +17,6 @@ const Basic = () => {
 
       <Col span={4}>
         <Button variant='text'>文本按钮</Button>
-      </Col>
-
-      <Col span={4}>
-        <Button variant='elevated'>悬浮按钮</Button>
-      </Col>
-
-      <Col span={4}>
-        <Button variant='tonal'>Tonal 按钮</Button>
       </Col>
     </Row>
   )

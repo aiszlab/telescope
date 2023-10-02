@@ -1,9 +1,11 @@
 ```tsx
-import { Button, Row, Col } from 'musae'
+import { Button, Grid } from 'musae'
+
+const { Row, Col } = Grid
 
 const Basic = () => {
   return (
-    <Row gutter={8}>
+    <Row gutter={8} justify='center' align='center'>
       <Col span={4}>
         <Button>基本用法</Button>
       </Col>

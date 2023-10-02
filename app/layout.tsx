@@ -31,6 +31,7 @@ export default function Layout(props: Props) {
             <span className='text-3xl'>asiz.dev</span>
           </Link>
         </header>
+
         {props.children}
       </body>
     </html>

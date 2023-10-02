@@ -25,10 +25,24 @@ export const useComponentTree = () => {
           {
             key: '/components/divider',
             label: 'Divider 分割线'
-          },
+          }
+        ]
+      },
+      {
+        key: '/components/navigation-group',
+        label: '导航',
+        children: [
           {
             key: '/components/menu',
             label: 'Menu 菜单'
+          },
+          {
+            key: '/components/breadcrumb',
+            label: 'Breadcrumb 面包屑'
+          },
+          {
+            key: '/components/tabs',
+            label: 'Tabs 标签页'
           }
         ]
       },

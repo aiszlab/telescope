@@ -5,3 +5,9 @@
 .properties table td:first-child {
   font-weight: 600;
 }
+
+.properties pre code {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
+  font-size: 0.75rem;
+}

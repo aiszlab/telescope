@@ -7,6 +7,13 @@
   resolved "https://registry.npmjs.org/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
+"@aiszlab/relax@1.0.19":
+  version "1.0.19"
+  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.0.19.tgz#f864f955da722431b9d24fd14286e4ee5a22390d"
+  integrity sha512-rW/bo/IwnbH0UATie1TvI6Dw1JZwyOjo4SzKWbzebNU3wybCEbk+0QL7gWxstpYRkLNYqQDVZya4+qgnFGGa6g==
+  dependencies:
+    rxjs "^7.8.1"
+
 "@aiszlab/relax@^1.0.14":
   version "1.0.14"
   resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.0.14.tgz#509ce70ca39e332e49b06e88eed29d692629ea5c"
@@ -2863,12 +2870,12 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musae@0.1.17-beta.0:
-  version "0.1.17-beta.0"
-  resolved "https://registry.npmjs.org/musae/-/musae-0.1.17-beta.0.tgz#b173fa2c38c8dad8dc1ae6c41de966138270c366"
-  integrity sha512-fph4d48kaDLQnNUj7hAuNRKJhD/oc7om3JyH5+xNpwnTCTwDSUXy+IN+TKTHFGquvVGanBEJx08pKQRcOTR3XQ==
+musae@^0.1.18:
+  version "0.1.18"
+  resolved "https://registry.npmjs.org/musae/-/musae-0.1.18.tgz#11386ce8d43528c287938be176837211a7c80d16"
+  integrity sha512-7ZEMCRzFn0vfC0LIGwUMQZLNE7nH0F34gdZnQu+GSltyxvqEKkB0akgvdwnfgWaKx1MbFI604pEudioR62Q4Fg==
   dependencies:
-    "@aiszlab/relax" "^1.0.14"
+    "@aiszlab/relax" "1.0.19"
     "@emotion/react" "^11.11.1"
     "@emotion/styled" "^11.11.0"
     "@popperjs/core" "^2.11.8"

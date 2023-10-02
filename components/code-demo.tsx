@@ -13,7 +13,7 @@ const CodeDemo = (props: Props) => {
 
   return (
     <div
-      className='border-2 rounded-lg'
+      className='border-2 rounded-lg my-4'
       style={{
         borderColor: theme.palettes.neutral[50]
       }}
