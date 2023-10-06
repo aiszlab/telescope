@@ -73,6 +73,10 @@ export const useComponentTree = () => {
           {
             key: '/components/switch',
             label: 'Switch 开关'
+          },
+          {
+            key: '/components/form',
+            label: 'Form 表单'
           }
         ]
       },
