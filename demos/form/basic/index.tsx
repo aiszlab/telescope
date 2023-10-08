@@ -7,11 +7,11 @@ const { Item } = Form
 const Basic = () => {
   return (
     <Form onChange={(values) => console.log('values====', values)}>
-      <Item name='name' required>
+      <Item name='name' required label='测试'>
         <Input />
       </Item>
 
-      <Item name='sex' required>
+      {/* <Item name='sex' required>
         <Select
           options={[
             {
@@ -20,7 +20,7 @@ const Basic = () => {
             }
           ]}
         />
-      </Item>
+      </Item> */}
     </Form>
   )
 }
