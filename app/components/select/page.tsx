@@ -1,5 +1,5 @@
 import ComponentDocument from '@/components/component-document'
-import BasicDemo from '@/demos/input/basic'
+import BasicDemo from '@/demos/select/basic'
 import BasicCode from '@/demos/input/basic/demo.mdx'
 import Properties from '@/demos/input/properties.mdx'
 
