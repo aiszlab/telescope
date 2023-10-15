@@ -7,8 +7,12 @@ const Basic = () => {
     <Select
       options={[
         {
-          value: '1',
-          label: '2'
+          value: 'man',
+          label: '男'
+        },
+        {
+          value: 'woman',
+          label: '女'
         }
       ]}
     />
