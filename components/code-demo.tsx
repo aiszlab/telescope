@@ -19,11 +19,15 @@ const CodeDemo = (props: Props) => {
         borderColor: theme.palettes.neutral[50]
       }}
     >
+      {/* 渲染 */}
       <div className='p-6 flex justify-center'>{props.demo}</div>
+
+      {/* 分割线 */}
+      <Divider align='left'>{props.title}</Divider>
+
+      {/* 代码块 */}
       <div className='rounded-lg'>
         {!isCollapsed && props.code}
-
-        <Divider align='left'>{props.title}</Divider>
 
         <div className='flex flex-col items-center'>
           <Button variant='text' onClick={toggle}>
