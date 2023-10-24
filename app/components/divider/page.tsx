@@ -9,6 +9,7 @@ const Page = () => {
       title='分割线'
       codeDemos={[
         {
+          title: '对齐方式',
           demo: <BasicDemo />,
           code: <BasicCode />
         }

@@ -3,6 +3,7 @@ import { useTheme, Button, Divider } from 'musae'
 import { useBoolean } from '@aiszlab/relax'
 
 export interface Props {
+  title?: string
   demo: ReactNode
   code: ReactNode
 }
@@ -22,7 +23,7 @@ const CodeDemo = (props: Props) => {
       <div className='rounded-lg'>
         {!isCollapsed && props.code}
 
-        <Divider />
+        <Divider align='left'>{props.title}</Divider>
 
         <div className='flex flex-col items-center'>
           <Button variant='text' onClick={toggle}>
