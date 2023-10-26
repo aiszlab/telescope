@@ -97,6 +97,16 @@ export const useComponentTree = () => {
             label: 'Message 消息'
           }
         ]
+      },
+      {
+        key: '/components/feedback',
+        label: '反馈',
+        children: [
+          {
+            key: '/components/drawer',
+            label: 'Drawer 抽屉'
+          }
+        ]
       }
     ]
   }, [])
