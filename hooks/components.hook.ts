@@ -103,6 +103,10 @@ export const useComponentTree = () => {
         label: '反馈',
         children: [
           {
+            key: '/components/dialog',
+            label: 'Dialog 弹窗'
+          },
+          {
             key: '/components/drawer',
             label: 'Drawer 抽屉'
           }
