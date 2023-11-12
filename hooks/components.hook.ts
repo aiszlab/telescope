@@ -71,6 +71,10 @@ export const useComponentTree = () => {
             label: 'Select 下拉框'
           },
           {
+            key: '/components/cascader',
+            label: 'Cascader 级联选择'
+          },
+          {
             key: '/components/switch',
             label: 'Switch 开关'
           },
