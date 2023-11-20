@@ -81,6 +81,10 @@ export const useComponentTree = () => {
           {
             key: '/components/form',
             label: 'Form 表单'
+          },
+          {
+            key: '/components/date-picker',
+            label: 'DatePicker 日期选择器'
           }
         ]
       },
@@ -99,6 +103,10 @@ export const useComponentTree = () => {
           {
             key: '/components/message',
             label: 'Message 消息'
+          },
+          {
+            key: '/components/calendar',
+            label: 'Calendar 日历'
           }
         ]
       },
