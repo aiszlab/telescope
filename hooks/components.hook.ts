@@ -85,6 +85,10 @@ export const useComponentTree = () => {
           {
             key: '/components/date-picker',
             label: 'DatePicker 日期选择器'
+          },
+          {
+            key: '/components/date-range-picker',
+            label: 'DateRangePicker 日期区间选择器'
           }
         ]
       },
@@ -107,6 +111,10 @@ export const useComponentTree = () => {
           {
             key: '/components/calendar',
             label: 'Calendar 日历'
+          },
+          {
+            key: '/components/clock',
+            label: 'Clock 时钟'
           }
         ]
       },
