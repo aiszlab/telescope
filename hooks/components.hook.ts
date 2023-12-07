@@ -119,6 +119,10 @@ export const useComponentTree = () => {
           {
             key: '/components/clock',
             label: 'Clock 时钟'
+          },
+          {
+            key: '/components/tree',
+            label: 'Tree 树形控件'
           }
         ]
       },
