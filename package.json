@@ -33,6 +33,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "raw-loader": "^4.0.2",
     "rehype-highlight": "^7.0.0"
   }
 }
