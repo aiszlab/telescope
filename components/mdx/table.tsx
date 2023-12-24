@@ -12,7 +12,7 @@ const Table: FC<Props> = ({ children }) => {
 
   return (
     <table
-      className='border-[1px]'
+      className='border-[1px] min-w-full'
       style={{
         borderColor: theme.palettes.neutral[50]
       }}

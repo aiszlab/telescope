@@ -10,10 +10,10 @@ const Basic = () => (
         label: 'Home'
       },
       {
-        label: <a href=''>Application Center</a>
+        label: <a href='/components'>Components</a>
       },
       {
-        label: 'Application List'
+        label: 'Breadcrumb'
       }
     ]}
   />

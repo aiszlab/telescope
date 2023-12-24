@@ -9,7 +9,7 @@ interface Props {
 
 const Pre = (props: Props) => {
   return (
-    <pre className='relative'>
+    <pre className='relative text-sm'>
       <Button variant='text' className='absolute top-3 right-3 p-0'>
         复制
       </Button>

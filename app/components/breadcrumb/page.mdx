@@ -1,0 +1,28 @@
+import Basic from './demos/basic'
+import basicSource from '!!raw-loader!./demos/basic'
+import Separator from './demos/separator'
+import separatorSource from '!!raw-loader!./demos/separator'
+
+# Breadcrumb 面包屑
+
+显示当前页面在系统层级结构中的位置，并能向上返回。
+
+## 何时使用
+
+- 当系统拥有超过两级以上的层级结构时；
+- 当需要告知用户『你在哪里』时；
+- 当需要向上导航的功能时。
+
+## 代码演示
+
+<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
+<Playable player={<Separator />} source={separatorSource} title='自定义间隔符' description='自定义间隔符。' />
+
+## API
+
+### Breadcrumb
+
+| 参数      | 说明         | 类型                    | 默认值 |
+| --------- | ------------ | ----------------------- | ------ |
+| items     | 路由栈信息   | `BreadcrumbItemProps[]` | `[]`   |
+| separator | 自定义分隔符 | `ReactNode`             | `/`    |

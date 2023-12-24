@@ -12,8 +12,6 @@ const withMDX = createMDX({
     extension: /\.mdx?$/,
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeHighlight]
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
   }
 })
 

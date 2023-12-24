@@ -1,22 +1,23 @@
-```tsx
+'use client'
+
 import React from 'react'
 import { Breadcrumb } from 'musae'
 
-const Basic = () => (
+const Separator = () => (
   <Breadcrumb
     items={[
       {
         label: 'Home'
       },
       {
-        label: <a href=''>Application Center</a>
+        label: <a href='/components'>Components</a>
       },
       {
-        label: 'Application List'
+        label: 'Breadcrumb'
       }
     ]}
+    separator='>'
   />
 )
 
-export default Basic
-```
+export default Separator

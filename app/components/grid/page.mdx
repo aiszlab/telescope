@@ -1,0 +1,34 @@
+import Basic from './demos/basic'
+import basicSource from '!!raw-loader!./demos/basic'
+import Gutter from './demos/gutter'
+import gutterSource from '!!raw-loader!./demos/gutter'
+
+# Grid 栅格
+
+24 栅格系统。
+
+## 设计理念
+
+在多数业务情况下，需要在设计区域内解决大量信息收纳的问题，我们将整个设计建议区域按照 24 等分的原则进行划分。
+划分之后的信息区块我们称之为『盒子』。建议横向排列的盒子数量最多四个，最少一个。『盒子』在整个屏幕上占比见上图。设计部分基于盒子的单位定制盒子内部的排版规则，以保证视觉层面的舒适感。
+
+## 代码演示
+
+<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
+<Playable player={<Gutter />} source={gutterSource} title='自定义间距' description='自定义间距。' />
+
+## API
+
+### Row
+
+| 参数    | 说明       | 类型                           | 默认值   |
+| ------- | ---------- | ------------------------------ | -------- |
+| gutter  | 自定义间距 | `number` \| `[number, number]` | `void 0` |
+| justify | 横向排列   | `center` \| `start` \| `end`   | `void 0` |
+| align   | 纵向排列   | `center` \| `start` \| `end`   | `void 0` |
+
+### Col
+
+| 参数 | 说明     | 类型     | 默认值 |
+| ---- | -------- | -------- | ------ |
+| span | 栅格大小 | `number` | `8`    |

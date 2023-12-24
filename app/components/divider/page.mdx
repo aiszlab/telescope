@@ -1,0 +1,27 @@
+import Basic from './demos/basic'
+import basicSource from '!!raw-loader!./demos/basic'
+import WithText from './demos/with-text'
+import withTextSource from '!!raw-loader!./demos/with-text'
+
+# Divider 分割线
+
+区隔内容的分割线。
+
+## 何时使用
+
+- 对不同章节的文本段落进行分割。
+- 对行内文字/链接进行分割，例如表格的操作列。
+
+## 代码演示
+
+<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
+<Playable player={<WithText />} source={withTextSource} title='带文字的分割线' description='带文字的分割线。' />
+
+## API
+
+### Divider
+
+| 参数     | 说明       | 类型                          | 默认值   |
+| -------- | ---------- | ----------------------------- | -------- |
+| children | 嵌套的内容 | `ReactNode`                   | `void 0` |
+| align    | 横向排列   | `center` \| `left` \| `right` | `center` |

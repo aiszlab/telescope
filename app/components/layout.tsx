@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, type ReactNode } from 'react'
+import { useCallback, type ReactNode, type Key } from 'react'
 import { Menu } from 'musae'
 import { useComponentTree } from '@/hooks/components.hook'
 import { useRouter } from 'next/navigation'
@@ -15,8 +15,8 @@ const Layout = (props: Props) => {
   const router = useRouter()
 
   const onMenuClick = useCallback(
-    (key: string) => {
-      router.push(key)
+    (key: Key) => {
+      router.push(key.toString())
     },
     [router]
   )
@@ -28,7 +28,7 @@ const Layout = (props: Props) => {
           <Menu items={menuItems} onClick={onMenuClick} />
         </div>
 
-        {props.children}
+        <div className='col-start-2 col-end-6 px-16 pb-8'>{props.children}</div>
       </main>
     </CacheProvider>
   )
