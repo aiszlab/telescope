@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { type MenuItemProps } from 'musae'
+import { type MenuItem } from 'musae'
 
 /**
  * @author murukal
@@ -8,7 +8,7 @@ import { type MenuItemProps } from 'musae'
  * 组件分类
  */
 export const useComponentTree = () => {
-  return useMemo<MenuItemProps[]>(() => {
+  return useMemo<MenuItem[]>(() => {
     return [
       {
         key: '/components',

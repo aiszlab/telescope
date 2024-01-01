@@ -3,7 +3,7 @@
 import { Radio } from 'musae'
 
 const Basic = () => {
-  return <Radio />
+  return <Radio value='demo'>Demo</Radio>
 }
 
 export default Basic

@@ -1,0 +1,19 @@
+import Basic from './mocks/basic'
+import basicSource from '!!raw-loader!./mocks/basic'
+
+# Clock 时钟
+
+电子表形式的时钟显示组件
+
+## 代码演示
+
+<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
+
+## API
+
+### Clock
+
+| 参数     | 说明             | 类型                                        | 默认值   |
+| -------- | ---------------- | ------------------------------------------- | -------- |
+| value    | 时间值           | `[number, number, number]`                  | `void 0` |
+| onChange | 修改时间后的回调 | `(value: [number, number, number]) => void` | `void 0` |

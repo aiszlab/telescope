@@ -1,16 +1,15 @@
-```tsx
-import { Radio } from 'musae'
+'use client'
 
-const RadioGroup = Radio.Group
+import { Radio } from 'musae'
 
 const Group = () => {
   return (
-    <RadioGroup>
+    <Radio.Group>
       <Radio value='A'>A</Radio>
       <Radio value='B'>B</Radio>
-    </RadioGroup>
+      <Radio value='C'>C</Radio>
+    </Radio.Group>
   )
 }
 
 export default Group
-```

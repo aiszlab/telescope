@@ -1,0 +1,33 @@
+import Basic from './mocks/basic'
+import basicSource from '!!raw-loader!./mocks/basic'
+import Group from './mocks/group'
+import groupSource from '!!raw-loader!./mocks/group'
+
+# Checkbox 多选框
+
+多选框。
+
+## 何时使用
+
+- 在一组可选项中进行多项选择时；
+- 单独使用可以表示两种状态之间的切换，和`switch`类似。区别在于切换`switch`会直接触发状态改变，而`checkbox`一般用于状态标记，需要和提交操作配合。
+
+## 代码演示
+
+<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
+<Playable player={<Group />} source={groupSource} title='Checkbox 组' description='方便的从数组生成 Checkbox 组。' />
+
+## API
+
+### Checkbox
+
+| 参数    | 说明           | 类型      | 默认值   |
+| ------- | -------------- | --------- | -------- |
+| value   | 多选框对应的值 | `Key`     | -        |
+| checked | 是否选中       | `boolean` | `void 0` |
+
+### Group
+
+| 参数  | 说明     | 类型    | 默认值 |
+| ----- | -------- | ------- | ------ |
+| value | 选中的值 | `Key[]` | []     |
