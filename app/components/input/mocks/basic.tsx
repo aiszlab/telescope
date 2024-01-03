@@ -1,0 +1,9 @@
+'use client'
+
+import { Input } from 'musae'
+
+const Basic = () => {
+  return <Input type='text' />
+}
+
+export default Basic
