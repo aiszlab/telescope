@@ -1,13 +1,13 @@
 'use client'
 
-import { useCallback, type ReactNode, type Key, useMemo } from 'react'
-import { Menu } from 'musae'
+import { useCallback, type Key, useMemo } from 'react'
+import { Menu, Layout as _Layout } from 'musae'
 import { useComponentTree } from '@/hooks/components.hook'
 import { useRouter } from 'next/navigation'
 import CacheProvider from '@/components/cache-provider'
 
 interface Props {
-  children: ReactNode
+  children: string
 }
 
 const Layout = (props: Props) => {
@@ -27,13 +27,13 @@ const Layout = (props: Props) => {
 
   return (
     <CacheProvider>
-      <main className='flex-1 grid grid-cols-5 mt-10'>
-        <div className='px-3 h-screen sticky top-0 overflow-hidden hover:overflow-y-auto'>
+      <_Layout>
+        <_Layout.Sider className='px-3 sticky top-0 overflow-hidden hover:overflow-y-auto'>
           <Menu items={menuItems} onClick={onMenuClick} defaultExpandedKeys={defaultExpandedKeys} />
-        </div>
+        </_Layout.Sider>
 
-        <div className='col-start-2 col-end-6 px-16 pb-8'>{props.children}</div>
-      </main>
+        <_Layout.Main>{props.children}</_Layout.Main>
+      </_Layout>
     </CacheProvider>
   )
 }

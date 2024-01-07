@@ -123,6 +123,10 @@ export const useComponentTree = () => {
           {
             key: '/components/tree',
             label: 'Tree 树形控件'
+          },
+          {
+            key: '/components/table',
+            label: 'Table 表格'
           }
         ]
       },

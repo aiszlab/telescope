@@ -1,0 +1,33 @@
+import Basic from './mocks/basic'
+import basicSource from '!!raw-loader!./mocks/basic'
+
+# Cascader 级联选择
+
+级联选择框。
+
+## 何时使用
+
+- 需要从一组相关联的数据集合进行选择，例如省市区，公司层级，事物分类等。
+- 从一个较大的数据集合中进行选择时，用多级分类进行分隔，方便选择。
+- 比起`Select`组件，可以在同一个浮层中完成选择，有较好的体验。
+
+## 代码演示
+
+<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
+
+## API
+
+| 参数     | 说明                   | 类型       | 默认值   |
+| -------- | ---------------------- | ---------- | -------- |
+| options  | 可选项数据源           | Option[]   | `void 0` |
+| onChange | 输入框内容变化时的回调 | () => void | `void 0` |
+
+### Option
+
+```ts
+interface Option {
+  label: string
+  value: string
+  children?: Option[]
+}
+```
