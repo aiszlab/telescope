@@ -2,6 +2,8 @@ import Basic from './mocks/basic'
 import basicSource from '!!raw-loader!./mocks/basic'
 import AddonAll from './mocks/addon-all'
 import addonAllSource from '!!raw-loader!./mocks/addon-all'
+import Password from './mocks/password'
+import passwordSource from '!!raw-loader!./mocks/password'
 
 # Input 输入框
 
@@ -21,12 +23,16 @@ import addonAllSource from '!!raw-loader!./mocks/addon-all'
   title='前缀和后缀'
   description='在输入框上添加前缀或后缀图标。'
 />
+<Playable player={<Password />} source={passwordSource} title='密码框' description='密码框。' />
 
 ## API
 
 ### Input
 
-| 参数     | 说明                   | 类型         | 默认值   |
-| -------- | ---------------------- | ------------ | -------- |
-| value    | 输入框内容             | string       | `void 0` |
-| onChange | 输入框内容变化时的回调 | `() => void` | `void 0` |
+| 参数     | 说明                   | 类型                 | 默认值   |
+| -------- | ---------------------- | -------------------- | -------- |
+| value    | 输入框内容             | `string`             | `void 0` |
+| onChange | 输入框内容变化时的回调 | `() => void`         | `void 0` |
+| prefix   | 输入框前缀             | `ReactNode`          | `void 0` |
+| suffix   | 输入框后缀             | `ReactNode`          | `void 0` |
+| type     | 输入框类型             | `text` \| `password` | `void 0` |

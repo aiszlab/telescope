@@ -3,7 +3,7 @@
 import { Input } from 'musae'
 
 const Basic = () => {
-  return <Input type='text' />
+  return <Input />
 }
 
 export default Basic
