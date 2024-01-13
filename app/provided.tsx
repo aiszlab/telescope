@@ -8,7 +8,7 @@ interface Props {
   children?: ReactNode
 }
 
-const Layout = (props: Props) => {
+const Provided = (props: Props) => {
   return (
     <ThemeProvider>
       <_Layout>
@@ -24,4 +24,4 @@ const Layout = (props: Props) => {
   )
 }
 
-export default Layout
+export default Provided

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import clsx from 'clsx'
-import Shell from './_layout'
+import Provided from './provided'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +26,7 @@ export default function Layout(props: Props) {
         />
       </head>
       <body className={clsx([inter.className, 'flex flex-col min-h-screen'])}>
-        <Shell>{props.children}</Shell>
+        <Provided>{props.children}</Provided>
       </body>
     </html>
   )
