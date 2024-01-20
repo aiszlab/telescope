@@ -21,7 +21,7 @@ const Playable = ({ title, player, source }: Props) => {
     <div
       className='border-2 rounded-lg my-4'
       style={{
-        borderColor: theme.palettes.neutral[50]
+        borderColor: theme.colors['outline']
       }}
     >
       {/* 渲染 */}

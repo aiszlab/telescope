@@ -14,8 +14,8 @@ const Th: FC<Props> = ({ children }) => {
     <th
       className='py-3 px-6 border-b-2 text-start whitespace-nowrap'
       style={{
-        backgroundColor: theme.palettes.neutral[95],
-        borderColor: theme.palettes.neutral[50]
+        backgroundColor: theme.colors['surface-container-highest'],
+        borderColor: theme.colors['outline']
       }}
     >
       {children}

@@ -14,7 +14,7 @@ const Table: FC<Props> = ({ children }) => {
     <table
       className='border-[1px] min-w-full'
       style={{
-        borderColor: theme.palettes.neutral[50]
+        borderColor: theme.colors['outline']
       }}
     >
       {children}
