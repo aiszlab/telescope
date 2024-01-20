@@ -32,7 +32,7 @@ const Layout = (props: Props) => {
           <Menu items={menuItems} onClick={onMenuClick} defaultExpandedKeys={defaultExpandedKeys} />
         </_Layout.Sider>
 
-        <_Layout.Main>{props.children}</_Layout.Main>
+        <_Layout.Main className='p-8 pt-0'>{props.children}</_Layout.Main>
       </_Layout>
     </CacheProvider>
   )

@@ -14,3 +14,44 @@ import basicSource from '!!raw-loader!./mocks/basic'
 ## 代码演示
 
 <Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
+
+## API
+
+### Select
+
+| 参数    | 说明                                                           | 类型                 | 默认值   |
+| ------- | -------------------------------------------------------------- | -------------------- | -------- |
+| options | 下拉选择范围                                                   | `Option[]`           | `void 0` |
+| complex | 数据复杂模式，如果设置为`true`，那么`onChange`数据则会变为对象 | `boolean`            | `void 0` |
+| value   | 下拉框受控值                                                   | `Value[]` \| `Value` | `void 0` |
+| mode    | 输入框下拉模式                                                 | `multiple`           | `void 0` |
+
+### Value
+
+```ts
+type Value = Key | Pick<Option, 'value' | 'label'>
+```
+
+### Option
+
+```ts
+interface Option {
+  /**
+   * @description
+   * value
+   */
+  value: Key
+
+  /**
+   * @description
+   * label
+   */
+  label?: string
+
+  /**
+   * @description
+   * children
+   */
+  children?: Option[]
+}
+```
