@@ -25,8 +25,6 @@ const SourceReader = ({ value, language = 'tsx' }: Props) => {
       }
     })
 
-    console.log('value====', value)
-
     setSource(_source)
   })
 
