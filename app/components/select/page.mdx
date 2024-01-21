@@ -1,5 +1,7 @@
 import Basic from './mocks/basic'
 import basicSource from '!!raw-loader!./mocks/basic'
+import Multiple from './mocks/multiple'
+import multipleSource from '!!raw-loader!./mocks/multiple'
 
 # Select 选择器
 
@@ -14,6 +16,7 @@ import basicSource from '!!raw-loader!./mocks/basic'
 ## 代码演示
 
 <Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
+<Playable player={<Multiple />} source={multipleSource} title='多选' description='多选的用法。' />
 
 ## API
 

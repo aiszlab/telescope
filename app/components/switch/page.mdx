@@ -1,0 +1,22 @@
+import Basic from './mocks/basic'
+import basicSource from '!!raw-loader!./mocks/basic'
+
+# Switch 开关
+
+开关选择器。
+
+## 何时使用
+
+- 需要表示开关状态/两种状态之间的切换时；
+- 和`checkbox`的区别是，切换`switch`会直接触发状态改变，而`checkbox`一般用于状态标记，需要和提交操作配合。
+
+## 代码演示
+
+<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
+
+## API
+
+| 参数     | 说明               | 类型                                            | 默认值   |
+| -------- | ------------------ | ----------------------------------------------- | -------- |
+| value    | 是否开启           | `boolean`                                       | `void 0` |
+| onChange | 发生改变的回调事件 | `(value: boolean) => void \| PromiseLike<void>` | `void 0` |

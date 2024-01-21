@@ -1,0 +1,44 @@
+import Basic from './mocks/basic'
+import basicSource from '!!raw-loader!./mocks/basic'
+
+# Tabs 标签页
+
+选项卡切换组件。
+
+## 何时使用
+
+提供平级的区域将大块内容进行收纳和展现，保持界面整洁。
+
+- 卡片式的页签，提供可关闭的样式，常用于容器顶部。
+- 既可用于容器顶部，也可用于容器内部，是最通用的 Tabs。
+
+## 代码演示
+
+<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
+
+## API
+
+### Tabs
+
+| 参数      | 说明                         | 类型        | 默认值   |
+| --------- | ---------------------------- | ----------- | -------- |
+| items     | `Tabs`对应的明细项，用于切换 | `TabItem[]` | `void 0` |
+| activeKey | 受控的选中值                 | `string`    | `void 0` |
+
+### TabItem
+
+```ts
+interface TabItem {
+  /**
+   * @description
+   * key
+   */
+  key: string
+
+  /**
+   * @description
+   * label
+   */
+  label: string
+}
+```
