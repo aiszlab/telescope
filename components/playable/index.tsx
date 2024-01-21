@@ -33,7 +33,7 @@ const Playable = ({ title, player, source }: Props) => {
       {/* 代码块 */}
       <div className='rounded-lg'>
         <div className={clsx({ 'h-0': isCollapsed }, 'overflow-hidden')}>
-          {/* <SourceReader value={source} /> */}
+          <SourceReader value={source} />
         </div>
 
         <div className='flex flex-col items-center'>

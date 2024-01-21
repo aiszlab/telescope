@@ -6,12 +6,10 @@ import createMDX from '@next/mdx'
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   webpack: (config, options) => {
-    if (!options.isServer) {
-      config.module.rules.push({
-        resourceQuery: /raw/,
-        type: 'asset/source'
-      })
-    }
+    config.module.rules.push({
+      resourceQuery: /raw/,
+      type: 'asset/source'
+    })
 
     return config
   }
