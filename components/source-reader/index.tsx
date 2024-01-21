@@ -17,13 +17,15 @@ const SourceReader = ({ value, language = 'tsx' }: Props) => {
   const [source, setSource] = useState<MDXRemoteSerializeResult | null>()
 
   useMounted(async () => {
-    const _source = await serialize(['```', language, value, '```'].join(' '), {
+    const _source = await serialize(['```' + language, value, '```'].join(' '), {
       mdxOptions: {
         development: process.env.NODE_ENV === 'development',
         remarkPlugins: [remarkGfm],
         rehypePlugins: [rehypeHighlight] as PluggableList
       }
     })
+
+    console.log('value====', value)
 
     setSource(_source)
   })
