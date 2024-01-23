@@ -3292,7 +3292,7 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musae@0.1.22:
+musae@^0.1.22:
   version "0.1.22"
   resolved "https://registry.npmjs.org/musae/-/musae-0.1.22.tgz#9c69c40231aad388f008b07b723c7145dcee0596"
   integrity sha512-IgnVnzRH8GfCkReOjiQAsNiKSIFid1K2yUuu5scdj2wUopZli5oFVvRSXAOBFywzn+4spYvIY1ITyyPOBN24SQ==
