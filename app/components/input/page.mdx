@@ -1,9 +1,4 @@
-import Basic from './mocks/basic'
-import basicSource from './mocks/basic?raw'
-import AddonAll from './mocks/addon-all'
-import addonAllSource from './mocks/addon-all?raw'
-import Password from './mocks/password'
-import passwordSource from './mocks/password?raw'
+import Usage from '@/components/usage'
 
 # Input 输入框
 
@@ -16,14 +11,9 @@ import passwordSource from './mocks/password?raw'
 
 ## 代码演示
 
-<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
-<Playable
-  player={<AddonAll />}
-  source={addonAllSource}
-  title='前缀和后缀'
-  description='在输入框上添加前缀或后缀图标。'
-/>
-<Playable player={<Password />} source={passwordSource} title='密码框' description='密码框。' />
+<Usage src='/input/basic' title='基本' description='最简单的用法。' />
+<Usage src='/input/addon-all' title='前缀和后缀' description='在输入框上添加前缀或后缀图标。' />
+<Usage src='/input/password' title='密码框' description='密码框。' />
 
 ## API
 
