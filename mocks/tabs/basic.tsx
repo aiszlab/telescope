@@ -1,3 +1,5 @@
+'use client'
+
 import { Tabs } from 'musae'
 
 const ITEMS = [

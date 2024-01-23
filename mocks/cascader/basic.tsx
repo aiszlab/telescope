@@ -1,3 +1,5 @@
+'use client'
+
 import { Cascader } from 'musae'
 
 const Basic = () => {

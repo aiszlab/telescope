@@ -1,3 +1,5 @@
+'use client'
+
 import { Select, Option } from 'musae'
 
 const OPTIONS: Option[] = [

@@ -1,3 +1,5 @@
+'use client'
+
 import { Grid } from 'musae'
 
 const { Row, Col } = Grid

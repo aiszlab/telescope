@@ -1,3 +1,5 @@
+'use client'
+
 import { Clock } from 'musae'
 
 const Basic = () => {
