@@ -1,7 +1,4 @@
-import Basic from './mocks/basic'
-import basicSource from './mocks/basic?raw'
-import Group from './mocks/group'
-import groupSource from './mocks/group?raw'
+import Usage from '@/components/usage'
 
 # Checkbox 多选框
 
@@ -14,8 +11,8 @@ import groupSource from './mocks/group?raw'
 
 ## 代码演示
 
-<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
-<Playable player={<Group />} source={groupSource} title='Checkbox 组' description='方便的从数组生成 Checkbox 组。' />
+<Usage src='/checkbox/basic' title='基本' description='最简单的用法。' />
+<Usage src='/checkbox/group' title='Checkbox 组' description='方便的从数组生成 Checkbox 组。' />
 
 ## API
 
