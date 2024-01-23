@@ -1,9 +1,4 @@
-import Basic from './mocks/basic'
-import basicSource from './mocks/basic?raw'
-import Group from './mocks/group'
-import groupSource from './mocks/group?raw'
-import Disabled from './mocks/disabled'
-import disabledSource from './mocks/disabled?raw'
+import Usage from '@/components/usage'
 
 # Radio 单选框
 
@@ -16,9 +11,9 @@ import disabledSource from './mocks/disabled?raw'
 
 ## 代码演示
 
-<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
-<Playable player={<Group />} source={groupSource} title='单选组合' description='一组互斥的 Radio 配合使用。' />
-<Playable player={<Disabled />} source={disabledSource} title='禁用' description='禁用的 Radio。' />
+<Usage src='/radio/basic' title='基本' description='最简单的用法。' />
+<Usage src='/radio/group' title='单选组合' description='一组互斥的 Radio 配合使用。' />
+<Usage src='/radio/disabled' title='禁用' description='禁用的 Radio。' />
 
 ## API
 

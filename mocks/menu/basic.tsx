@@ -1,8 +1,6 @@
-'use client'
-
 import { Menu } from 'musae'
 
-const items = [
+const ITEMS = [
   {
     label: '导航菜单 1',
     key: 'navigation-1',
@@ -40,7 +38,7 @@ const items = [
 ]
 
 const Basic = () => {
-  return <Menu items={items} selectedKeys={['option-3']} />
+  return <Menu items={ITEMS} selectedKeys={['option-3']} />
 }
 
 export default Basic
