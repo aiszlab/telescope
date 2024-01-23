@@ -4,15 +4,7 @@ import createMDX from '@next/mdx'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
-  webpack: (config, options) => {
-    config.module.rules.push({
-      resourceQuery: /raw/,
-      type: 'asset/source'
-    })
-
-    return config
-  }
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx']
 }
 
 const withMDX = createMDX({
