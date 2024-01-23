@@ -1,7 +1,4 @@
-import Basic from './mocks/basic'
-import basicSource from './mocks/basic?raw'
-import WithText from './mocks/with-text'
-import withTextSource from './mocks/with-text?raw'
+import Usage from '@/components/usage'
 
 # Divider 分割线
 
@@ -14,8 +11,8 @@ import withTextSource from './mocks/with-text?raw'
 
 ## 代码演示
 
-<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
-<Playable player={<WithText />} source={withTextSource} title='带文字的分割线' description='带文字的分割线。' />
+<Usage src='/divider/basic' title='基本' description='最简单的用法。' />
+<Usage src='/divider/with-label' title='带文字的分割线' description='带文字的分割线。' />
 
 ## API
 

@@ -1,8 +1,6 @@
-'use client'
-
 import { Divider } from 'musae'
 
-const WithText = () => {
+const WithLabel = () => {
   return (
     <div>
       <p>
@@ -28,4 +26,4 @@ const WithText = () => {
   )
 }
 
-export default WithText
+export default WithLabel
