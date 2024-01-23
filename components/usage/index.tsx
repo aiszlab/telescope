@@ -1,6 +1,6 @@
 import { readFile } from 'fs/promises'
 import { fileURLToPath } from 'url'
-import { dirname, resolve, extname } from 'path'
+import { dirname, join } from 'path'
 import { serialize } from 'next-mdx-remote/serialize'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
@@ -12,18 +12,12 @@ interface Props {
   description: string
 }
 
-const Usage = async (props: Props) => {
-  const src = resolve(dirname(fileURLToPath(import.meta.url)), '../../', props.src)
-  const ext = extname(props.src)
-
-  console.log('src====', src)
-  console.log('ext====', ext)
-
+const Usage = async ({ src, title, description }: Props) => {
   const [source, render] = await Promise.all([
-    readFile(src)
+    readFile(join(dirname(fileURLToPath(import.meta.url)), '../../mocks', `${src}.tsx`))
       .then((file) => file.toString())
       .then((source) =>
-        serialize(['```', ext, source, '```'].join(' '), {
+        serialize(['```tsx', source, '```'].join(' '), {
           mdxOptions: {
             development: process.env.NODE_ENV === 'development',
             remarkPlugins: [remarkGfm],
@@ -32,10 +26,10 @@ const Usage = async (props: Props) => {
           }
         })
       ),
-    import(src)
+    import(`../../mocks${src}`).then((lazy) => lazy.default)
   ])
 
-  return <Playable title={props.title} description={props.description} render={render} source={source} />
+  return <Playable title={title} description={description} render={render} source={source} />
 }
 
 export default Usage

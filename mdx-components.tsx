@@ -7,7 +7,6 @@ import H1 from './components/mdx/h1'
 import H2 from './components/mdx/h2'
 import H3 from '@/components/mdx/h3'
 import Pre from '@/components/mdx/pre'
-import Playable from './components/playable'
 
 // This file allows you to provide custom React components
 // to be used in MDX files. You can import and use any
@@ -26,7 +25,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: H1,
     h2: H2,
     h3: H3,
-    pre: Pre,
-    Playable: Playable
+    pre: Pre
   }
 }
