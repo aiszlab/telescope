@@ -1,7 +1,4 @@
-import Basic from './mocks/basic'
-import basicSource from './mocks/basic?raw'
-import Gutter from './mocks/gutter'
-import gutterSource from './mocks/gutter?raw'
+import Usage from '@/components/usage'
 
 # Grid 栅格
 
@@ -14,8 +11,8 @@ import gutterSource from './mocks/gutter?raw'
 
 ## 代码演示
 
-<Playable player={<Basic />} source={basicSource} title='基本' description='最简单的用法。' />
-<Playable player={<Gutter />} source={gutterSource} title='自定义间距' description='自定义间距。' />
+<Usage src='/grid/basic' title='基本' description='最简单的用法。' />
+<Usage src='/grid/gutter' title='自定义间距' description='自定义间距。' />
 
 ## API
 
