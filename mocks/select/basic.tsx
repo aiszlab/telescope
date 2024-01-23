@@ -1,5 +1,3 @@
-'use client'
-
 import { Select } from 'musae'
 
 const Basic = () => {

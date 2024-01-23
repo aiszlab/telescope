@@ -1,5 +1,3 @@
-'use client'
-
 import { Radio } from 'musae'
 
 const Disabled = () => {
