@@ -1,21 +1,23 @@
 'use client'
 
-import { type ReactNode } from 'react'
+import { FC, createElement } from 'react'
 import { useTheme, Button, Divider } from 'musae'
 import { useBoolean } from '@aiszlab/relax'
-import SourceReader from '../source-reader'
 import clsx from 'clsx'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import { useMDXComponents } from '@/mdx-components'
 
 interface Props {
   title: string
-  player: ReactNode
-  source: string
+  render: FC
+  source: MDXRemoteSerializeResult
   description: string
 }
 
-const Playable = ({ title, player, source }: Props) => {
+const Playable = ({ title, render, source }: Props) => {
   const theme = useTheme()
   const { isOn: isCollapsed, toggle } = useBoolean(true)
+  const components = useMDXComponents({})
 
   return (
     <div
@@ -25,7 +27,7 @@ const Playable = ({ title, player, source }: Props) => {
       }}
     >
       {/* 渲染 */}
-      <div className='p-6 flex justify-center'>{player}</div>
+      <div className='p-6 flex justify-center'>{createElement(render)}</div>
 
       {/* 分割线 */}
       <Divider align='left'>{title}</Divider>
@@ -33,7 +35,7 @@ const Playable = ({ title, player, source }: Props) => {
       {/* 代码块 */}
       <div className='rounded-lg'>
         <div className={clsx({ 'h-0': isCollapsed }, 'overflow-hidden')}>
-          <SourceReader value={source} />
+          <MDXRemote {...source} components={components} />
         </div>
 
         <div className='flex flex-col items-center'>
