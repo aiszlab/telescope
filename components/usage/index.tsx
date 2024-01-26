@@ -24,8 +24,9 @@ const Usage = async ({ src, title, description }: Props) => {
     readFile(join(dirname(fileURLToPath(import.meta.url)), '../../mocks', src))
       .catch(() => null)
       .then((file) => file?.toString())
-      .then(async (source) => {
-        if (!source) return ''
+      .then((source) => {
+        if (!source) return null
+
         return unified()
           .use(remarkParse) // Convert into markdown AST
           .use(remarkRehype) // Transform to HTML AST
@@ -35,7 +36,7 @@ const Usage = async ({ src, title, description }: Props) => {
           .use(rehypeHighlight)
           .process([['```', ext].join(''), source, '```'].join(' '))
       })
-      .then((markdown) => String(markdown)),
+      .then((markdown) => String(markdown ?? '')),
     import(`../../mocks${src}`).then((lazy) => lazy.default)
   ])
 
