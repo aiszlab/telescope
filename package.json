@@ -17,7 +17,6 @@
     "eslint": "8.47.0",
     "musae": "^0.1.22",
     "next": "^14.1.0",
-    "next-mdx-remote": "^4.4.1",
     "postcss": "8.4.28",
     "raw-loader": "^4.0.2",
     "react": "18.2.0",

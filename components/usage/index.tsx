@@ -1,7 +1,7 @@
 import { readFile } from 'fs/promises'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
-import { serialize } from 'next-mdx-remote/serialize'
+import { compile } from '@mdx-js/mdx'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import Playable from './playable'
@@ -17,19 +17,17 @@ const Usage = async ({ src, title, description }: Props) => {
     readFile(join(dirname(fileURLToPath(import.meta.url)), '../../mocks', `${src}.tsx`))
       .then((file) => file.toString())
       .then((source) =>
-        serialize(['```tsx', source, '```'].join(' '), {
-          mdxOptions: {
-            development: process.env.NODE_ENV === 'development',
-            remarkPlugins: [remarkGfm],
-            // @ts-ignore
-            rehypePlugins: [rehypeHighlight]
-          }
+        compile(['```tsx', source, '```'].join(' '), {
+          remarkPlugins: [remarkGfm],
+          rehypePlugins: [rehypeHighlight]
         })
       ),
     import(`../../mocks${src}`).then((lazy) => lazy.default)
   ])
 
-  return <Playable title={title} description={description} render={render} source={source} />
+  console.log('source====', source)
+
+  return <Playable title={title} description={description} render={render} source={source.toString()} />
 }
 
 export default Usage
