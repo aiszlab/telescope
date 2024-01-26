@@ -4,7 +4,6 @@ import { FC, createElement } from 'react'
 import { useTheme, Button, Divider } from 'musae'
 import { useBoolean } from '@aiszlab/relax'
 import clsx from 'clsx'
-import { useMDXComponents } from '@/mdx-components'
 
 interface Props {
   title: string
@@ -16,7 +15,6 @@ interface Props {
 const Playable = ({ title, render, source }: Props) => {
   const theme = useTheme()
   const { isOn: isCollapsed, toggle } = useBoolean(true)
-  const components = useMDXComponents({})
 
   return (
     <div
@@ -33,7 +31,13 @@ const Playable = ({ title, render, source }: Props) => {
 
       {/* 代码块 */}
       <div className='rounded-lg'>
-        <div className={clsx({ 'h-0': isCollapsed }, 'overflow-hidden')}>{source}</div>
+        <div className={clsx({ 'h-0': isCollapsed }, 'overflow-hidden')}>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: source
+            }}
+          />
+        </div>
 
         <div className='flex flex-col items-center'>
           <Button variant='text' onClick={toggle}>

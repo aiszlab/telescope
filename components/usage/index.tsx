@@ -1,10 +1,14 @@
 import { readFile } from 'fs/promises'
 import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
-import { compile } from '@mdx-js/mdx'
+import { dirname, extname, join } from 'path'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import Playable from './playable'
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeSanitize from 'rehype-sanitize'
+import rehypeStringify from 'rehype-stringify'
 
 interface Props {
   src: string
@@ -13,21 +17,29 @@ interface Props {
 }
 
 const Usage = async ({ src, title, description }: Props) => {
+  // get src ext
+  const ext = extname(src).slice(1)
+
   const [source, render] = await Promise.all([
-    readFile(join(dirname(fileURLToPath(import.meta.url)), '../../mocks', `${src}.tsx`))
-      .then((file) => file.toString())
-      .then((source) =>
-        compile(['```tsx', source, '```'].join(' '), {
-          remarkPlugins: [remarkGfm],
-          rehypePlugins: [rehypeHighlight]
-        })
-      ),
+    readFile(join(dirname(fileURLToPath(import.meta.url)), '../../mocks', src))
+      .catch(() => null)
+      .then((file) => file?.toString())
+      .then(async (source) => {
+        if (!source) return ''
+        return unified()
+          .use(remarkParse) // Convert into markdown AST
+          .use(remarkRehype) // Transform to HTML AST
+          .use(rehypeSanitize) // Sanitize HTML input
+          .use(rehypeStringify) // Convert AST into serialized HTML
+          .use(remarkGfm)
+          .use(rehypeHighlight)
+          .process([['```', ext].join(''), source, '```'].join(' '))
+      })
+      .then((markdown) => String(markdown)),
     import(`../../mocks${src}`).then((lazy) => lazy.default)
   ])
 
-  console.log('source====', source)
-
-  return <Playable title={title} description={description} render={render} source={source.toString()} />
+  return <Playable title={title} description={description} render={render} source={source} />
 }
 
 export default Usage
