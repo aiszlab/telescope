@@ -4,20 +4,17 @@ import { FC, createElement } from 'react'
 import { useTheme, Button, Divider } from 'musae'
 import { useBoolean } from '@aiszlab/relax'
 import clsx from 'clsx'
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
-import { useMDXComponents } from '@/mdx-components'
 
 interface Props {
   title: string
   render: FC
-  source: MDXRemoteSerializeResult
+  source: string
   description: string
 }
 
 const Playable = ({ title, render, source }: Props) => {
   const theme = useTheme()
   const { isOn: isCollapsed, toggle } = useBoolean(true)
-  const components = useMDXComponents({})
 
   return (
     <div
@@ -35,7 +32,11 @@ const Playable = ({ title, render, source }: Props) => {
       {/* 代码块 */}
       <div className='rounded-lg'>
         <div className={clsx({ 'h-0': isCollapsed }, 'overflow-hidden')}>
-          <MDXRemote {...source} components={components} />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: source
+            }}
+          />
         </div>
 
         <div className='flex flex-col items-center'>
