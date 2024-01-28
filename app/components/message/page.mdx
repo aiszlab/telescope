@@ -1,7 +1,20 @@
+import Usage from '@/components/usage'
+
 # Message 消息提醒
+
+全局展示操作反馈信息。
 
 ## 何时使用
 
+- 可提供成功、警告和错误等反馈信息。
+- 顶部居中显示并自动消失，是一种不打断用户操作的轻量级提示方式。
+
 ## 代码演示
 
+<Usage src='/message/basic.tsx' title='基本' description='最简单的用法。' />
+
 ## API
+
+| 参数 | 说明 | 类型                           | 默认值   |
+| ---- | ---- | ------------------------------ | -------- |
+| size | 尺寸 | `small` \| `medium` \| `large` | `medium` |

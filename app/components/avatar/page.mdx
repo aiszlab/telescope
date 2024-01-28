@@ -1,7 +1,35 @@
+import Usage from '@/components/usage'
+
 # Avatar 头像
+
+用来代表用户或事物，支持图片、图标或字符展示。
 
 ## 何时使用
 
 ## 代码演示
 
+<Usage src='/avatar/basic.tsx' title='基本' description='最简单的用法。' />
+<Usage src='/avatar/group.tsx' title='头像组' description='多个头像组的用法。' />
+
 ## API
+
+### Avatar
+
+| 参数  | 说明                     | 类型     | 默认值   |
+| ----- | ------------------------ | -------- | -------- |
+| src   | 资源地址                 | `string` | `void 0` |
+| alt   | 图像无法显示时的替代文本 | `string` | `void 0` |
+| size  | 设置头像的大小           | `Size`   | `medium` |
+| shape | 指定头像的形状           | `Shape`  | `circle` |
+
+### Size
+
+```ts
+type Size = 'small' | 'medium' | 'large'
+```
+
+### Shape
+
+```ts
+type Shape = 'circle' | 'square'
+```

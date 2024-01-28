@@ -3,7 +3,7 @@
 import { useCallback, type Key, useMemo } from 'react'
 import { Menu, Layout as _Layout } from 'musae'
 import { useComponentTree } from '@/hooks/components.hook'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 
 interface Props {
   children: string
@@ -12,6 +12,7 @@ interface Props {
 const Layout = (props: Props) => {
   const menuItems = useComponentTree()
   const router = useRouter()
+  const pathname = usePathname()
 
   const onMenuClick = useCallback(
     (key: Key) => {
@@ -27,7 +28,12 @@ const Layout = (props: Props) => {
   return (
     <_Layout>
       <_Layout.Sider className='px-3 sticky top-0 overflow-hidden hover:overflow-y-auto'>
-        <Menu items={menuItems} onClick={onMenuClick} defaultExpandedKeys={defaultExpandedKeys} />
+        <Menu
+          items={menuItems}
+          onClick={onMenuClick}
+          defaultExpandedKeys={defaultExpandedKeys}
+          defaultSelectedKeys={[pathname]}
+        />
       </_Layout.Sider>
 
       <_Layout.Main className='p-8 pt-0'>{props.children}</_Layout.Main>
