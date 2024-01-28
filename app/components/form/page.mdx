@@ -1,7 +1,26 @@
+import Usage from '@/components/usage'
+
 # Form 表单
+
+高性能表单控件，自带数据域管理。包含数据录入、校验以及对应样式。
 
 ## 何时使用
 
+- 用于创建一个实体或收集信息。
+- 需要对输入的数据类型进行校验时。
+
 ## 代码演示
 
+<Usage src='/form/basic.tsx' title='基本' description='最简单的用法。' />
+
 ## API
+
+### Form
+
+| 参数          | 说明                                 | 类型                       | 默认值   |
+| ------------- | ------------------------------------ | -------------------------- | -------- |
+| defaultValues | 表单默认值，只有初始化以及重置时生效 | `Object`                   | `void 0` |
+| onChange      | 字段值更新时触发回调事件             | (values: `Object`) => void | `void 0` |
+| onSubmit      | 提交表单的回调事件                   | (values: `Object`) => void | `void 0` |
+| labelCol      | `label`标签布局，同`<Col>`组件       | `number`                   | `void 0` |
+| onSubmit      | 输入控件布局，同`<Col>`组件          | `number`                   | `void 0` |

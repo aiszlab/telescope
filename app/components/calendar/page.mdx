@@ -1,7 +1,21 @@
+import Usage from '@/components/usage'
+
 # Calendar 日历
+
+日历本组件
 
 ## 何时使用
 
+需要展现行程表或者日期选择的场景时
+
 ## 代码演示
 
+<Usage src='/calendar/basic.tsx' title='基本' description='最简单的用法。' />
+
 ## API
+
+| 参数      | 说明                   | 类型                        | 默认值   |
+| --------- | ---------------------- | --------------------------- | -------- |
+| value     | 当前时间点或者时间区间 | `Dayjs` \| `[Dayjs, Dayjs]` | `void 0` |
+| onClick   | 点击日期之后的回调事件 | (clickAt: `Dayjs`) => void  | `void 0` |
+| focusedAt | 顶部聚焦的年月         | `Dayjs`                     | `void 0` |

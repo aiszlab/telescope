@@ -41,6 +41,7 @@ const DATA_SOURCE: Person[] = [
 const Basic = () => {
   return (
     <Table
+      bordered
       dataSource={DATA_SOURCE}
       columns={(helper) => {
         return [

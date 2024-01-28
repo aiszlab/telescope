@@ -2,7 +2,7 @@
 
 import { Layout as _Layout, ThemeProvider } from 'musae'
 import Link from 'next/link'
-import type { ReactNode } from 'react'
+import { useEffect, type ReactNode, useRef } from 'react'
 
 interface Props {
   children?: ReactNode

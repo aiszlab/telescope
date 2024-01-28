@@ -33,6 +33,7 @@ const Playable = ({ title, render, source }: Props) => {
       <div className='rounded-lg'>
         <div className={clsx({ 'h-0': isCollapsed }, 'overflow-hidden')}>
           <div
+            className='text-sm'
             dangerouslySetInnerHTML={{
               __html: source
             }}
