@@ -24,7 +24,7 @@ const Playable = ({ title, render, source }: Props) => {
       }}
     >
       {/* 渲染 */}
-      <div className='p-6 flex justify-center'>{createElement(render)}</div>
+      <div className='p-6 flex'>{createElement(render)}</div>
 
       {/* 分割线 */}
       <Divider align='left'>{title}</Divider>

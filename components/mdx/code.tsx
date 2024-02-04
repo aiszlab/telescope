@@ -7,16 +7,7 @@ interface Props {
 }
 
 const Code = (props: Props) => {
-  return (
-    <code
-      className={clsx(props.className, 'rounded p-2')}
-      style={{
-        background: 'rgba(0, 0, 0, 0.05)'
-      }}
-    >
-      {props.children}
-    </code>
-  )
+  return <code className={clsx(props.className, 'rounded p-1.5 bg-black bg-opacity-5')}>{props.children}</code>
 }
 
 export default Code

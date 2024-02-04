@@ -43,6 +43,10 @@ export const useComponentTree = () => {
           {
             key: '/components/tabs',
             label: 'Tabs 标签页'
+          },
+          {
+            key: '/components/pagination',
+            label: 'Pagination 分页'
           }
         ]
       },
