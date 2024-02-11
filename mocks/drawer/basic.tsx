@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Dialog } from 'musae'
+import { Button, Drawer } from 'musae'
 import { useState } from 'react'
 
 const Basic = () => {
@@ -12,8 +12,8 @@ const Basic = () => {
 
   return (
     <>
-      <Button onClick={() => setIsOpen(true)}>打开弹窗</Button>
-      <Dialog open={isOpen} onClose={onClose} />
+      <Button onClick={() => setIsOpen(true)}>打开抽屉</Button>
+      <Drawer open={isOpen} onClose={onClose} />
     </>
   )
 }

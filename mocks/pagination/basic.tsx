@@ -3,7 +3,7 @@
 import { Pagination } from 'musae'
 
 const Basic = () => {
-  return <Pagination />
+  return <Pagination total={100} />
 }
 
 export default Basic
