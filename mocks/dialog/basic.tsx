@@ -13,7 +13,9 @@ const Basic = () => {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>打开弹窗</Button>
-      <Dialog open={isOpen} onClose={onClose} />
+      <Dialog open={isOpen} onClose={onClose} title='基本使用'>
+        这是一个弹窗的基本使用方法
+      </Dialog>
     </>
   )
 }

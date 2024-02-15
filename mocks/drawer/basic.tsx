@@ -10,9 +10,13 @@ const Basic = () => {
     setIsOpen(false)
   }
 
+  const open = () => {
+    setIsOpen(true)
+  }
+
   return (
     <>
-      <Button onClick={() => setIsOpen(true)}>打开抽屉</Button>
+      <Button onClick={open}>打开抽屉</Button>
       <Drawer open={isOpen} onClose={onClose} />
     </>
   )

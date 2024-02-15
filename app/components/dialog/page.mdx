@@ -14,3 +14,12 @@ import Usage from '@/components/usage'
 <Usage src='/dialog/basic.tsx' title='基本' description='最简单的用法。' />
 
 ## API
+
+| 参数      | 说明                     | 类型           | 默认值   |
+| --------- | ------------------------ | -------------- | -------- |
+| title     | 对话框的标题             | `ReactNode`    | `void 0` |
+| children  | 对话框的内容             | `ReactNode`    | `void 0` |
+| open      | 控制对话框是否打开       | `boolean`      | `false`  |
+| footer    | 对话框底部的定制内容     | `ReactNode`    | `void 0` |
+| onConfirm | 对话框点击确认的回调函数 | `VoidFunction` | `void 0` |
+| onClose   | 对话框点击关闭的回调函数 | `VoidFunction` | `void 0` |

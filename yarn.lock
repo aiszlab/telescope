@@ -7,18 +7,10 @@
   resolved "https://registry.npmjs.org/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@aiszlab/relax@1.2.16":
-  version "1.2.16"
-  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.16.tgz#198fbd41a14f436bbc221d85bff9adf93fae14ae"
-  integrity sha512-t680jvwKVO8X6jOz0rOSOhC/xuZUctClNvkVmoMGmGIw2gwYIFdsRpi/uWwWP0OU7yMSLusTgKMCqGoxa2Kkdw==
-  dependencies:
-    react-is "^18.2.0"
-    rxjs "^7.8.1"
-
-"@aiszlab/relax@^1.2.11":
-  version "1.2.15"
-  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.15.tgz#ea76894a8c84ae5295c744122cdda0548e1c9860"
-  integrity sha512-ubPGVnjtZxksmqkKe0NFeL4fDlY+xWSEx6MCqZFmR++3QeltWJFgW7DbSenTfwPDxLXW4ldDW2tU7bN3pO41IA==
+"@aiszlab/relax@^1.2.22":
+  version "1.2.22"
+  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.22.tgz#0064388fe26233f452006f649a2f46c3d7550800"
+  integrity sha512-CHrNmuHBfW0n/hJyLwnb47VsYZiRoPH/ygGcHeX5spcRr6DNdGx0oEKU2MWeYxVPkG9ZuN/UXCorlfC2JjfVoQ==
   dependencies:
     react-is "^18.2.0"
     rxjs "^7.8.1"
@@ -2826,12 +2818,12 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musae@0.1.23-beta.4:
-  version "0.1.23-beta.4"
-  resolved "https://registry.npmjs.org/musae/-/musae-0.1.23-beta.4.tgz#a4e7d58e00580cc766b2c042f470c824ed298d38"
-  integrity sha512-8gGhmV9rMTuha6ZUBEN8i/Woau0CiPC9yGZoj/hZCnq9IhM431z7yWbgVuY3yzGSiLeUHgcZQNqJ0CdKejwIBw==
+musae@^0.1.24:
+  version "0.1.24"
+  resolved "https://registry.npmjs.org/musae/-/musae-0.1.24.tgz#7f97bda0f7a580e54784749205a424e38c98d14a"
+  integrity sha512-/ooJRo7U2O3CRD2K0JUX0B1/S5P2WLELxWxCdzc0DO2b+35HGcqQFVZZ5uZ59wKCzwlZaCRuQtvd0HZ0SWR5Bg==
   dependencies:
-    "@aiszlab/relax" "1.2.16"
+    "@aiszlab/relax" "^1.2.22"
     "@popperjs/core" "^2.11.8"
     "@tanstack/react-table" "^8.11.3"
     clsx "^1.2.1"
