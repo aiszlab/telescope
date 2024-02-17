@@ -2,15 +2,16 @@
 
 import { useCallback, type Key, useMemo } from 'react'
 import { Menu, Layout as _Layout } from 'musae'
-import { useComponentTree } from '@/hooks/components.hook'
+import { useComponents } from '@/hooks/use-components'
 import { useRouter, usePathname } from 'next/navigation'
+import { useFloatNav } from '@/hooks/use-float-nav'
 
 interface Props {
   children: string
 }
 
 const Layout = (props: Props) => {
-  const menuItems = useComponentTree()
+  const menuItems = useComponents()
   const router = useRouter()
   const pathname = usePathname()
 
@@ -25,6 +26,8 @@ const Layout = (props: Props) => {
     return menuItems.map((item) => item.key)
   }, [menuItems])
 
+  const [] = useFloatNav()
+
   return (
     <_Layout>
       <_Layout.Sider className='px-3 sticky top-0 overflow-hidden hover:overflow-y-auto'>
@@ -36,7 +39,16 @@ const Layout = (props: Props) => {
         />
       </_Layout.Sider>
 
-      <_Layout.Main className='p-8 pt-0'>{props.children}</_Layout.Main>
+      <_Layout.Main
+        className='p-8 pt-0 grid'
+        style={{
+          gridTemplateColumns: '1fr 240px',
+          columnGap: 20
+        }}
+      >
+        <div className='max-w-5xl w-full justify-self-center'>{props.children}</div>
+        <nav>1</nav>
+      </_Layout.Main>
     </_Layout>
   )
 }

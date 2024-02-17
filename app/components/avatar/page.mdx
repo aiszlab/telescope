@@ -15,12 +15,12 @@ import Usage from '@/components/usage'
 
 ### Avatar
 
-| 参数  | 说明                     | 类型     | 默认值   |
-| ----- | ------------------------ | -------- | -------- |
-| src   | 资源地址                 | `string` | `void 0` |
-| alt   | 图像无法显示时的替代文本 | `string` | `void 0` |
-| size  | 设置头像的大小           | `Size`   | `medium` |
-| shape | 指定头像的形状           | `Shape`  | `circle` |
+| 参数  | 说明                     | 类型     | 默认值     |
+| ----- | ------------------------ | -------- | ---------- |
+| src   | 资源地址                 | `string` | `void 0`   |
+| alt   | 图像无法显示时的替代文本 | `string` | `void 0`   |
+| size  | 设置头像的大小           | `Size`   | `medium`   |
+| shape | 指定头像的形状           | `Shape`  | `circular` |
 
 ### Size
 
@@ -31,5 +31,5 @@ type Size = 'small' | 'medium' | 'large'
 ### Shape
 
 ```ts
-type Shape = 'circle' | 'square'
+type Shape = 'circular' | 'squared'
 ```

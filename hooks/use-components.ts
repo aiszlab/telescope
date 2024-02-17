@@ -7,7 +7,7 @@ import { type MenuItem } from 'musae'
  * @description
  * 组件分类
  */
-export const useComponentTree = () => {
+export const useComponents = () => {
   return useMemo<MenuItem[]>(() => {
     return [
       {
@@ -145,6 +145,10 @@ export const useComponentTree = () => {
           {
             key: '/components/drawer',
             label: 'Drawer 抽屉'
+          },
+          {
+            key: '/components/tooltip',
+            label: 'Tooltip 消息提示'
           }
         ]
       }

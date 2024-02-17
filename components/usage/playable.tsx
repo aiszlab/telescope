@@ -10,9 +10,10 @@ interface Props {
   render: FC
   source: string
   description: string
+  id?: string
 }
 
-const Playable = ({ title, render, source }: Props) => {
+const Playable = ({ title, render, source, id }: Props) => {
   const theme = useTheme()
   const { isOn: isCollapsed, toggle } = useBoolean(true)
 
@@ -22,6 +23,7 @@ const Playable = ({ title, render, source }: Props) => {
       style={{
         borderColor: theme.colors['outline']
       }}
+      id={id}
     >
       {/* 渲染 */}
       <div className='p-6 flex'>{createElement(render)}</div>
