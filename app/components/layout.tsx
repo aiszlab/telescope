@@ -4,7 +4,8 @@ import { useCallback, type Key, useMemo } from 'react'
 import { Menu, Layout as _Layout } from 'musae'
 import { useComponents } from '@/hooks/use-components'
 import { useRouter, usePathname } from 'next/navigation'
-import { useFloatNav } from '@/hooks/use-float-nav'
+import { Context, useFloatNav } from '@/hooks/use-float-nav'
+import FloatNav from '@/components/float-nav'
 
 interface Props {
   children: string
@@ -26,30 +27,32 @@ const Layout = (props: Props) => {
     return menuItems.map((item) => item.key)
   }, [menuItems])
 
-  const [] = useFloatNav()
+  const { contextValue } = useFloatNav()
 
   return (
-    <_Layout>
-      <_Layout.Sider className='px-3 sticky top-0 overflow-hidden hover:overflow-y-auto'>
-        <Menu
-          items={menuItems}
-          onClick={onMenuClick}
-          defaultExpandedKeys={defaultExpandedKeys}
-          defaultSelectedKeys={[pathname]}
-        />
-      </_Layout.Sider>
+    <Context.Provider value={contextValue}>
+      <_Layout>
+        <_Layout.Sider className='px-3 sticky top-0 overflow-hidden hover:overflow-y-auto'>
+          <Menu
+            items={menuItems}
+            onClick={onMenuClick}
+            defaultExpandedKeys={defaultExpandedKeys}
+            defaultSelectedKeys={[pathname]}
+          />
+        </_Layout.Sider>
 
-      <_Layout.Main
-        className='p-8 pt-0 grid'
-        style={{
-          gridTemplateColumns: '1fr 240px',
-          columnGap: 20
-        }}
-      >
-        <div className='max-w-5xl w-full justify-self-center'>{props.children}</div>
-        <nav>1</nav>
-      </_Layout.Main>
-    </_Layout>
+        <_Layout.Main
+          className='p-8 pt-0 grid'
+          style={{
+            gridTemplateColumns: 'calc(100% - 260px) 240px',
+            columnGap: 20
+          }}
+        >
+          <div>{props.children}</div>
+          <FloatNav />
+        </_Layout.Main>
+      </_Layout>
+    </Context.Provider>
   )
 }
 

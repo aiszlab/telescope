@@ -1,46 +1,61 @@
-import { useEvent } from '@aiszlab/relax'
-import { ReactNode, createContext, useContext, useMemo, useState } from 'react'
-
-type Item = {
-  id: string
-  title: string
-}
+import { useEvent, useUpdateEffect } from '@aiszlab/relax'
+import { MenuItem } from 'musae'
+import { usePathname } from 'next/navigation'
+import { createContext, useMemo, useState } from 'react'
 
 type ContextValue = {
-  register: (item: Item) => void
-  items: Item[]
+  register: (key: string, parentKey?: string) => void
+  items: MenuItem[]
 }
 
-const Context = createContext<ContextValue | null>(null)
+export const Context = createContext<ContextValue | null>(null)
 
-interface Props {
-  children: ReactNode
-}
+export const useFloatNav = () => {
+  const [items, setItems] = useState<Map<string, Omit<MenuItem, 'key'>>>(new Map())
+  const pathname = usePathname()
 
-export const useFloatNav = ({ children }: Props) => {
-  const [items, setItems] = useState<Map<string, string>>(new Map())
+  const register = useEvent<ContextValue['register']>((key, parentKey) => {
+    setItems((prev) => {
+      const next = new Map(prev)
 
-  const register = useEvent((item: Item) => {
-    setItems((prev) => new Map(prev).set(item.id, item.title))
+      if (!parentKey) {
+        return next.set(key, {
+          label: <a href={`#${key}`}>{key}</a>
+        })
+      }
+
+      const parent = next.has(parentKey)
+        ? next.get(parentKey)
+        : next
+            .set(parentKey, {
+              label: <a href={`#${key}`}>{key}</a>
+            })
+            .get(parentKey)
+      parent!.children = Array.from(
+        new Map(parent?.children?.map((child) => [child.key, child]))
+          .set(key, {
+            key,
+            label: <a href={`#${key}`}>{key}</a>
+          })
+          .values()
+      )
+      return next
+    })
   })
 
-  const Provider = useMemo(() => {
-    return (
-      <Context.Provider
-        value={{
-          register,
-          items: Array.from(items.entries()).map(([id, title]) => ({
-            id,
-            title
-          }))
-        }}
-      >
-        {children}
-      </Context.Provider>
-    )
-  }, [register, items, children])
+  useUpdateEffect(() => {
+    setItems(new Map())
+  }, [pathname])
 
-  const useNav = () => useContext(Context)
+  const contextValue = useMemo<ContextValue>(() => {
+    return {
+      register,
+      items: Array.from(items.entries()).map(([key, item]) => ({
+        ...item,
+        key
+      }))
+    }
+  }, [register, items])
 
-  return [Provider, useNav]
+  return { contextValue }
 }

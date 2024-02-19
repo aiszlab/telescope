@@ -11,14 +11,16 @@ const Table: FC<Props> = ({ children }) => {
   const theme = useTheme()
 
   return (
-    <table
-      className='border-[1px] min-w-full'
-      style={{
-        borderColor: theme.colors['outline']
-      }}
-    >
-      {children}
-    </table>
+    <div className='w-full overflow-auto'>
+      <table
+        className='border-[1px] min-w-full table-auto'
+        style={{
+          borderColor: theme.colors['outline']
+        }}
+      >
+        {children}
+      </table>
+    </div>
   )
 }
 

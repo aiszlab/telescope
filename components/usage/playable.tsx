@@ -1,21 +1,26 @@
 'use client'
 
-import { FC, createElement } from 'react'
+import { FC, createElement, useContext, useEffect } from 'react'
 import { useTheme, Button, Divider } from 'musae'
-import { useBoolean } from '@aiszlab/relax'
+import { useBoolean, useMount } from '@aiszlab/relax'
 import clsx from 'clsx'
+import { Context } from '@/hooks/use-float-nav'
 
 interface Props {
   title: string
   render: FC
   source: string
   description: string
-  id?: string
 }
 
-const Playable = ({ title, render, source, id }: Props) => {
+const Playable = ({ title, render, source }: Props) => {
   const theme = useTheme()
   const { isOn: isCollapsed, toggle } = useBoolean(true)
+  const register = useContext(Context)?.register
+
+  useMount(() => {
+    register?.(title, '代码演示')
+  })
 
   return (
     <div
@@ -23,7 +28,7 @@ const Playable = ({ title, render, source, id }: Props) => {
       style={{
         borderColor: theme.colors['outline']
       }}
-      id={id}
+      id={title}
     >
       {/* 渲染 */}
       <div className='p-6 flex'>{createElement(render)}</div>

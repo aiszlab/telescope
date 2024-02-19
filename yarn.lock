@@ -15,6 +15,14 @@
     react-is "^18.2.0"
     rxjs "^7.8.1"
 
+"@aiszlab/relax@^1.2.23":
+  version "1.2.23"
+  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.23.tgz#502d38c7b8c313f7e15af25a2fd271f373c37774"
+  integrity sha512-Fq9MG6iPRoUEtvNw7C9eLdAslKo0G2kUjA0/Xl1ANY7YQfqXSO3yrmUgiaBL7ZWB8OaNjKNHpBrHzk/E+RAmBg==
+  dependencies:
+    react-is "^18.2.0"
+    rxjs "^7.8.1"
+
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
   resolved "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz"

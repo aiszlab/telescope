@@ -14,7 +14,6 @@ interface Props {
   src: string
   title: string
   description: string
-  id?: string
 }
 
 const Usage = async ({ src, title, description }: Props) => {
