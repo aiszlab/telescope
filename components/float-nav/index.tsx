@@ -15,6 +15,8 @@ const FloatNav = () => {
         style={{
           position: 'sticky'
         }}
+        defaultExpandedKeys={items.map((item) => item.key)}
+        size='small'
       />
     </nav>
   )

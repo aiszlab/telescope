@@ -44,7 +44,7 @@ const Layout = (props: Props) => {
         <_Layout.Main
           className='p-8 pt-0 grid'
           style={{
-            gridTemplateColumns: 'calc(100% - 260px) 240px',
+            gridTemplateColumns: 'calc(100% - 200px) 180px',
             columnGap: 20
           }}
         >
