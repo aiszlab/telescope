@@ -1,3 +1,5 @@
+'use client'
+
 import { useMount, useBoolean } from '@aiszlab/relax'
 import { useMessage, Button } from 'musae'
 import React from 'react'
