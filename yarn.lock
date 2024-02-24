@@ -15,10 +15,10 @@
     react-is "^18.2.0"
     rxjs "^7.8.1"
 
-"@aiszlab/relax@^1.2.23":
-  version "1.2.23"
-  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.23.tgz#502d38c7b8c313f7e15af25a2fd271f373c37774"
-  integrity sha512-Fq9MG6iPRoUEtvNw7C9eLdAslKo0G2kUjA0/Xl1ANY7YQfqXSO3yrmUgiaBL7ZWB8OaNjKNHpBrHzk/E+RAmBg==
+"@aiszlab/relax@^1.2.24":
+  version "1.2.24"
+  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.24.tgz#6982371e5bae2019073db5f2e86ffe29835d0243"
+  integrity sha512-jhkRHMtQL0NX3T56jqjO12QFSGjb2Ii5mKwpzoaZXzLC0HKK83rmIdhrhvczbXlS1DWQL/JH/TCVW04PV9WJFw==
   dependencies:
     react-is "^18.2.0"
     rxjs "^7.8.1"
