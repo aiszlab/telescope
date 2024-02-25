@@ -2,13 +2,12 @@
 
 import { useMounted, useBoolean } from '@aiszlab/relax'
 import { useMessage, Button } from 'musae'
-import React from 'react'
 
 const MyComponent = () => {
   const [messager, holder] = useMessage()
 
   useMounted(() => {
-    messager.info('mount')
+    messager.info('mounted')
   })
 
   return (
@@ -23,10 +22,10 @@ const Basic = () => {
   const { isOn, toggle } = useBoolean(false)
 
   return (
-    <>
+    <div>
       <Button onClick={toggle}>{isOn ? 'unmount' : 'mount'}</Button>
       {isOn && <MyComponent />}
-    </>
+    </div>
   )
 }
 

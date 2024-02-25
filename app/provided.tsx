@@ -1,6 +1,6 @@
 'use client'
 
-import { Layout as _Layout, ThemeProvider, Github } from 'musae'
+import { Layout as _Layout, ThemeProvider, Github, Menu } from 'musae'
 import Link from 'next/link'
 import { type ReactNode } from 'react'
 
@@ -17,14 +17,27 @@ const Provided = (props: Props) => {
             <span className='text-3xl font-medium'>asiz.dev</span>
           </Link>
 
-          <ul className='hidden lg:flex'>
-            <li>
-              <span className='ml-6 text-sm font-bold'>Docs</span>
-            </li>
-            <li>
-              <span className='ml-6 text-sm font-bold'>About us</span>
-            </li>
-          </ul>
+          <Menu
+            mode='horizontal'
+            className='hidden lg:flex'
+            items={[
+              {
+                key: '/docs',
+                label: <span className='text-sm font-bold'>Docs</span>,
+                children: [
+                  {
+                    key: '/docs/components',
+                    label: '组件'
+                  },
+                  {
+                    key: '/docs/hooks',
+                    label: 'Hooks'
+                  }
+                ]
+              },
+              { key: '/about-us', label: <span className='text-sm font-bold'>About us</span>, children: [] }
+            ]}
+          />
 
           <ul className='flex items-center justify-end flex-1'>
             <li>
