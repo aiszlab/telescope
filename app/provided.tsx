@@ -27,11 +27,11 @@ const Provided = (props: Props) => {
                 children: [
                   {
                     key: '/docs/components',
-                    label: '组件'
+                    label: <Link href='/components'>组件</Link>
                   },
                   {
                     key: '/docs/hooks',
-                    label: 'Hooks'
+                    label: <Link href='/hooks'>Hooks</Link>
                   }
                 ]
               },

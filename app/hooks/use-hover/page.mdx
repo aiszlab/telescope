@@ -8,8 +8,10 @@ import Usage from '@/components/usage'
 
 <Usage src='/hooks/use-hover/basic.tsx' title='基本' description='最简单的用法。' />
 
-## API
+## Return
 
-| 参数 | 说明 | 类型 | 默认值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+| 出参           | 说明                   | 类型         |
+| -------------- | ---------------------- | ------------ |
+| isHovered      | 当前元素是否被 hover   | `boolean`    |
+| onPointerEnter | 鼠标移入当前元素的事件 | `() => void` |
+| onPointerLeave | 鼠标移出当前元素的事件 | `() => void` |
