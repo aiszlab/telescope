@@ -3,7 +3,7 @@
 import { useMount, useBoolean } from '@aiszlab/relax'
 import { useMessage, Button } from 'musae'
 
-const MyComponent = () => {
+const HelloWorld = () => {
   const [messager, holder] = useMessage()
 
   useMount(() => {
@@ -24,7 +24,7 @@ const Basic = () => {
   return (
     <div>
       <Button onClick={toggle}>{isOn ? 'unmount' : 'mount'}</Button>
-      {isOn && <MyComponent />}
+      {isOn && <HelloWorld />}
     </div>
   )
 }

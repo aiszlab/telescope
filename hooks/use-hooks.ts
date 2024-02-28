@@ -33,6 +33,16 @@ export const useHooks = () => {
             label: 'useHover'
           }
         ]
+      },
+      {
+        key: '/hooks/state',
+        label: 'State',
+        children: [
+          {
+            key: '/hooks/use-controlled-state',
+            label: 'useControlledState'
+          }
+        ]
       }
     ]
   }, [])
