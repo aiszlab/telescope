@@ -53,6 +53,10 @@ export const useHooks = () => {
           {
             key: '/hooks/use-boolean',
             label: 'useBoolean'
+          },
+          {
+            key: '/hooks/use-default',
+            label: 'useDefault'
           }
         ]
       },
@@ -67,6 +71,18 @@ export const useHooks = () => {
           {
             key: '/hooks/use-throttle-callback',
             label: 'useThrottleCallback'
+          },
+          {
+            key: '/hooks/use-event',
+            label: 'useEvent'
+          },
+          {
+            key: '/hooks/use-force-update',
+            label: 'useForceUpdate'
+          },
+          {
+            key: '/hooks/use-refs',
+            label: 'useRefs'
           }
         ]
       }
