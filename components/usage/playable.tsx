@@ -15,7 +15,7 @@ interface Props {
 
 const Playable = ({ title, render, source }: Props) => {
   const theme = useTheme()
-  const { isOn: isCollapsed, toggle } = useBoolean(true)
+  const [isCollapsed, { toggle }] = useBoolean(true)
   const register = useContext(Context)?.register
 
   useMount(() => {

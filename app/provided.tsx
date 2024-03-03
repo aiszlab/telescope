@@ -55,6 +55,7 @@ const Provided = (props: Props) => {
           </ul>
         </_Layout.Header>
 
+        {/* @ts-ignore */}
         <_Layout.Main className='flex-1 flex flex-col'>{props.children}</_Layout.Main>
       </_Layout>
     </ThemeProvider>
