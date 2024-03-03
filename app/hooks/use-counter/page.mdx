@@ -1,0 +1,29 @@
+import Usage from '@/components/usage'
+
+# useCounter
+
+计数器钩子，用于处理数字计数器。
+
+## 代码演示
+
+<Usage src='/hooks/use-counter/basic.tsx' title='基本' description='最简单的用法。' />
+
+## API
+
+| 参数         | 说明   | 类型                     | 默认值      |
+| ------------ | ------ | ------------------------ | ----------- |
+| initialState | 初始值 | `number \| () => number` | -           |
+| min          | 最小值 | `number`                 | `-Infinity` |
+| max          | 最大值 | `number`                 | `Infinity`  |
+
+## Return
+
+| 参数     | 说明       | 类型                                |
+| -------- | ---------- | ----------------------------------- |
+| count    | 计数值     | `number \| () => number`            |
+| add      | 增加函数   | `(step?: number) => void`           |
+| subtract | 减少函数   | `subtract: (step?: number) => void` |
+| first    | 改为最小值 | `() => void`                        |
+| last     | 改为最大值 | `() => void`                        |
+| reset    | 改为初始值 | `() => void`                        |
+| setCount | 设置函数   | `Dispatch<SetStateAction<number>>`  |

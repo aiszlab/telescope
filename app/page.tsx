@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation'
 import { useCallback } from 'react'
 import dayjs from 'dayjs'
 
+const CURRENT_AT = dayjs()
+
 const App = () => {
   const router = useRouter()
 
@@ -23,7 +25,7 @@ const App = () => {
           &nbsp;🥳
         </h1>
 
-        <div className='bg-slate-600 w-full py-20'>
+        <div className='bg-slate-600 w-full py-20 flex-1'>
           <h1 className='max-w-7xl text-6xl text-white px-20 font-bold'>
             <span>
               Build&nbsp;<b className='text-green-600'>optimized</b>&nbsp;websites&nbsp;
@@ -40,7 +42,7 @@ const App = () => {
         </div>
       </main>
 
-      <footer className='bg-slate-800 p-10 flex flex-col items-center'>
+      <footer className='bg-slate-800 text-white p-10 flex flex-col items-center'>
         <div className='flex w-full mb-6'>
           <div className='flex-1 px-2'>
             <h6 className='font-bold text-lg mb-5'>Learn</h6>
@@ -55,7 +57,7 @@ const App = () => {
             </ul>
           </div>
         </div>
-        <p>Copyright © {dayjs().get('y')} fantufantu</p>
+        <p>Copyright © {CURRENT_AT.get('y')} fantufantu</p>
       </footer>
     </>
   )

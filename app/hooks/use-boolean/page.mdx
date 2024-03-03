@@ -1,0 +1,25 @@
+import Usage from '@/components/usage'
+
+# useBoolean
+
+真假值钩子。
+
+## 代码演示
+
+<Usage src='/hooks/use-boolean/basic.tsx' title='基本' description='最简单的用法。' />
+
+## API
+
+| 参数         | 说明   | 类型                       | 默认值 |
+| ------------ | ------ | -------------------------- | ------ |
+| initialState | 初始值 | `boolean \| () => boolean` | -      |
+
+## Return
+
+| 参数       | 说明         | 类型                                |
+| ---------- | ------------ | ----------------------------------- |
+| isOn       | 真假值       | `number \| () => number`            |
+| turnOn     | 设置为真     | `() => void`                        |
+| turnOff    | 设置为假     | `() => void`                        |
+| toggle     | 设置为相反值 | `() => void`                        |
+| setBoolean | 设置函数     | `Dispatch<SetStateAction<boolean>>` |

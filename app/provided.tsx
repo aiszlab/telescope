@@ -1,14 +1,22 @@
 'use client'
 
-import { Layout as _Layout, ThemeProvider, Github, Menu } from 'musae'
+import { Layout as _Layout, ThemeProvider, Menu } from 'musae'
+import { Github } from 'musae/icons'
 import Link from 'next/link'
-import { type ReactNode } from 'react'
+import { Key, type ReactNode } from 'react'
+import { useRouter } from 'next/navigation'
 
 interface Props {
   children?: ReactNode
 }
 
 const Provided = (props: Props) => {
+  const router = useRouter()
+
+  const toDocs = (href: Key) => {
+    router.push(href.toString())
+  }
+
   return (
     <ThemeProvider>
       <_Layout>
@@ -26,17 +34,18 @@ const Provided = (props: Props) => {
                 label: <span className='text-sm font-bold'>Docs</span>,
                 children: [
                   {
-                    key: '/docs/components',
-                    label: <Link href='/components'>组件</Link>
+                    key: '/components',
+                    label: '组件'
                   },
                   {
-                    key: '/docs/hooks',
-                    label: <Link href='/hooks'>Hooks</Link>
+                    key: '/hooks',
+                    label: 'Hooks'
                   }
                 ]
               },
               { key: '/about-us', label: <span className='text-sm font-bold'>About us</span>, children: [] }
             ]}
+            onClick={toDocs}
           />
 
           <ul className='flex items-center justify-end flex-1'>
@@ -46,7 +55,7 @@ const Provided = (props: Props) => {
           </ul>
         </_Layout.Header>
 
-        <_Layout.Main>{props.children}</_Layout.Main>
+        <_Layout.Main className='flex-1 flex flex-col'>{props.children}</_Layout.Main>
       </_Layout>
     </ThemeProvider>
   )

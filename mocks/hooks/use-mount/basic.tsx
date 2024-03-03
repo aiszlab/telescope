@@ -19,11 +19,11 @@ const HelloWorld = () => {
 }
 
 const Basic = () => {
-  const { isOn, toggle } = useBoolean(false)
+  const [isOn, { turnOn }] = useBoolean(false)
 
   return (
     <div>
-      <Button onClick={toggle}>{isOn ? 'unmount' : 'mount'}</Button>
+      <Button onClick={turnOn}>{isOn ? 'unmount' : 'mount'}</Button>
       {isOn && <HelloWorld />}
     </div>
   )

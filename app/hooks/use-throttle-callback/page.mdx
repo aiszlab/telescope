@@ -1,0 +1,24 @@
+import Usage from '@/components/usage'
+
+# useThrottleCallback
+
+节流函数钩子。
+
+## 代码演示
+
+<Usage src='/hooks/use-throttle-callback/basic.tsx' title='基本' description='最简单的用法。' />
+
+## API
+
+| 参数     | 说明     | 类型     | 默认值 |
+| -------- | -------- | -------- | ------ |
+| callback | 执行函数 | `T`      | -      |
+| wait     | 等待时间 | `number` | 1000   |
+
+## Return
+
+| 参数     | 说明             | 类型         |
+| -------- | ---------------- | ------------ |
+| next     | 节流函数         | `T`          |
+| complete | 取消节流限制     | `() => void` |
+| cancel   | 中断执行中的函数 | `() => void` |

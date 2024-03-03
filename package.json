@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@aiszlab/relax": "^1.2.24",
+    "@aiszlab/relax": "1.2.28-beta.7",
     "@types/node": "20.11.20",
     "autoprefixer": "10.4.17",
     "clsx": "^2.0.0",
