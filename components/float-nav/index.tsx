@@ -7,17 +7,8 @@ const FloatNav = () => {
   if (items.length === 0) return
 
   return (
-    <nav>
-      <Menu
-        className='top-24'
-        variant='text'
-        items={items}
-        style={{
-          position: 'sticky'
-        }}
-        defaultExpandedKeys={items.map((item) => item.key)}
-        size='small'
-      />
+    <nav className='h-fit sticky top-24'>
+      <Menu variant='text' items={items} defaultExpandedKeys={items.map((item) => item.key)} size='small' />
     </nav>
   )
 }

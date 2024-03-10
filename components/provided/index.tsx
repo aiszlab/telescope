@@ -50,12 +50,13 @@ const Provided = (props: Props) => {
 
           <ul className='flex items-center justify-end flex-1'>
             <li>
-              <Github />
+              <a target='_blank' href='https://github.com/aiszlab/musae'>
+                <Github />
+              </a>
             </li>
           </ul>
         </_Layout.Header>
 
-        {/* @ts-ignore */}
         <_Layout.Main className='flex-1 flex flex-col'>{props.children}</_Layout.Main>
       </_Layout>
     </ThemeProvider>

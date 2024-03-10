@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, createElement, useContext, useEffect } from 'react'
+import { FC, createElement, useContext } from 'react'
 import { useTheme, Button, Divider } from 'musae'
 import { useBoolean, useMount } from '@aiszlab/relax'
 import clsx from 'clsx'
@@ -19,7 +19,7 @@ const Playable = ({ title, render, source }: Props) => {
   const register = useContext(Context)?.register
 
   useMount(() => {
-    register?.(title, '代码演示')
+    register?.(title, 'child')
   })
 
   return (

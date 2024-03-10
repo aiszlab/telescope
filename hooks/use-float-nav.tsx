@@ -1,44 +1,47 @@
 import { useEvent, useUpdateEffect } from '@aiszlab/relax'
 import { MenuItem } from 'musae'
 import { usePathname } from 'next/navigation'
-import { createContext, useMemo, useState } from 'react'
+import { createContext, useMemo, useRef, useState } from 'react'
 
 type ContextValue = {
-  register: (key: string, parentKey?: string) => void
+  register: (key: string, type?: 'parent' | 'child') => void
   items: MenuItem[]
 }
 
 export const Context = createContext<ContextValue | null>(null)
 
-export const useFloatNav = () => {
-  const [items, setItems] = useState<Map<string, Omit<MenuItem, 'key'>>>(new Map())
-  const pathname = usePathname()
+type NavItems = Map<string, Omit<MenuItem, 'key' | 'children'> & { children?: NavItems }>
 
-  const register = useEvent<ContextValue['register']>((key, parentKey) => {
+const toMenuItems = (items: NavItems): MenuItem[] => {
+  return Array.from(items.entries()).map(([key, { label, children }]) => {
+    return {
+      key,
+      label,
+      children: children && toMenuItems(children)
+    }
+  })
+}
+
+export const useFloatNav = () => {
+  const [items, setItems] = useState<NavItems>(new Map())
+  const pathname = usePathname()
+  const registedParentKey = useRef<string>()
+
+  const register = useEvent<ContextValue['register']>((key, type = 'parent') => {
     setItems((prev) => {
       const next = new Map(prev)
+      const hash = `#${key}`
 
-      if (!parentKey) {
+      if (type === 'parent') {
+        registedParentKey.current = key
         return next.set(key, {
-          label: <a href={`#${key}`}>{key}</a>
+          label: <a href={hash}>{key}</a>
         })
       }
 
-      const parent = next.has(parentKey)
-        ? next.get(parentKey)
-        : next
-            .set(parentKey, {
-              label: <a href={`#${key}`}>{key}</a>
-            })
-            .get(parentKey)
-      parent!.children = Array.from(
-        new Map(parent?.children?.map((child) => [child.key, child]))
-          .set(key, {
-            key,
-            label: <a href={`#${key}`}>{key}</a>
-          })
-          .values()
-      )
+      if (!registedParentKey.current) return next
+      const parent = next.get(registedParentKey.current)
+      parent && (parent.children = new Map(parent?.children).set(key, { label: <a href={hash}>{key}</a> }))
       return next
     })
   })
@@ -50,10 +53,7 @@ export const useFloatNav = () => {
   const contextValue = useMemo<ContextValue>(() => {
     return {
       register,
-      items: Array.from(items.entries()).map(([key, item]) => ({
-        ...item,
-        key
-      }))
+      items: toMenuItems(items)
     }
   }, [register, items])
 

@@ -1,0 +1,23 @@
+## 快速开始
+
+```bash
+yarn add @aiszlab/relax
+```
+
+hooks or utils for building your react project quickly
+
+## 如何使用
+
+```tsx
+import { useEvent } from '@aiszlab/relax'
+
+const App = () => {
+  const click = useEvent(() => {
+    // do something
+  })
+
+  return <Button onClick={click}>使用 relax</Button>
+}
+
+export default App
+```
