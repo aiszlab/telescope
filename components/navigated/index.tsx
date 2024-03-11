@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, type Key, useMemo } from 'react'
-import { Menu, Layout as _Layout, Button, useDark } from 'musae'
+import { Menu, Layout as _Layout, Button } from 'musae'
 import { useRouter, usePathname } from 'next/navigation'
 import { Context, useFloatNav } from '@/hooks/use-float-nav'
 import FloatNav from '@/components/float-nav'
@@ -26,8 +26,6 @@ const Navigated = ({ type, children }: Props) => {
     [router]
   )
 
-  const { toggle } = useDark()
-
   const defaultExpandedKeys = useMemo(() => {
     return items.map((item) => item.key)
   }, [items])
@@ -44,9 +42,6 @@ const Navigated = ({ type, children }: Props) => {
             defaultExpandedKeys={defaultExpandedKeys}
             defaultSelectedKeys={[pathname]}
           />
-          <Button className='h-fit' onClick={(e) => toggle(e as any)}>
-            11
-          </Button>
         </_Layout.Sider>
 
         <_Layout.Main className={clsx(styles.main, 'p-8 pt-0 grid gap-x-5')}>

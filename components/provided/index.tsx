@@ -1,10 +1,10 @@
 'use client'
 
 import { Layout as _Layout, ThemeProvider, Menu } from 'musae'
-import { Github } from 'musae/icons'
 import Link from 'next/link'
 import { Key, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
+import Toolbar from './toolbar'
 
 interface Props {
   children?: ReactNode
@@ -43,18 +43,12 @@ const Provided = (props: Props) => {
                   }
                 ]
               },
-              { key: '/about-us', label: <span className='text-sm font-bold'>About us</span>, children: [] }
+              { key: '/about-us', label: <span className='text-sm font-bold'>About us</span> }
             ]}
             onClick={toDocs}
           />
 
-          <ul className='flex items-center justify-end flex-1'>
-            <li>
-              <a target='_blank' href='https://github.com/aiszlab/musae'>
-                <Github />
-              </a>
-            </li>
-          </ul>
+          <Toolbar />
         </_Layout.Header>
 
         <_Layout.Main className='flex-1 flex flex-col'>{props.children}</_Layout.Main>
