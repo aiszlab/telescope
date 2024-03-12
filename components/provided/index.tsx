@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { Key, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import Toolbar from './toolbar'
+import { DocSearch } from '@docsearch/react'
+import '@docsearch/css'
 
 interface Props {
   children?: ReactNode
@@ -24,6 +26,8 @@ const Provided = (props: Props) => {
           <Link href='/'>
             <span className='text-3xl font-medium'>asiz.dev</span>
           </Link>
+
+          <DocSearch appId='0N3PFNNWHU' indexName='aisz.dev' apiKey='62e7d04736181990874b386c5f35fd04' />
 
           <Menu
             mode='horizontal'
