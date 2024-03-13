@@ -1,3 +1,12 @@
 .main {
-  grid-template-columns: calc(100% - 200px) 180px;
+  --navigation-size: 0px;
+  --spacing: 20px;
+  grid-template-columns: calc(100% - calc(var(--navigation-size) + var(--spacing))) var(--navigation-size);
+  column-gap: var(--spacing);
+}
+
+@media (min-width: 1024px) {
+  .main {
+    --navigation-size: 180px;
+  }
 }

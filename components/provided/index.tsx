@@ -31,7 +31,7 @@ const Provided = (props: Props) => {
 
           <Menu
             mode='horizontal'
-            className='hidden lg:flex'
+            className='hidden lg:flex flex-1 justify-end'
             items={[
               {
                 key: '/docs',

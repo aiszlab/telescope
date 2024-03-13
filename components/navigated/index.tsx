@@ -44,9 +44,9 @@ const Navigated = ({ type, children }: Props) => {
           />
         </_Layout.Sider>
 
-        <_Layout.Main className={clsx(styles.main, 'p-8 pt-0 grid gap-x-5')}>
+        <_Layout.Main className={clsx(styles.main, 'p-8 pt-0 grid')}>
           <div>{children}</div>
-          <FloatNav />
+          <FloatNav className='hidden lg:block' />
         </_Layout.Main>
       </_Layout>
     </Context.Provider>

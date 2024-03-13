@@ -1,13 +1,18 @@
 import { Context } from '@/hooks/use-float-nav'
 import { useContext } from 'react'
 import { Menu } from 'musae'
+import clsx from 'clsx'
 
-const FloatNav = () => {
+interface Props {
+  className: string
+}
+
+const FloatNav = (props: Props) => {
   const items = useContext(Context)?.items ?? []
   if (items.length === 0) return
 
   return (
-    <nav className='h-fit sticky top-24'>
+    <nav className={clsx('h-fit sticky top-24', props.className)}>
       <Menu variant='text' items={items} defaultExpandedKeys={items.map((item) => item.key)} size='small' />
     </nav>
   )

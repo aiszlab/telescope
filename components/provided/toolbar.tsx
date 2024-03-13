@@ -5,7 +5,7 @@ const Toolbar = () => {
   const { mode, toggle } = useTheme()
 
   return (
-    <ul className='flex items-center justify-end flex-1 gap-x-2'>
+    <ul className='flex items-center justify-end gap-x-2'>
       <li>
         <Button shape='circular' variant='text' onClick={toggle}>
           {mode === 'dark' ? <WbSunny /> : <Bedtime />}
