@@ -67,24 +67,16 @@ body:
       description: |
         Which package (or packages) do you think your issue is related to?
         **Tip**: The first line of the stack trace can help you to figure out this
-
-        The package isn't listed below? Try to find its repository [here](https://github.com/orgs/aiszlab/repositories) and open the issue there instead
       options:
         - label: "I don't know. Or some 3rd-party package"
         - label: '<code>@musae</code>'
         - label: '<code>@aiszlab/relax</code>'
-        - label: 'Other (see below)'
-
-  - type: input
-    attributes:
-      label: 'Other package'
-      description: 'If your issue is related to some package that is not listed above nor under @nestjs org, write its name here'
 
   - type: input
     attributes:
       label: 'Node.js version'
       description: 'Which version of Node.js are you using?'
-      placeholder: '14.17.6'
+      placeholder: '18'
 
   - type: checkboxes
     validations:
