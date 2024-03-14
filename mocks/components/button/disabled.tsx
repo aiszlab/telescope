@@ -1,10 +1,9 @@
 'use client'
-
 import { Button, Grid } from 'musae'
 
 const { Row, Col } = Grid
 
-const Basic = () => {
+const Disabled = () => {
   return (
     <Row gutter={8} justify='center' align='center'>
       <Col span={8}>
@@ -26,4 +25,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default Disabled

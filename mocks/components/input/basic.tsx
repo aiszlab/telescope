@@ -1,5 +1,4 @@
 'use client'
-
 import { Input } from 'musae'
 
 const Basic = () => {

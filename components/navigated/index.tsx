@@ -35,7 +35,7 @@ const Navigated = ({ type, children }: Props) => {
   return (
     <Context.Provider value={contextValue}>
       <_Layout>
-        <_Layout.Sider className='px-3 sticky top-0 overflow-hidden hover:overflow-y-auto'>
+        <_Layout.Sider className='px-3 sticky top-0 overflow-hidden hover:overflow-y-auto hidden lg:block'>
           <Menu
             items={items}
             onClick={onMenuClick}
@@ -44,7 +44,7 @@ const Navigated = ({ type, children }: Props) => {
           />
         </_Layout.Sider>
 
-        <_Layout.Main className={clsx(styles.main, 'p-8 pt-0 grid')}>
+        <_Layout.Main className={clsx(styles.main, 'p-8 pt-0 grid col-end-auto')}>
           <div>{children}</div>
           <FloatNav className='hidden lg:block' />
         </_Layout.Main>
