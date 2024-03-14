@@ -23,7 +23,8 @@ export default function Layout(props: Props) {
       <head>
         <link
           rel='stylesheet'
-          href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css'
+          href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css'
+          // https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css
         />
       </head>
       <body className={clsx(inter.className, 'flex flex-col min-h-screen')}>
