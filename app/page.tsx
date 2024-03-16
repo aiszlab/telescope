@@ -19,12 +19,12 @@ const App = () => {
   return (
     <>
       <main className='flex-1 flex flex-col items-center content-center flex-nowrap'>
-        <div className='p-20'>
+        <div className='p-32'>
           <h1 className='text-5xl font-bold'>
-            🎉
+            🎉{' '}
             <span className='bg-clip-text text-transparent from-green-700 to-cyan-200 bg-gradient-to-br '>
               musae is out!️
-            </span>
+            </span>{' '}
             🥳
           </h1>
         </div>

@@ -27,7 +27,7 @@ export default function Layout(props: Props) {
           // https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css
         />
       </head>
-      <body className={clsx(inter.className, 'flex flex-col min-h-screen')}>
+      <body className={inter.className}>
         <Provided>{props.children}</Provided>
       </body>
     </html>
