@@ -38,13 +38,12 @@ const App = () => {
           <h1 className='text-4xl px-20 font-bold' style={{ color: theme.colors['on-secondary-container'] }}>
             <span>
               Build <b className='text-green-600'>optimized</b> websites <b className='text-green-600'>quickly</b>,
-              focus on your <b className='text-green-600'>content</b>
+              focus on your <b className='text-green-600'>logic</b>
             </span>
           </h1>
 
           <div className='mt-6 px-20 py-6 flex items-center gap-x-6'>
             <Button onClick={start}>Get Started</Button>
-            <Button onClick={start}>Try a Demo</Button>
           </div>
         </div>
       </main>

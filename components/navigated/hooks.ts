@@ -25,6 +25,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/divider',
               label: 'Divider 分割线'
+            },
+            {
+              key: '/components/waterfall',
+              label: 'Waterfall 瀑布流'
             }
           ]
         },
