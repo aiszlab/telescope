@@ -1591,7 +1591,7 @@ fraction.js@^4.3.7:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.3.7.tgz#06ca0085157e42fda7f9e726e79fefc4068840f7"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
-framer-motion@^11.0.6:
+framer-motion@11.0.8:
   version "11.0.8"
   resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-11.0.8.tgz#8f97a18cbad5858d85b53bc325c40a03d0a5c203"
   integrity sha512-1KSGNuqe1qZkS/SWQlDnqK2VCVzRVEoval379j0FiUBJAZoqgwyvqFkfvJbgW2IPFo4wX16K+M0k5jO23lCIjA==
@@ -2986,10 +2986,10 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musae@^0.1.28:
-  version "0.1.28"
-  resolved "https://registry.npmjs.org/musae/-/musae-0.1.28.tgz#acf39358232f67d54498eecf5ce663939b6d61d3"
-  integrity sha512-TmpDujXLfdqXlo4d2inaA3D9hzblzsgqyc5sLQHi9Uu3B6RbXhFhwK959Q+ZzpaNie+11vHNK+LjrEItZhbmow==
+musae@^0.1.30:
+  version "0.1.30"
+  resolved "https://registry.npmjs.org/musae/-/musae-0.1.30.tgz#95c7cbd182790c70c8c0554fb98828ca181f366a"
+  integrity sha512-AZeDo9aqDE+QM+qtzkHLqWCLw2O5FgeKM5E9lta0M+bo2FhAE7Li7ftfLizycLgmZai3BteKporJwqmSBV1H3g==
   dependencies:
     "@aiszlab/relax" "1.2.29"
     "@popperjs/core" "^2.11.8"
@@ -2997,7 +2997,7 @@ musae@^0.1.28:
     clsx "^2.1.0"
     dayjs "^1.11.10"
     deepmerge "^4.3.1"
-    framer-motion "^11.0.6"
+    framer-motion "11.0.8"
     react-hook-form "^7.47.0"
 
 mz@^2.7.0:
