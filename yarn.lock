@@ -2986,10 +2986,10 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musae@^0.1.30:
-  version "0.1.30"
-  resolved "https://registry.npmjs.org/musae/-/musae-0.1.30.tgz#95c7cbd182790c70c8c0554fb98828ca181f366a"
-  integrity sha512-AZeDo9aqDE+QM+qtzkHLqWCLw2O5FgeKM5E9lta0M+bo2FhAE7Li7ftfLizycLgmZai3BteKporJwqmSBV1H3g==
+musae@^0.1.31:
+  version "0.1.31"
+  resolved "https://registry.npmjs.org/musae/-/musae-0.1.31.tgz#b778ff9ef5eae1f4728e44cae63af06794df9499"
+  integrity sha512-0b55ijP4NxZO3RDQYwrkOAy/wUTszfhaipJI4vLmHuS0NDZ03y65f8B5wPOdcKsJmhtecvjIfsRpo4zYfykp3g==
   dependencies:
     "@aiszlab/relax" "1.2.29"
     "@popperjs/core" "^2.11.8"
