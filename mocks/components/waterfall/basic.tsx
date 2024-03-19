@@ -11,7 +11,7 @@ const Basic = () => {
         return (
           <div
             key={index}
-            className='bg-purple-400 text-white w-9 rounded flex justify-center items-center shadow'
+            className='bg-purple-400 text-white rounded flex justify-center items-center shadow'
             style={{ height }}
           >
             {index + 1}
