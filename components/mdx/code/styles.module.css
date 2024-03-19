@@ -1,0 +1,4 @@
+.code-line {
+  background-color: var(--code-line-bg);
+  color: var(--code-line-color);
+}

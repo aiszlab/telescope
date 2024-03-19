@@ -1,0 +1,3 @@
+.head > tr > th {
+  background-color: var(--table-header-bg);
+}
