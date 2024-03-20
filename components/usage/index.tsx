@@ -9,6 +9,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeSanitize from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
+import styles from './styles.module.css'
 
 interface Props {
   src: string
@@ -40,7 +41,7 @@ const Usage = async ({ src, title, description }: Props) => {
     import(`../../mocks${src}`).then((lazy) => lazy.default)
   ])
 
-  return <Playable title={title} description={description} render={render} source={source} />
+  return <Playable title={title} description={description} render={render} source={source} className={styles.usage} />
 }
 
 export default Usage

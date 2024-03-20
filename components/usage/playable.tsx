@@ -13,9 +13,10 @@ interface Props {
   render: FC
   source: string
   description: string
+  className?: string
 }
 
-const Playable = ({ title, render, source, description }: Props) => {
+const Playable = ({ title, render, source, description, className }: Props) => {
   const theme = useTheme()
   const [isCollapsed, { toggle }] = useBoolean(true)
   const register = useContext(Context)?.register
@@ -25,7 +26,7 @@ const Playable = ({ title, render, source, description }: Props) => {
   })
 
   return (
-    <div>
+    <div className={className}>
       <H4>{title}</H4>
 
       <P>{description}</P>
