@@ -22,7 +22,7 @@ const Provided = (props: Props) => {
   return (
     <ThemeProvider>
       <_Layout className='min-h-screen'>
-        <_Layout.Header className='flex items-center gap-x-4'>
+        <_Layout.Header className='flex items-center gap-x-4 shadow-sm'>
           <Link href='/'>
             <span className='text-3xl font-medium'>asiz.dev</span>
           </Link>

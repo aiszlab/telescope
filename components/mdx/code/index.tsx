@@ -12,7 +12,7 @@ const Code = (props: Props) => {
   const theme = useTheme()
   return (
     <code
-      className={clsx(styles['code-line'], 'px-1.5 py-0.5 rounded text-xs')}
+      className={clsx(styles['code-line'], 'px-1.5 py-0.5 rounded text-xs mx-0.5')}
       style={{
         // @ts-ignore
         '--code-line-color': theme.colors['on-surface-variant'],
