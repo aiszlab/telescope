@@ -10,15 +10,22 @@ import Usage from '@/components/usage'
 
 ## API
 
-| 参数     | 说明     | 类型     | 默认值 |
-| -------- | -------- | -------- | ------ |
-| callback | 执行函数 | `T`      | -      |
-| wait     | 等待时间 | `number` | 1000   |
+| 参数     | 说明     | 类型                   | 默认值 |
+| -------- | -------- | ---------------------- | ------ |
+| callback | 执行函数 | `T \| Throttler<T, R>` | -      |
+| duration | 等待时间 | `number`               | 1000   |
+
+```ts
+type Throttler<T extends Callable, R extends Array<unknown> = Parameters<T>> = {
+  callback: (...args: R) => ReturnType<T>
+  pipeable: Nullable<(...args: Parameters<T>) => R | Promise<R>>
+}
+```
 
 ## Return
 
-| 参数     | 说明             | 类型         |
-| -------- | ---------------- | ------------ |
-| next     | 节流函数         | `T`          |
-| complete | 取消节流限制     | `() => void` |
-| cancel   | 中断执行中的函数 | `() => void` |
+| 参数  | 说明             | 类型                               |
+| ----- | ---------------- | ---------------------------------- |
+| next  | 防抖函数         | `(...args: Parameters<T>) => void` |
+| flush | 取消防抖限制     | `() => void`                       |
+| abort | 中断执行中的函数 | `() => void`                       |
