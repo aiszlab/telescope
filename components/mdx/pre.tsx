@@ -11,7 +11,7 @@ const Pre = (props: Props) => {
 
   return (
     <pre
-      className='relative rounded my-3 p-4'
+      className='relative rounded my-3 p-4 overflow-x-auto'
       style={{
         backgroundColor: theme.colors['surface-container-low']
       }}

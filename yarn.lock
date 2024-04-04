@@ -7,7 +7,7 @@
   resolved "https://registry.npmjs.org/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@aiszlab/relax@1.2.29":
+"@aiszlab/relax@1.2.29", "@aiszlab/relax@^1.2.29":
   version "1.2.29"
   resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.29.tgz#991391c68118e6dacaf7a606d960a6012c021ee2"
   integrity sha512-E81aVC1hN4SGkDy4vLg2fV257x9H589R4QRQme04GB37trsyP/VaccMwHPU6CX+qXEIbk4K7T/LSXxyS1Mk7SA==

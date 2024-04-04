@@ -7,20 +7,32 @@ import Usage from '@/components/usage'
 ## 代码演示
 
 <Usage src='/hooks/use-debounce-callback/basic.tsx' title='基本' description='最简单的用法。' />
+<Usage
+  src='/hooks/use-debounce-callback/sortable.tsx'
+  title='有序性'
+  description='当你的需要防抖的结果有序返回时的用法。'
+/>
 
 ## API
 
-| 参数     | 说明     | 类型     | 默认值 |
-| -------- | -------- | -------- | ------ |
-| callback | 执行函数 | `T`      | -      |
-| wait     | 等待时间 | `number` | 1000   |
+| 参数      | 说明     | 类型                   | 默认值 |
+| --------- | -------- | ---------------------- | ------ |
+| debouncer | 执行函数 | `T \| Debouncer<T, R>` | -      |
+| wait      | 等待时间 | `number`               | 1000   |
+
+### Debouncer
+
+```ts
+type Debouncer<T extends Callable, R extends Array<unknown> = Parameters<T>> = {
+  callback: (...args: R) => ReturnType<T>
+  pipeable: Nullable<(...args: Parameters<T>) => R | Promise<R>>
+}
+```
 
 ## Return
 
-## Return
-
-| 参数     | 说明             | 类型         |
-| -------- | ---------------- | ------------ |
-| next     | 防抖函数         | `T`          |
-| complete | 取消防抖限制     | `() => void` |
-| cancel   | 中断执行中的函数 | `() => void` |
+| 参数  | 说明             | 类型                               |
+| ----- | ---------------- | ---------------------------------- |
+| next  | 防抖函数         | `(...args: Parameters<T>) => void` |
+| flush | 取消防抖限制     | `() => void`                       |
+| abort | 中断执行中的函数 | `() => void`                       |
