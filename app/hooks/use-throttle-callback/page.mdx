@@ -6,7 +6,15 @@ import Usage from '@/components/usage'
 
 ## 代码演示
 
-<Usage src='/hooks/use-throttle-callback/basic.tsx' title='基本' description='最简单的用法。' />
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-throttle-callback/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    }
+  ]}
+/>
 
 ## API
 
@@ -14,6 +22,8 @@ import Usage from '@/components/usage'
 | -------- | -------- | ---------------------- | ------ |
 | callback | 执行函数 | `T \| Throttler<T, R>` | -      |
 | duration | 等待时间 | `number`               | 1000   |
+
+### Throttler
 
 ```ts
 type Throttler<T extends Callable, R extends Array<unknown> = Parameters<T>> = {
@@ -26,6 +36,6 @@ type Throttler<T extends Callable, R extends Array<unknown> = Parameters<T>> = {
 
 | 参数  | 说明             | 类型                               |
 | ----- | ---------------- | ---------------------------------- |
-| next  | 防抖函数         | `(...args: Parameters<T>) => void` |
-| flush | 取消防抖限制     | `() => void`                       |
+| next  | 节流函数         | `(...args: Parameters<T>) => void` |
+| flush | 取消节流限制     | `() => void`                       |
 | abort | 中断执行中的函数 | `() => void`                       |

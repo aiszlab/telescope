@@ -8,7 +8,7 @@ import { Context } from '@/hooks/use-float-nav'
 import H4 from '@/components/mdx/h4'
 import P from '@/components/mdx/p'
 
-interface Props {
+export interface Props {
   title: string
   render: FC
   source: string

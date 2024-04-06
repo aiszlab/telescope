@@ -1,12 +1,22 @@
 'use client'
-
-import { Form, Input, Button } from 'musae'
+import { Form, Input, Button, FormRef } from 'musae'
+import { useRef } from 'react'
 
 const Item = Form.Item
 
 const Basic = () => {
+  const ref = useRef<FormRef>(null)
+
+  const login = async () => {
+    ref.current?.validate()
+  }
+
+  const reset = () => {
+    ref.current?.reset()
+  }
+
   return (
-    <Form>
+    <Form ref={ref}>
       <Item label='用户名' required name='username'>
         <Input />
       </Item>
@@ -16,7 +26,8 @@ const Basic = () => {
       </Item>
 
       <Item>
-        <Button>登录</Button>
+        <Button onClick={login}>登录</Button>
+        <Button onClick={reset}>重置</Button>
       </Item>
     </Form>
   )

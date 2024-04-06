@@ -1,9 +1,8 @@
 'use client'
-
 import { Loading } from 'musae'
 
 const Basic = () => {
-  return <Loading></Loading>
+  return <Loading />
 }
 
 export default Basic

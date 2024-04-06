@@ -24,7 +24,7 @@ const Provided = (props: Props) => {
       <_Layout className='min-h-screen'>
         <_Layout.Header className='flex items-center gap-x-4 shadow-sm'>
           <Link href='/'>
-            <span className='text-3xl font-medium'>asiz.dev</span>
+            <span className='text-3xl font-medium'>aisz.dev</span>
           </Link>
 
           <DocSearch appId='0N3PFNNWHU' indexName='aisz.dev' apiKey='62e7d04736181990874b386c5f35fd04' />

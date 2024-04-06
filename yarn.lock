@@ -7,10 +7,10 @@
   resolved "https://registry.npmjs.org/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@aiszlab/relax@1.2.29", "@aiszlab/relax@^1.2.29":
-  version "1.2.29"
-  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.29.tgz#991391c68118e6dacaf7a606d960a6012c021ee2"
-  integrity sha512-E81aVC1hN4SGkDy4vLg2fV257x9H589R4QRQme04GB37trsyP/VaccMwHPU6CX+qXEIbk4K7T/LSXxyS1Mk7SA==
+"@aiszlab/relax@^1.2.30":
+  version "1.2.30"
+  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.30.tgz#f8c13e508d3dcdf5efc51d40f4691ce00fb8181c"
+  integrity sha512-qcNH2EpClusY7hdVP0cQZbhUitwL4Q04jIOaK0pRp073V+DSZyl80CZrTexh2FBC2eeFBQ79zjCuHr0O6c8gQw==
   dependencies:
     react-is "^18.2.0"
     rxjs "^7.8.1"
@@ -2986,12 +2986,12 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musae@^0.1.32:
-  version "0.1.32"
-  resolved "https://registry.npmjs.org/musae/-/musae-0.1.32.tgz#a29fb2173bba13a88c161791a7d00215599d4052"
-  integrity sha512-rAxI9fcv1NiRzIw4+bKBCwM8llxCuwfonUzndSfyKKF5WxfRjFsjUheq2Nh43hiNDRurwDuLo2TP15L/zd3GZg==
+musae@^0.1.34:
+  version "0.1.34"
+  resolved "https://registry.npmjs.org/musae/-/musae-0.1.34.tgz#80722cc656fc7bb0a7e293d756197fe1a009e6a6"
+  integrity sha512-z/8LPAIJ0USELwV0UcINzXVocGxn4Tw3wbCA1BXOxFoPkQomYdGSV9vfN2QFzQxsxT6vT0Mc/wrJwE/KsFZ9ig==
   dependencies:
-    "@aiszlab/relax" "1.2.29"
+    "@aiszlab/relax" "^1.2.30"
     "@popperjs/core" "^2.11.8"
     "@tanstack/react-table" "^8.11.3"
     clsx "^2.1.0"
