@@ -176,6 +176,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/hooks/use-mounted',
               label: 'useMounted'
+            },
+            {
+              key: '/hooks/use-update-effect',
+              label: 'useUpdateEffect'
             }
           ]
         },
