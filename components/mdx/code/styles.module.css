@@ -1,4 +1,4 @@
-.code-line {
-  background-color: var(--code-line-bg);
-  color: var(--code-line-color);
+.code:not(.hljs) {
+  padding-inline: 6px;
+  margin-inline: 2px;
 }

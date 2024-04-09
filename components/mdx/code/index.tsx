@@ -6,17 +6,17 @@ import { useTheme } from 'musae'
 
 interface Props {
   children?: ReactNode
+  className?: string
 }
 
 const Code = (props: Props) => {
   const theme = useTheme()
   return (
     <code
-      className={clsx(styles['code-line'], 'px-1.5 py-0.5 rounded text-xs mx-0.5')}
+      className={clsx(props.className, styles.code, 'py-0.5 rounded text-xs')}
       style={{
-        // @ts-ignore
-        '--code-line-color': theme.colors['on-surface-variant'],
-        '--code-line-bg': theme.colors['surface-container']
+        backgroundColor: theme.colors['surface-container-low'],
+        color: theme.colors['on-surface']
       }}
     >
       {props.children}
