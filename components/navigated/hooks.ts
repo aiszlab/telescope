@@ -113,6 +113,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Avatar 头像'
             },
             {
+              key: '/components/image',
+              label: 'Image 图片'
+            },
+            {
               key: '/components/loading',
               label: 'Loading 加载中'
             },
