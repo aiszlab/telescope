@@ -1,0 +1,29 @@
+import Usage from '@/components/usage'
+
+# Space 边距容器
+
+自带边距的组件，用于控制元素之间的距离。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/space/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    },
+    {
+      src: '/components/space/custom-gutter.tsx',
+      title: '自定义间距',
+      description: '自定义间距的容器。'
+    }
+  ]}
+/>
+
+## API
+
+| 参数     | 说明             | 类型                           | 默认值   |
+| -------- | ---------------- | ------------------------------ | -------- |
+| gutter   | 子元素之间的边距 | `number` \| `[number, number]` | `[4, 4]` |
+| children | 子元素           | `ReactNode`                    | `void 0` |

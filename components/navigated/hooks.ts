@@ -29,6 +29,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/waterfall',
               label: 'Waterfall 瀑布流'
+            },
+            {
+              key: '/components/space',
+              label: 'Space 间距容器'
             }
           ]
         },

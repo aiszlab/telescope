@@ -7,16 +7,16 @@ import clsx from 'clsx'
 import { Context } from '@/hooks/use-float-nav'
 import H4 from '@/components/mdx/h4'
 import P from '@/components/mdx/p'
+import styles from './styles.module.css'
 
 export interface Props {
   title: string
   render: FC
   source: string
   description: string
-  className?: string
 }
 
-const Playable = ({ title, render, source, description, className }: Props) => {
+const Playable = ({ title, render, source, description }: Props) => {
   const theme = useTheme()
   const [isCollapsed, { toggle }] = useBoolean(true)
   const register = useContext(Context)?.register
@@ -26,7 +26,7 @@ const Playable = ({ title, render, source, description, className }: Props) => {
   })
 
   return (
-    <div className={className}>
+    <div>
       <H4>{title}</H4>
 
       <P>{description}</P>
@@ -53,7 +53,11 @@ const Playable = ({ title, render, source, description, className }: Props) => {
 
         {/* 代码块 */}
         <div
-          className={clsx({ 'h-0': isCollapsed }, 'overflow-hidden rounded-lg')}
+          className={clsx({ 'h-0': isCollapsed }, 'overflow-hidden rounded-lg', styles.playable)}
+          style={{
+            // @ts-ignore
+            '--text-color': theme.colors['on-surface']
+          }}
           dangerouslySetInnerHTML={{
             __html: source
           }}

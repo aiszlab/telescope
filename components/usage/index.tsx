@@ -10,7 +10,6 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeSanitize from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
-import styles from './styles.module.css'
 
 interface Source {
   src: string
@@ -53,8 +52,7 @@ const Usage = async ({ sources, small = false }: Props) => {
         description,
         title,
         source,
-        render,
-        className: styles.usage
+        render
       }
     })
   )
