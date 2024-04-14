@@ -1,11 +1,11 @@
 'use client'
-import { Space, Chip } from 'musae'
+import { Space } from 'musae'
 
 const CustomGutter = () => {
   return (
     <Space gutter={32}>
-      <Chip>第一个标签</Chip>
-      <Chip>第二个标签</Chip>
+      <span>第一个标签</span>
+      <span>第二个标签</span>
     </Space>
   )
 }
