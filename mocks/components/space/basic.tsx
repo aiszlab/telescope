@@ -1,11 +1,11 @@
 'use client'
-import { Space } from 'musae'
+import { Space, Tag } from 'musae'
 
 const Basic = () => {
   return (
     <Space>
-      <span>第一个标签</span>
-      <span>第二个标签</span>
+      <Tag size='large'>第一个标签</Tag>
+      <Tag size='large'>第二个标签</Tag>
     </Space>
   )
 }

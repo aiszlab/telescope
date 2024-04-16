@@ -121,6 +121,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Image 图片'
             },
             {
+              key: '/components/tag',
+              label: 'Tag 标签'
+            },
+            {
               key: '/components/loading',
               label: 'Loading 加载中'
             },
