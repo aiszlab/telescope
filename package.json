@@ -32,7 +32,7 @@
     "@next/mdx": "^14.2.1",
     "@types/mdx": "^2.0.11",
     "@types/node": "^20.12.7",
-    "@types/react": "^18.2.65",
+    "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.19",
     "eslint-config-next": "^14.1.0",
     "rehype-highlight": "^7.0.0",
