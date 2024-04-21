@@ -15,6 +15,16 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
           label: 'Getting Started'
         },
         {
+          key: '/components/common-group',
+          label: '通用',
+          children: [
+            {
+              key: '/components/icon',
+              label: 'Icon 图标'
+            }
+          ]
+        },
+        {
           key: '/components/layout-group',
           label: '布局',
           children: [

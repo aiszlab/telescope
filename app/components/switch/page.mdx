@@ -12,18 +12,25 @@ import Usage from '@/components/usage'
 ## 代码演示
 
 <Usage
+  small
   sources={[
     {
       src: '/components/switch/basic.tsx',
       title: '基本',
       description: '最简单的用法。'
+    },
+    {
+      src: '/components/switch/icon.tsx',
+      title: '图标',
+      description: '携带 icon 的开关。'
     }
   ]}
 />
 
 ## API
 
-| 参数     | 说明               | 类型                                            | 默认值 |
-| -------- | ------------------ | ----------------------------------------------- | ------ |
-| value    | 是否开启           | `boolean`                                       | -      |
-| onChange | 发生改变的回调事件 | `(value: boolean) => void \| PromiseLike<void>` | -      |
+| 参数     | 说明               | 类型                                            | 默认值   |
+| -------- | ------------------ | ----------------------------------------------- | -------- |
+| value    | 是否开启           | `boolean`                                       | `void 0` |
+| onChange | 发生改变的回调事件 | `(value: boolean) => void \| PromiseLike<void>` | `void 0` |
+| icon     | 显示`icon`         | `boolean`                                       | `false`  |

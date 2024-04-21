@@ -1,5 +1,4 @@
 'use client'
-
 import { Switch } from 'musae'
 
 const Basic = () => {
