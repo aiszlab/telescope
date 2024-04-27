@@ -2,7 +2,7 @@
 import { Input } from 'musae'
 
 const AddonAll = () => {
-  return <Input prefix='￥' suffix='RMB' />
+  return <Input leading='￥' trailing='RMB' />
 }
 
 export default AddonAll

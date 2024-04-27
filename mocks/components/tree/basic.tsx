@@ -16,7 +16,7 @@ const NODES: TreeNode[] = [
 ]
 
 const Basic = () => {
-  return <Tree nodes={NODES} />
+  return <Tree nodes={NODES} className='w-64' />
 }
 
 export default Basic

@@ -13,6 +13,7 @@ import Usage from '@/components/usage'
 ## 代码演示
 
 <Usage
+  small
   sources={[
     {
       src: '/components/select/basic.tsx',
@@ -28,6 +29,11 @@ import Usage from '@/components/usage'
       src: '/components/select/searchable.tsx',
       title: '可搜索',
       description: '可以通过输入框筛选下拉选项的内容。'
+    },
+    {
+      src: '/components/select/controlled.tsx',
+      title: '受控',
+      description: '通过状态值控制选项渲染。'
     }
   ]}
 />

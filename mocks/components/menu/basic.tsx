@@ -39,7 +39,7 @@ const ITEMS = [
 ]
 
 const Basic = () => {
-  return <Menu items={ITEMS} selectedKeys={['option-3']} />
+  return <Menu items={ITEMS} selectedKeys={['option-3']} className='w-64' />
 }
 
 export default Basic
