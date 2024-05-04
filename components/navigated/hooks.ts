@@ -101,6 +101,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Switch 开关'
             },
             {
+              key: '/components/rate',
+              label: 'Rate 评分'
+            },
+            {
               key: '/components/form',
               label: 'Form 表单'
             },
