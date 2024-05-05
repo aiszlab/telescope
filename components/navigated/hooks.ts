@@ -179,6 +179,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/tooltip',
               label: 'Tooltip 消息提示'
+            },
+            {
+              key: '/components/tour',
+              label: 'Tour 漫游式引导'
             }
           ]
         }

@@ -15,10 +15,10 @@
     react-is "^18.2.0"
     rxjs "^7.8.1"
 
-"@aiszlab/relax@^1.2.35":
-  version "1.2.35"
-  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.35.tgz#6ad7e33ac37f16af3c8f5197705387935f167b7a"
-  integrity sha512-1xp5APBuaP/97bnLIOHXGO6XHAoKP/kMubzNxpOqRjnz3IAF4S0bX9tBZ6pEy/43g0I1e7mPWJJVb/ABAkx8HA==
+"@aiszlab/relax@^1.2.37":
+  version "1.2.37"
+  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.37.tgz#f7dec55e8d35976b491d36a6541f2b6c81abcbbe"
+  integrity sha512-mk68QHAbLeDI8iWg0k1VJuLb+CQfg7OP3UMKq9828vcBnXknJr2RolBXWWZOeB/HkyDREh4udjS5CbUJfhdJow==
   dependencies:
     react-is "^18.2.0"
     rxjs "^7.8.1"
@@ -3000,12 +3000,12 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musae@^0.1.42:
-  version "0.1.42"
-  resolved "https://registry.npmjs.org/musae/-/musae-0.1.42.tgz#bbbc4045bfd573a15f5e3f95435ce702c4e78b9a"
-  integrity sha512-XPlb6GOeSC6ZqcVXc10FU67bQMcFpwbkoQJmIrCSyXhqwdTKMXxeNpP9D1B67VyPgEEb21/QDs7Szz/mhE9qrA==
+musae@^0.1.43:
+  version "0.1.43"
+  resolved "https://registry.npmjs.org/musae/-/musae-0.1.43.tgz#639f3d502c45ac568dcde96d0eca4a14117535dc"
+  integrity sha512-o1eHs5XDhJKJBQQdEOi8KiyWa59FZF+WaqYLni2Qj8MZuYxg8lK8bouUFwoNvRg3FNRWaDIMVzN+PJNFu6IONw==
   dependencies:
-    "@aiszlab/relax" "^1.2.35"
+    "@aiszlab/relax" "^1.2.37"
     "@popperjs/core" "^2.11.8"
     "@tanstack/react-table" "^8.11.3"
     clsx "^2.1.0"
