@@ -65,6 +65,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/pagination',
               label: 'Pagination 分页'
+            },
+            {
+              key: '/components/steps',
+              label: 'Steps 步骤条'
             }
           ]
         },

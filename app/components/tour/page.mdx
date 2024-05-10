@@ -1,8 +1,6 @@
 import Usage from '@/components/usage'
 
-# Rate 评分
-
-评分
+# Tour 漫游式引导
 
 ## 代码演示
 
@@ -13,16 +11,47 @@ import Usage from '@/components/usage'
       src: '/components/tour/basic.tsx',
       title: '基本',
       description: '最简单的用法。'
+    },
+    {
+      src: '/components/tour/without-overlay.tsx',
+      title: '非模态',
+      description: '不显示遮盖的用法。'
     }
   ]}
 />
 
 ## API
 
-| 参数     | 说明             | 类型                      | 默认值   |
-| -------- | ---------------- | ------------------------- | -------- |
-| count    | 总分             | `number`                  | `5`      |
-| value    | 受控值           | `number`                  | `void 0` |
-| onChange | 值变更的回调事件 | `(value: number) => void` | `void 0` |
-| halfable | 是否支持半选     | `boolean`                 | `true`   |
-| disabled | 是否禁用         | `boolean`                 | `false`  |
+### Tour
+
+| 参数             | 说明           | 类型                         | 默认值   |
+| ---------------- | -------------- | ---------------------------- | -------- |
+| open             | 是否显示       | `boolean`                    | `false`  |
+| steps            | 步骤列表       | `TourStep[]`                 | -        |
+| onClose          | 结束引导的回调 | `() => void`                 | `void 0` |
+| overlay          | 是否显示遮盖层 | `boolean`                    | `true`   |
+| spotlightPadding | 聚光灯的内边距 | `number \| [number, number]` | `8`      |
+
+### TourStep
+
+```ts
+export type TourStep = {
+  /**
+   * @description
+   * title
+   */
+  title: ReactNode
+
+  /**
+   * @description
+   * description
+   */
+  description?: ReactNode
+
+  /**
+   * @description
+   * target
+   */
+  target: Nullable<Element> | (() => Nullable<Element>)
+}
+```
