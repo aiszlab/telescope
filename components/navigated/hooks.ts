@@ -165,6 +165,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/table',
               label: 'Table 表格'
+            },
+            {
+              key: '/components/timeline',
+              label: 'Timeline 时间轴'
             }
           ]
         },

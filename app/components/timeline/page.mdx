@@ -1,31 +1,26 @@
 import Usage from '@/components/usage'
 
-# Steps 步骤条
+# Timeline 时间轴
 
 ## 何时使用
 
-步骤条，一般用于完成一个任务需要分几个步骤，在每个步骤完成之前，用户必须完成前一个步骤。
+垂直展示的时间流信息。
 
 ## 代码演示
 
 <Usage
   sources={[
     {
-      src: '/components/steps/basic.tsx',
+      src: '/components/timeline/basic.tsx',
       title: '基本',
       description: '最简单的用法。'
-    },
-    {
-      src: '/components/steps/vertical.tsx',
-      title: '垂直布局',
-      description: '可以指定组件为垂直布局。'
     }
   ]}
 />
 
 ## API
 
-### Steps
+### Timeline
 
 | 参数     | 说明                                                           | 类型                         | 默认值         |
 | -------- | -------------------------------------------------------------- | ---------------------------- | -------------- |
@@ -33,27 +28,3 @@ import Usage from '@/components/usage'
 | value    | 当前所在步骤                                                   | `number`                     | `0`            |
 | onChange | 在步骤条中点击步骤的回调事件，不设置的场景下认为步骤条不可点击 | `(value: number) => void`    | `void 0`       |
 | type     | 类型                                                           | `"horizontal" \| "vertical"` | `"horizontal"` |
-
-### StepItem
-
-```ts
-type StepItem = {
-  /**
-   * @description
-   * leading
-   */
-  leading?: ReactNode
-
-  /**
-   * @description
-   * title
-   */
-  title: ReactNode
-
-  /**
-   * @description
-   * description
-   */
-  description?: string
-}
-```
