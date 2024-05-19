@@ -2,7 +2,7 @@
 
 import { Divider } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return (
     <div>
       <p>
@@ -18,4 +18,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

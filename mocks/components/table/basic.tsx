@@ -38,7 +38,7 @@ const DATA_SOURCE: Person[] = [
   }
 ]
 
-const Basic = () => {
+const App = () => {
   return (
     <Table
       dataSource={DATA_SOURCE}
@@ -77,4 +77,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

@@ -38,7 +38,7 @@ const DATA_SOURCE: Person[] = [
   }
 ]
 
-const Basic = () => {
+const App = () => {
   return (
     <Table
       bordered
@@ -78,4 +78,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

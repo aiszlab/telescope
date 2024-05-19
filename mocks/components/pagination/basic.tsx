@@ -2,8 +2,8 @@
 
 import { Pagination } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return <Pagination total={100} />
 }
 
-export default Basic
+export default App

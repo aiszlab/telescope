@@ -2,7 +2,7 @@
 
 import { useMessage, Button } from 'musae'
 
-const Basic = () => {
+const App = () => {
   const [messager, holder] = useMessage()
 
   const click = () => {
@@ -17,4 +17,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

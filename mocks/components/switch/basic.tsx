@@ -1,8 +1,8 @@
 'use client'
 import { Switch } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return <Switch />
 }
 
-export default Basic
+export default App

@@ -4,7 +4,7 @@ import { Calendar } from 'musae'
 import { useState } from 'react'
 import dayjs, { type Dayjs } from 'dayjs'
 
-const Basic = () => {
+const App = () => {
   const [at, setAt] = useState(dayjs())
   const onClick = (clickAt: Dayjs) => {
     setAt(clickAt)
@@ -13,4 +13,4 @@ const Basic = () => {
   return <Calendar value={at} onClick={onClick} />
 }
 
-export default Basic
+export default App

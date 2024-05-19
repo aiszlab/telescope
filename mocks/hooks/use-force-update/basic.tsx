@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { Button } from 'musae'
 import { useForceUpdate } from '@aiszlab/relax'
 
-const Basic = () => {
+const App = () => {
   const [, forceUpdate] = useForceUpdate()
   const count = useRef(1)
 
@@ -19,4 +19,4 @@ const Basic = () => {
   return <Button onClick={click}>{`第${count.current}次渲染`}</Button>
 }
 
-export default Basic
+export default App

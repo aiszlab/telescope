@@ -2,8 +2,8 @@
 
 import { Checkbox } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return <Checkbox value='demo'>Demo</Checkbox>
 }
 
-export default Basic
+export default App

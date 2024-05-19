@@ -30,14 +30,18 @@ import Usage from '@/components/usage'
 
 ### Row Props
 
-| 参数    | 说明       | 类型                           | 默认值   |
-| ------- | ---------- | ------------------------------ | -------- |
-| gutter  | 自定义间距 | `number` \| `[number, number]` | `void 0` |
-| justify | 横向排列   | `center` \| `start` \| `end`   | `void 0` |
-| align   | 纵向排列   | `center` \| `start` \| `end`   | `void 0` |
+| 参数     | 说明       | 类型                                  | 默认值   |
+| -------- | ---------- | ------------------------------------- | -------- |
+| gutter   | 自定义间距 | `number` \| `[number, number]`        | `0`      |
+| justify  | 横向排列   | `React.CSSProperties["justifyItems"]` | `void 0` |
+| align    | 纵向排列   | `React.CSSProperties["alignItems"]`   | `void 0` |
+| children | 子组件     | `React.ReactNode`                     | `void 0` |
+| as       | 渲染标签   | `"div"` \| `"main"`                   | `"div"`  |
 
 ### Col Props
 
-| 参数 | 说明     | 类型     | 默认值 |
-| ---- | -------- | -------- | ------ |
-| span | 栅格大小 | `number` | `8`    |
+| 参数     | 说明     | 类型                 | 默认值   |
+| -------- | -------- | -------------------- | -------- |
+| span     | 栅格大小 | `number`             | `8`      |
+| children | 子组件   | `React.ReactNode`    | `void 0` |
+| as       | 渲染标签 | `"div"` \| `"aside"` | `"div"`  |

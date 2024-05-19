@@ -1,8 +1,8 @@
 'use client'
 import { Input } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return <Input />
 }
 
-export default Basic
+export default App

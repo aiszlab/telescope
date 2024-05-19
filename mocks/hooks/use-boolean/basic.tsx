@@ -3,7 +3,7 @@
 import { Switch, Button } from 'musae'
 import { useBoolean } from '@aiszlab/relax'
 
-const Basic = () => {
+const App = () => {
   const [isOn, { turnOn, turnOff, toggle }] = useBoolean()
 
   return (
@@ -18,4 +18,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

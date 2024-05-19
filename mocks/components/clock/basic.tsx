@@ -2,8 +2,8 @@
 
 import { Clock } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return <Clock />
 }
 
-export default Basic
+export default App

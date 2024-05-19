@@ -1,7 +1,7 @@
 'use client'
 import { Image } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return (
     <Image
       src='https://mui.com/static/material-ui/react-components/autocomplete-light.png'
@@ -11,4 +11,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

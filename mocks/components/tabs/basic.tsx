@@ -17,8 +17,8 @@ const ITEMS = [
   }
 ]
 
-const Basic = () => {
+const App = () => {
   return <Tabs items={ITEMS} />
 }
 
-export default Basic
+export default App

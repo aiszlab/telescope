@@ -3,7 +3,7 @@
 import { useFocus } from '@aiszlab/relax'
 import { Input } from 'musae'
 
-const Basic = () => {
+const App = () => {
   const [isFocused, focusProps] = useFocus()
 
   return (
@@ -14,4 +14,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

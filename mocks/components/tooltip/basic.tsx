@@ -2,7 +2,7 @@
 
 import { Tooltip } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return (
     <Tooltip title='新增一个元素'>
       <span>add</span>
@@ -10,4 +10,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

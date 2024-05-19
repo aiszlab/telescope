@@ -2,7 +2,7 @@
 import { useRefs } from '@aiszlab/relax'
 import { useRef } from 'react'
 
-const Basic = () => {
+const App = () => {
   const colorRef = useRef<HTMLDivElement | null>(null)
   const heightRef = useRef<HTMLDivElement | null>(null)
 
@@ -31,4 +31,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

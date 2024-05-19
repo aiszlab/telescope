@@ -38,8 +38,8 @@ const ITEMS = [
   }
 ]
 
-const Basic = () => {
+const App = () => {
   return <Menu items={ITEMS} selectedKeys={['option-3']} className='w-64' />
 }
 
-export default Basic
+export default App

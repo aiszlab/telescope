@@ -1,7 +1,7 @@
 'use client'
 import { Space, Tag } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return (
     <Space>
       <Tag size='large'>第一个标签</Tag>
@@ -10,4 +10,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

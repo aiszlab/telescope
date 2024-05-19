@@ -3,7 +3,7 @@ import { Form, Input, Button } from 'musae'
 
 const Item = Form.Item
 
-const Basic = () => {
+const App = () => {
   return (
     <Form>
       <Item label='用户名' required name='username'>
@@ -21,4 +21,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

@@ -27,15 +27,15 @@ import Usage from '@/components/usage'
 
 ### Tabs
 
-| 参数      | 说明                         | 类型        | 默认值 |
-| --------- | ---------------------------- | ----------- | ------ |
-| items     | `Tabs`对应的明细项，用于切换 | `TabItem[]` | -      |
-| activeKey | 受控的选中值                 | `string`    | -      |
+| 参数      | 说明                   | 类型        | 默认值   |
+| --------- | ---------------------- | ----------- | -------- |
+| items     | 对应的明细项，用于切换 | `TabItem[]` | `[]`     |
+| activeKey | 受控的选中值           | `string`    | `void 0` |
 
 ### TabItem
 
 ```ts
-interface TabItem {
+type TabItem = {
   /**
    * @description
    * key

@@ -3,7 +3,7 @@
 import React from 'react'
 import { Breadcrumb } from 'musae'
 
-const Basic = () => (
+const App = () => (
   <Breadcrumb
     items={[
       {
@@ -19,4 +19,4 @@ const Basic = () => (
   />
 )
 
-export default Basic
+export default App

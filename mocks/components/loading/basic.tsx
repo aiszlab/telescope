@@ -1,8 +1,8 @@
 'use client'
 import { Loading } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return <Loading />
 }
 
-export default Basic
+export default App

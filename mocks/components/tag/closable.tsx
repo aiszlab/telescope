@@ -1,7 +1,7 @@
 'use client'
 import { Tag, useMessage } from 'musae'
 
-const Basic = () => {
+const App = () => {
   const [{ info }] = useMessage()
 
   return (
@@ -17,4 +17,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

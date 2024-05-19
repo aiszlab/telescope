@@ -12,8 +12,8 @@ const OPTIONS: Option[] = [
   }
 ]
 
-const Basic = () => {
+const App = () => {
   return <Select options={OPTIONS} />
 }
 
-export default Basic
+export default App

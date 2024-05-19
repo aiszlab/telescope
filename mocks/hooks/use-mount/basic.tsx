@@ -18,7 +18,7 @@ const HelloWorld = () => {
   )
 }
 
-const Basic = () => {
+const App = () => {
   const [isOn, { toggle }] = useBoolean(false)
 
   return (
@@ -29,4 +29,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

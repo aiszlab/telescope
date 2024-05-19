@@ -14,7 +14,7 @@ const ControlledInput = (props: { value: string; onChange: (value: string) => vo
   return <Input value={value} onChange={change} />
 }
 
-const Basic = () => {
+const App = () => {
   const [value, setValue] = useState('')
   const change = (value: string) => {
     setValue(value)
@@ -23,4 +23,4 @@ const Basic = () => {
   return <ControlledInput value={value} onChange={change} />
 }
 
-export default Basic
+export default App

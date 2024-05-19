@@ -2,8 +2,8 @@
 
 import { Radio } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return <Radio value='demo'>Demo</Radio>
 }
 
-export default Basic
+export default App

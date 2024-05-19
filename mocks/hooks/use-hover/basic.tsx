@@ -3,7 +3,7 @@
 import { useHover } from '@aiszlab/relax'
 import { Button } from 'musae'
 
-const Basic = () => {
+const App = () => {
   const [isHovered, hoverProps] = useHover()
 
   return (
@@ -14,4 +14,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

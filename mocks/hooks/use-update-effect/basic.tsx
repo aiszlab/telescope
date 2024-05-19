@@ -3,7 +3,7 @@ import { useUpdateEffect } from '@aiszlab/relax'
 import { useEffect, useState } from 'react'
 import { Button, useMessage } from 'musae'
 
-const Basic = () => {
+const App = () => {
   const [count, setCount] = useState(0)
   const [{ info }, holder] = useMessage()
 
@@ -28,4 +28,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

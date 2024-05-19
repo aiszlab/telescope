@@ -3,7 +3,7 @@ import { Grid, useTheme } from 'musae'
 
 const { Row, Col } = Grid
 
-const Basic = () => {
+const App = () => {
   const theme = useTheme()
 
   const styled = {
@@ -56,4 +56,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

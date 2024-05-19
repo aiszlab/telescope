@@ -2,7 +2,7 @@
 import { useDebounceCallback } from '@aiszlab/relax'
 import { useMessage, Input } from 'musae'
 
-const Basic = () => {
+const App = () => {
   const [messager, holder] = useMessage()
   const { next: search } = useDebounceCallback((value: string) => {
     messager.info(`你正在尝试搜索：${value}`)
@@ -16,4 +16,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

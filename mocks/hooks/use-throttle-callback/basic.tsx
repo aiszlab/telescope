@@ -3,7 +3,7 @@
 import { useThrottleCallback } from '@aiszlab/relax'
 import { useMessage, Input } from 'musae'
 
-const Basic = () => {
+const App = () => {
   const [messager, holder] = useMessage()
   const { next: search } = useThrottleCallback((value: string) => {
     messager.info(`你首次编辑内容为：${value}`)
@@ -17,4 +17,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

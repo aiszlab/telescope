@@ -32,7 +32,26 @@ import Usage from '@/components/usage'
 
 ### Breadcrumb
 
-| 参数      | 说明         | 类型                    | 默认值 |
-| --------- | ------------ | ----------------------- | ------ |
-| items     | 路由栈信息   | `BreadcrumbItemProps[]` | `[]`   |
-| separator | 自定义分隔符 | `ReactNode`             | `/`    |
+| 参数      | 说明         | 类型               | 默认值 |
+| --------- | ------------ | ------------------ | ------ |
+| items     | 路由栈信息   | `BreadcrumbItem[]` | `[]`   |
+| separator | 自定义分隔符 | `React.ReactNode`  | `/`    |
+
+### BreadcrumbItem
+
+```ts
+type BreadcrumbItem = {
+  /**
+   * @description
+   * item display label
+   */
+  label: React.ReactNode
+
+  /**
+   * @description
+   * item href link
+   * if link is not provided, item will display as a label
+   */
+  href?: string
+}
+```

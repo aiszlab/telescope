@@ -29,16 +29,44 @@ import Usage from '@/components/usage'
 
 ### Menu
 
-| 参数         | 说明                      | 类型                 | 默认值 |
-| ------------ | ------------------------- | -------------------- | ------ |
-| items        | 菜单项                    | `MenuItem[]`         | -      |
-| selectedKeys | 当前选中的菜单项 key 数组 | `Key[]`              | -      |
-| onClick      | 点击 MenuItem 调用此函数  | `(key: Key) => void` | -      |
+| 参数                | 说明                                           | 类型                                         | 默认值     |
+| ------------------- | ---------------------------------------------- | -------------------------------------------- | ---------- |
+| items               | 菜单项                                         | `MenuItem[]`                                 | `void 0`   |
+| selectedKeys        | 当前选中的菜单项数组                           | `React.Key[]`                                | `void 0`   |
+| defaultSelectedKeys | 默认选中的菜单项数组，优先级低于`selectedKeys` | `React.Key[]`                                | `void 0`   |
+| expandedKeys        | 当前展开的菜单项                               | `React.Key[]`                                | `void 0`   |
+| defaultExpandedKeys | 默认展开的菜单项                               | `React.Key[]`                                | `void 0`   |
+| variant             | 默认展开的菜单项                               | `"filled"` \| `"outlined"` \| `"text"`       | `"filled"` |
+| size                | 菜单大小                                       | `"small"` \| `"medium"` \| `"large"`         | `"medium"` |
+| mode                | 菜单模式                                       | `"vertical"` \| `"horizontal"` \| `"inline"` | `"inline"` |
+| onClick             | 点击 MenuItem 调用此函数                       | `(key: React.Key) => void \| Promise<void>`  | `void 0`   |
 
 ### MenuItem
 
-| 参数     | 说明           | 类型         | 默认值 |
-| -------- | -------------- | ------------ | ------ |
-| label    | 菜单项标题     | `ReactNode`  | -      |
-| key      | 唯一标识       | `Key`        | -      |
-| children | 子菜单的菜单项 | `MenuItem[]` | -      |
+```ts
+type MenuItem = {
+  /**
+   * @description
+   * key
+   */
+  key: React.Key
+
+  /**
+   * @description
+   * label
+   */
+  label?: React.ReactNode
+
+  /**
+   * @description
+   * prefix node
+   */
+  prefix?: React.ReactNode
+
+  /**
+   * @description
+   * children
+   */
+  children?: MenuItem[]
+}
+```

@@ -4,7 +4,7 @@ import { useCounter } from '@aiszlab/relax'
 import { KeyboardArrowLeft, KeyboardArrowRight } from 'musae/icons'
 import { Button } from 'musae'
 
-const Basic = () => {
+const App = () => {
   const [count, { add, subtract }] = useCounter(0)
 
   const _add = () => add()
@@ -19,4 +19,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

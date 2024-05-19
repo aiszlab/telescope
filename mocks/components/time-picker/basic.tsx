@@ -2,8 +2,8 @@
 
 import { TimePicker } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return <TimePicker />
 }
 
-export default Basic
+export default App

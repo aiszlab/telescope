@@ -16,7 +16,7 @@ const HelloWorld = (props: { onClick: () => void }) => {
 
 const Memorized = memo(HelloWorld)
 
-const Basic = () => {
+const App = () => {
   const [, forceUpdate] = useForceUpdate()
 
   const click = useEvent(() => {
@@ -32,4 +32,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

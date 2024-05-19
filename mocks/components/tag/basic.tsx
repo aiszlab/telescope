@@ -1,8 +1,8 @@
 'use client'
 import { Tag } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return <Tag size='small'>一个标签</Tag>
 }
 
-export default Basic
+export default App

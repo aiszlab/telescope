@@ -2,7 +2,7 @@
 
 import { Cascader } from 'musae'
 
-const Basic = () => {
+const App = () => {
   return (
     <Cascader
       options={[
@@ -35,4 +35,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App

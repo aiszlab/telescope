@@ -3,7 +3,7 @@
 import { Button, Dialog } from 'musae'
 import { useState } from 'react'
 
-const Basic = () => {
+const App = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const onClose = () => {
@@ -20,4 +20,4 @@ const Basic = () => {
   )
 }
 
-export default Basic
+export default App
