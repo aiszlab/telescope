@@ -85,6 +85,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Input 输入框'
             },
             {
+              key: '/components/otp-input',
+              label: 'OtpInput OTP 输入框'
+            },
+            {
               key: '/components/checkbox',
               label: 'Checkbox 复选框'
             },

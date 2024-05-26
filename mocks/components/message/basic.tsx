@@ -6,7 +6,7 @@ const App = () => {
   const [messager, holder] = useMessage()
 
   const click = () => {
-    messager.error('展示一个普通的错误消息！')
+    messager.error({ description: '展示一个普通的错误消息！' })
   }
 
   return (
