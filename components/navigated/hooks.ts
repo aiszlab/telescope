@@ -81,6 +81,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Button 按钮'
             },
             {
+              key: '/components/countable',
+              label: 'Countable 可计数'
+            },
+            {
               key: '/components/input',
               label: 'Input 输入框'
             },
@@ -148,7 +152,11 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             },
             {
               key: '/components/message',
-              label: 'Message 消息'
+              label: 'Message 全局提示'
+            },
+            {
+              key: '/components/notification',
+              label: 'Notification 通知消息框'
             },
             {
               key: '/components/calendar',

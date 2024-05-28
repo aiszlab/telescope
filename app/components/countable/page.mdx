@@ -1,0 +1,31 @@
+import Usage from '@/components/usage'
+
+# Button 按钮
+
+按钮用于开始一个即时操作。
+
+## 何时使用
+
+标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。
+
+## 代码演示
+
+<Usage
+  small
+  sources={[
+    {
+      src: '/components/countable/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    }
+  ]}
+/>
+
+## API
+
+### Button
+
+| 参数    | 说明     | 类型                                   | 默认值   |
+| ------- | -------- | -------------------------------------- | -------- |
+| variant | 样式     | `filled` \| `outlined` \| `text`       | `filled` |
+| onClick | 点击事件 | `MouseEventHandler<HTMLButtonElement>` | -        |
