@@ -1,0 +1,31 @@
+import Usage from '@/components/usage'
+
+# OtpInput OTP 输入框
+
+采用分页的形式分隔长列表，每次只加载一个页面。
+
+## 何时使用
+
+- 当加载/渲染所有数据将花费很多时间时；
+- 可切换页码浏览数据。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/otp-input/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    }
+  ]}
+/>
+
+## API
+
+| 参数     | 说明                   | 类型     | 默认值 |
+| -------- | ---------------------- | -------- | ------ |
+| total    | 总数                   | `number` | `0`    |
+| pageSize | 页码大小               | `number` | `10`   |
+| siblings | 页数过多时前置显示个数 | `number` | `1`    |
+| total    | 总数                   | `number` | `1`    |
