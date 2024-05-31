@@ -131,6 +131,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/time-picker',
               label: 'TimePicker 时间选择器'
+            },
+            {
+              key: '/components/upload',
+              label: 'Upload 上传'
             }
           ]
         },
