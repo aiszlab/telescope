@@ -201,6 +201,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Drawer 抽屉'
             },
             {
+              key: '/components/progress',
+              label: 'Progress 进度条'
+            },
+            {
               key: '/components/tooltip',
               label: 'Tooltip 消息提示'
             },

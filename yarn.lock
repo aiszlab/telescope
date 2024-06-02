@@ -15,10 +15,10 @@
     react-is "^18.2.0"
     rxjs "^7.8.1"
 
-"@aiszlab/relax@^1.2.38":
-  version "1.2.38"
-  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.38.tgz#fe23a15266597563f4b6e385f23e2bfe51d5fe49"
-  integrity sha512-xPw29mq+ykcfMCnERzOLgHex77sYWlbkOXxvvpJ5yrx51/RXBPYf9s336eHnCay8s6daFBZEv1xXqZ8Ya50uxg==
+"@aiszlab/relax@^1.2.44":
+  version "1.2.44"
+  resolved "https://registry.npmjs.org/@aiszlab/relax/-/relax-1.2.44.tgz#e5a3f8c9455f7d7a129a1a6f34f4aff4731d081f"
+  integrity sha512-23nx9GibeD1rZUI3Aubn0f+yNw2Ek7ngH3uo5fRnAQU7AToOcNc68ktsZh7bW0NmVUdy4EbxN9ZWcUqGagW6WA==
   dependencies:
     react-is "^18.2.0"
     rxjs "^7.8.1"
@@ -3020,12 +3020,12 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musae@^0.1.44:
-  version "0.1.44"
-  resolved "https://registry.npmjs.org/musae/-/musae-0.1.44.tgz#5147abb70bbaa7f31f3712932cae3dfd871f7bcb"
-  integrity sha512-zgjJUVvrHtls1tSbh3/WXgkY3Lp+FlWD9pfOcp9bIV4iUMMEMHXPnV8cqjH1eL5TrKoEt3zt+P6E+9wkB9xVUA==
+musae@^0.1.46:
+  version "0.1.46"
+  resolved "https://registry.npmjs.org/musae/-/musae-0.1.46.tgz#8df4f9fddeed8ed03f8d070539c3ee5daf0924cf"
+  integrity sha512-tbcgxv5Y0SUZlE6LZ7z5p4un3UR/n3Z112gWD5e2GhbFdxAP8qgJK+QwuMxd0pxia4Emm+zJyptRlKXuUL4UVw==
   dependencies:
-    "@aiszlab/relax" "^1.2.38"
+    "@aiszlab/relax" "^1.2.44"
     "@floating-ui/dom" "^1.6.5"
     "@tanstack/react-table" "^8.16.0"
     clsx "^2.1.1"
@@ -3033,6 +3033,7 @@ musae@^0.1.44:
     deepmerge "^4.3.1"
     framer-motion "11.0.8"
     react-hook-form "^7.47.0"
+    rxjs "^7.8.1"
 
 mz@^2.7.0:
   version "2.7.0"
