@@ -3,7 +3,7 @@ import { Progress } from 'musae'
 
 const App = () => {
   return (
-    <div className='w-full flex flex-col gap-1'>
+    <div className='w-full flex flex-row gap-1 flex-wrap'>
       <Progress variant='circular' value={0} />
       <Progress variant='circular' value={10} />
       <Progress variant='circular' value={50} />
