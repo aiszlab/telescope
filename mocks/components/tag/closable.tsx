@@ -9,7 +9,7 @@ const App = () => {
       size='small'
       closable
       onClose={() => {
-        info('删除标签')
+        info({ description: '删除标签' })
       }}
     >
       可删除标签

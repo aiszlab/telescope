@@ -7,7 +7,7 @@ const HelloWorld = () => {
   const [messager, holder] = useMessage()
 
   useMounted(() => {
-    messager.info('mounted')
+    messager.info({ description: 'mounted' })
   })
 
   return (

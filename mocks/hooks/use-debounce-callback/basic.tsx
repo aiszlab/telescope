@@ -5,7 +5,7 @@ import { useMessage, Input } from 'musae'
 const App = () => {
   const [messager, holder] = useMessage()
   const { next: search } = useDebounceCallback((value: string) => {
-    messager.info(`你正在尝试搜索：${value}`)
+    messager.info({ description: `你正在尝试搜索：${value}` })
   }, 2000)
 
   return (

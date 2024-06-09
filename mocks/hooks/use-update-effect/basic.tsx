@@ -8,11 +8,11 @@ const App = () => {
   const [{ info }, holder] = useMessage()
 
   useUpdateEffect(() => {
-    info('更新的副作用起作用啦！')
+    info({ description: '更新的副作用起作用啦！' })
   }, [count])
 
   useEffect(() => {
-    info('普通副作用起作用啦！')
+    info({ description: '普通副作用起作用啦！' })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count])
 
