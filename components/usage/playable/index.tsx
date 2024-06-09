@@ -39,7 +39,7 @@ const Playable = ({ title, render, source, description }: Props) => {
         id={title}
       >
         {/* 渲染 */}
-        <div className='p-6 flex justify-center'>{createElement(render)}</div>
+        <div className='p-6'>{createElement(render)}</div>
 
         <Divider />
 
