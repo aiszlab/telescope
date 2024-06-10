@@ -22,8 +22,8 @@ import Usage from '@/components/usage'
 
 ## API
 
-| 参数      | 说明                   | 类型                        | 默认值 |
-| --------- | ---------------------- | --------------------------- | ------ |
-| value     | 当前时间点或者时间区间 | `Dayjs` \| `[Dayjs, Dayjs]` | -      |
-| onClick   | 点击日期之后的回调事件 | (clickAt: `Dayjs`) => void  | -      |
-| focusedAt | 顶部聚焦的年月         | `Dayjs`                     | -      |
+| 参数      | 说明                   | 类型                                                  | 默认值   |
+| --------- | ---------------------- | ----------------------------------------------------- | -------- |
+| value     | 当前时间点或者时间区间 | `Dayjs` \| `[Dayjs \| undefined, Dayjs \| undefined]` | `void 0` |
+| focusedAt | 顶部聚焦的年月         | `Dayjs`                                               | `void 0` |
+| onClick   | 点击日期之后的回调事件 | `(clickAt: Dayjs) => void`                            | `void 0` |

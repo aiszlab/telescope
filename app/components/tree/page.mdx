@@ -21,3 +21,19 @@ import Usage from '@/components/usage'
 />
 
 ## API
+
+### Tree Props
+
+| 参数         | 说明            | 类型                          | 默认值   |
+| ------------ | --------------- | ----------------------------- | -------- |
+| nodes        | 节点列表        | `TreeNode[]`                  | `[]`     |
+| expandedKeys | 展开的节点`key` | `React.Key[]`                 | `void 0` |
+| onExpand     | 展开的回调事件  | `(keys: React.Key[]) => void` | `void 0` |
+
+### TreeNode
+
+| 参数     | 说明         | 类型              | 默认值   |
+| -------- | ------------ | ----------------- | -------- |
+| key      | 节点唯一键   | `React.Key`       | -        |
+| title    | 节点显示文案 | `React.ReactNode` | -        |
+| children | 子节点       | `TreeNode[]`      | `void 0` |

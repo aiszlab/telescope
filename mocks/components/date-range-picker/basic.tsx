@@ -1,9 +1,8 @@
 'use client'
-
-import { DatePicker } from 'musae'
+import { DateRangePicker } from 'musae'
 
 const App = () => {
-  return <DatePicker />
+  return <DateRangePicker />
 }
 
 export default App

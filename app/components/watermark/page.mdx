@@ -13,3 +13,26 @@ import Usage from '@/components/usage'
     }
   ]}
 />
+
+## API
+
+### Watermark Props
+
+| 参数     | 说明           | 类型                                     | 默认值   |
+| -------- | -------------- | ---------------------------------------- | -------- |
+| children | 需要水印的组件 | `React.ReactNode`                        | `void 0` |
+| mark     | 水印内容       | `string \| string[] \| HTMLImageElement` | -        |
+| width    | 水印宽度       | `number`                                 | `120`    |
+| height   | 水印高度       | `number`                                 | `64`     |
+| font     | 水印字体样式   | `Font`                                   | `{}`     |
+
+### Font
+
+| 参数       | 说明         | 类型                                          | 默认值            |
+| ---------- | ------------ | --------------------------------------------- | ----------------- |
+| color      | 字体颜色     | `CanvasFillStrokeStyles["fillStyle"]`         | `rgba(0,0,0,.15)` |
+| fontSize   | 水印内容     | `number \| string`                            | `16`              |
+| fontWeight | 水印宽度     | `"normal" \| "light" \| "weight" \| number`   | `"normal"`        |
+| fontStyle  | 字体样式     | `"none" \| "normal" \| "italic" \| "oblique"` | `"normal"`        |
+| fontFamily | 字体         | `string`                                      | `"sans-serif"`    |
+| textAlign  | 字体对齐方式 | `CanvasTextAlign`                             | `"start"`         |

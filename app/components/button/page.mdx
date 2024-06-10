@@ -40,7 +40,15 @@ import Usage from '@/components/usage'
 
 ### Button
 
-| 参数    | 说明     | 类型                                   | 默认值   |
-| ------- | -------- | -------------------------------------- | -------- |
-| variant | 样式     | `filled` \| `outlined` \| `text`       | `filled` |
-| onClick | 点击事件 | `MouseEventHandler<HTMLButtonElement>` | -        |
+| 参数     | 说明               | 类型                                             | 默认值      |
+| -------- | ------------------ | ------------------------------------------------ | ----------- |
+| variant  | 样式               | `"filled" \| "outlined" \| "text"`               | `"filled"`  |
+| color    | 主调色             | `"primary" \| "secondary" \| "tertiary"`         | `"primary"` |
+| shape    | 形状               | `"rounded" \| "circular"`                        | `"rounded"` |
+| size     | 尺寸               | `"small" \| "medium" \| "large"`                 | `"medium"`  |
+| children | 显示内容           | `React.ReactNode`                                | `void 0`    |
+| disabled | 是否禁用           | `boolean`                                        | `false`     |
+| prefix   | 前置内容           | `React.ReactNode`                                | `void 0`    |
+| suffix   | 后置内容           | `React.ReactNode`                                | `void 0`    |
+| ripple   | 是否开启水波纹特效 | `boolean`                                        | `true`      |
+| onClick  | 点击事件           | `(event: MouseEvent<HTMLButtonElement>) => void` | `void 0`    |

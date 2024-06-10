@@ -13,7 +13,7 @@ import Usage from '@/components/usage'
 <Usage
   sources={[
     {
-      src: '/components/date-picker/basic.tsx',
+      src: '/components/date-range-picker/basic.tsx',
       title: '基本',
       description: '最简单的用法。'
     }
@@ -21,3 +21,8 @@ import Usage from '@/components/usage'
 />
 
 ## API
+
+| 参数     | 说明               | 类型                                       | 默认值   |
+| -------- | ------------------ | ------------------------------------------ | -------- |
+| value    | 选中的时间范围     | `[Dayjs \| undefined, Dayjs \| undefined]` | `void 0` |
+| onChange | 选择范围的回调事件 | `(value: [Dayjs, Dayjs]) => void`          | `void 0` |

@@ -39,19 +39,7 @@ import Usage from '@/components/usage'
 
 ### BreadcrumbItem
 
-```ts
-type BreadcrumbItem = {
-  /**
-   * @description
-   * item display label
-   */
-  label: React.ReactNode
-
-  /**
-   * @description
-   * item href link
-   * if link is not provided, item will display as a label
-   */
-  href?: string
-}
-```
+| 参数  | 说明         | 类型              | 默认值   |
+| ----- | ------------ | ----------------- | -------- |
+| label | 项目展示内容 | `React.ReactNode` | -        |
+| href  | 跳转路由     | `string`          | `void 0` |

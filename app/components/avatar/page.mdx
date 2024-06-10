@@ -4,8 +4,6 @@ import Usage from '@/components/usage'
 
 用来代表用户或事物，支持图片、图标或字符展示。
 
-## 何时使用
-
 ## 代码演示
 
 <Usage
@@ -28,21 +26,18 @@ import Usage from '@/components/usage'
 
 ### Avatar
 
-| 参数  | 说明                     | 类型     | 默认值     |
-| ----- | ------------------------ | -------- | ---------- |
-| src   | 资源地址                 | `string` | -          |
-| alt   | 图像无法显示时的替代文本 | `string` | -          |
-| size  | 设置头像的大小           | `Size`   | `medium`   |
-| shape | 指定头像的形状           | `Shape`  | `circular` |
+| 参数  | 说明                     | 类型                             | 默认值       |
+| ----- | ------------------------ | -------------------------------- | ------------ |
+| src   | 资源地址                 | `string`                         | `void 0`     |
+| alt   | 图像无法显示时的替代文本 | `string`                         | `void 0`     |
+| size  | 设置头像的大小           | `"small" \| "medium" \| "large"` | `"medium"`   |
+| shape | 指定头像的形状           | `"circular" \| "squared"`        | `"circular"` |
 
-### Size
+### Group
 
-```ts
-type Size = 'small' | 'medium' | 'large'
-```
-
-### Shape
-
-```ts
-type Shape = 'circular' | 'squared'
-```
+| 参数     | 说明           | 类型                             | 默认值       |
+| -------- | -------------- | -------------------------------- | ------------ |
+| children | 子组件         | `React.ReactNode`                | -            |
+| max      | 最多显示个数   | `number`                         | `3`          |
+| size     | 设置头像的大小 | `"small" \| "medium" \| "large"` | `"medium"`   |
+| shape    | 指定头像的形状 | `"circular" \| "squared"`        | `"circular"` |

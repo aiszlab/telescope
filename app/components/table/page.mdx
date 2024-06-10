@@ -25,3 +25,13 @@ import Usage from '@/components/usage'
     }
   ]}
 />
+
+## API
+
+### Table Props
+
+| 参数       | 说明           | 类型                                               | 默认值   |
+| ---------- | -------------- | -------------------------------------------------- | -------- |
+| dataSource | 数据列表       | `T[]`                                              | `[]`     |
+| columns    | 表格列定义回调 | `(helper: ColumnHelper<T>) => ColumnDef<T, any>[]` | `void 0` |
+| bordered   | 是否展示边框   | `boolean`                                          | `false`  |

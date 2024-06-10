@@ -22,36 +22,20 @@ import Usage from '@/components/usage'
 
 ## API
 
-### Tour
+### Tour Props
 
 | 参数             | 说明           | 类型                         | 默认值   |
 | ---------------- | -------------- | ---------------------------- | -------- |
 | open             | 是否显示       | `boolean`                    | `false`  |
-| steps            | 步骤列表       | `TourStep[]`                 | -        |
+| steps            | 步骤列表       | `TourStep[]`                 | `[]`     |
 | onClose          | 结束引导的回调 | `() => void`                 | `void 0` |
 | overlay          | 是否显示遮盖层 | `boolean`                    | `true`   |
 | spotlightPadding | 聚光灯的内边距 | `number \| [number, number]` | `8`      |
 
 ### TourStep
 
-```ts
-export type TourStep = {
-  /**
-   * @description
-   * title
-   */
-  title: ReactNode
-
-  /**
-   * @description
-   * description
-   */
-  description?: ReactNode
-
-  /**
-   * @description
-   * target
-   */
-  target: Nullable<Element> | (() => Nullable<Element>)
-}
-```
+| 参数        | 说明           | 类型                                         | 默认值   |
+| ----------- | -------------- | -------------------------------------------- | -------- |
+| title       | 步骤标题       | `React.ReactNode`                            | -        |
+| description | 步骤描述       | `React.ReactNode`                            | `void 0` |
+| target      | 步骤挂载的节点 | `Element \| null \| () => (Element \| null)` | -        |

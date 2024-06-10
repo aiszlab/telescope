@@ -20,11 +20,16 @@ import Usage from '@/components/usage'
 
 ## API
 
-### Timeline
+### Timeline Props
 
-| 参数     | 说明                                                           | 类型                         | 默认值         |
-| -------- | -------------------------------------------------------------- | ---------------------------- | -------------- |
-| items    | 步骤项目列表                                                   | `StepItem[]`                 | -              |
-| value    | 当前所在步骤                                                   | `number`                     | `0`            |
-| onChange | 在步骤条中点击步骤的回调事件，不设置的场景下认为步骤条不可点击 | `(value: number) => void`    | `void 0`       |
-| type     | 类型                                                           | `"horizontal" \| "vertical"` | `"horizontal"` |
+| 参数  | 说明           | 类型                               | 默认值    |
+| ----- | -------------- | ---------------------------------- | --------- |
+| items | 时间线项目列表 | `TimelineItem[]`                   | -         |
+| mode  | 时间线布局模式 | `"left" \| "right" \| "alternate"` | `"right"` |
+
+### TimelineItem
+
+| 参数        | 说明         | 类型              | 默认值   |
+| ----------- | ------------ | ----------------- | -------- |
+| label       | 节点展示标签 | `React.ReactNode` | `void 0` |
+| description | 节点展示描述 | `React.ReactNode` | -        |
