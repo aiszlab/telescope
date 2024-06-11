@@ -205,6 +205,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Progress 进度条'
             },
             {
+              key: '/components/popover',
+              label: 'Popover 气泡卡片'
+            },
+            {
               key: '/components/tooltip',
               label: 'Tooltip 消息提示'
             },
