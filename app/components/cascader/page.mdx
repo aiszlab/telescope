@@ -24,17 +24,12 @@ import Usage from '@/components/usage'
 
 ## API
 
-| 参数     | 说明                   | 类型       | 默认值 |
-| -------- | ---------------------- | ---------- | ------ |
-| options  | 可选项数据源           | Option[]   | -      |
-| onChange | 输入框内容变化时的回调 | () => void | -      |
+### Cascader
 
-### Option
-
-```ts
-interface Option {
-  label: string
-  value: string
-  children?: Option[]
-}
-```
+| 参数      | 说明                                                           | 类型                                             | 默认值   |
+| --------- | -------------------------------------------------------------- | ------------------------------------------------ | -------- |
+| value     | 选择内容                                                       | `Value[] \| Value`                               | `void 0` |
+| options   | 可选项数据源                                                   | [`Option[]`](https://aisz.dev/components/select) | `[]`     |
+| mode      | 级联选择框类型                                                 | `"multiple"`                                     | `void 0` |
+| complex   | 数据复杂模式，如果设置为`true`，那么`onChange`数据则会变为对象 | `"multiple"`                                     | `false`  |
+| separator | 间隔符                                                         | `React.ReactNode`                                | `"/"`    |

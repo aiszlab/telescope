@@ -10,6 +10,7 @@ import P from '@/components/mdx/p'
 import H4 from '@/components/mdx/h4'
 import Ul from '@/components/mdx/ul'
 import Thead from '@/components/mdx/thead'
+import Anchor from '@/components/mdx/anchor'
 
 // This file allows you to provide custom React components
 // to be used in MDX files. You can import and use any
@@ -31,6 +32,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     pre: Pre,
     p: P,
     ul: Ul,
-    thead: Thead
+    thead: Thead,
+    a: Anchor
   }
 }

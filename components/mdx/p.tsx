@@ -5,7 +5,7 @@ interface Props {
 }
 
 const P = ({ children }: Props) => {
-  return <p>{children}</p>
+  return <p className='my-4'>{children}</p>
 }
 
 export default P

@@ -1,12 +1,12 @@
 import Usage from '@/components/usage'
 
-# Button 按钮
+# Countable 可计数组件
 
-按钮用于开始一个即时操作。
+携带计数功能的按钮。
 
 ## 何时使用
 
-标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。
+常用于一些特定场景，比如发送验证码之后的倒计时。
 
 ## 代码演示
 
@@ -23,9 +23,9 @@ import Usage from '@/components/usage'
 
 ## API
 
-### Button
+继承自[`Button`](https://aisz.dev/components/button)
 
-| 参数    | 说明     | 类型                                   | 默认值   |
-| ------- | -------- | -------------------------------------- | -------- |
-| variant | 样式     | `filled` \| `outlined` \| `text`       | `filled` |
-| onClick | 点击事件 | `MouseEventHandler<HTMLButtonElement>` | -        |
+| 参数     | 说明     | 类型     | 默认值 |
+| -------- | -------- | -------- | ------ |
+| count    | 计数大小 | `number` | `60`   |
+| interval | 计时间隔 | `number` | `1000` |

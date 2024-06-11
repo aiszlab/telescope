@@ -215,6 +215,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/tour',
               label: 'Tour 漫游式引导'
+            },
+            {
+              key: '/components/watermark',
+              label: 'Watermark 水印'
             }
           ]
         }

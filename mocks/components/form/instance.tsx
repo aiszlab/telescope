@@ -21,7 +21,7 @@ const Instance = () => {
     if (!isValid) return
 
     const values = form.getValues()
-    info(`用户名: ${values.username}; 密码: ${values.password}`)
+    info({ description: `用户名: ${values.username}; 密码: ${values.password}` })
   }
 
   const fill = () => {

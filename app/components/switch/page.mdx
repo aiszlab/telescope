@@ -39,8 +39,11 @@ import Usage from '@/components/usage'
 
 ## API
 
-| 参数     | 说明               | 类型                                            | 默认值   |
-| -------- | ------------------ | ----------------------------------------------- | -------- |
-| value    | 是否开启           | `boolean`                                       | `void 0` |
-| onChange | 发生改变的回调事件 | `(value: boolean) => void \| PromiseLike<void>` | `void 0` |
-| icon     | 显示`icon`         | `boolean`                                       | `false`  |
+| 参数              | 说明               | 类型                                            | 默认值   |
+| ----------------- | ------------------ | ----------------------------------------------- | -------- |
+| value             | 是否选中值         | `boolean`                                       | `void 0` |
+| onChange          | 发生改变的回调事件 | `(value: boolean) => void \| PromiseLike<void>` | `void 0` |
+| icon              | 是否显示`icon`     | `boolean`                                       | `false`  |
+| checkedChildren   | 选中时显示的组件   | `React.ReactNode`                               | `void 0` |
+| uncheckedChildren | 未选中时显示的组件 | `React.ReactNode`                               | `void 0` |
+| disabled          | 当前组件是否禁用   | `boolean`                                       | `false`  |

@@ -42,12 +42,16 @@ import Usage from '@/components/usage'
 
 ### Select
 
-| 参数    | 说明                                                           | 类型                 | 默认值 |
-| ------- | -------------------------------------------------------------- | -------------------- | ------ |
-| options | 下拉选择范围                                                   | `Option[]`           | -      |
-| complex | 数据复杂模式，如果设置为`true`，那么`onChange`数据则会变为对象 | `boolean`            | -      |
-| value   | 下拉框受控值                                                   | `Value[]` \| `Value` | -      |
-| mode    | 输入框下拉模式                                                 | `multiple`           | -      |
+| 参数       | 说明                                                           | 类型                                                         | 默认值   |
+| ---------- | -------------------------------------------------------------- | ------------------------------------------------------------ | -------- |
+| options    | 下拉选择范围                                                   | `Option[]`                                                   | -        |
+| complex    | 数据复杂模式，如果设置为`true`，那么`onChange`数据则会变为对象 | `boolean`                                                    | `false`  |
+| value      | 下拉框受控值                                                   | `Value[]` \| `Value`                                         | `void 0` |
+| mode       | 输入框下拉模式                                                 | `"multiple"`                                                 | `void 0` |
+| searchable | 是否可搜索                                                     | `boolean`                                                    | `false`  |
+| onSearch   | 输入框搜索后的回调函数                                         | `(searched: string) => void`                                 | `void 0` |
+| onFilter   | 本地的过滤回调函数                                             | `((searched: string, option: Option) => boolean) \| boolean` | `void 0` |
+| onChange   | 修改后的回调函数                                               | `(value: ValueOrValues) => void`                             | `void 0` |
 
 ### Value
 
@@ -57,24 +61,8 @@ type Value = Key | Pick<Option, 'value' | 'label'>
 
 ### Option
 
-```ts
-interface Option {
-  /**
-   * @description
-   * value
-   */
-  value: Key
-
-  /**
-   * @description
-   * label
-   */
-  label?: string
-
-  /**
-   * @description
-   * children
-   */
-  children?: Option[]
-}
-```
+| 参数     | 说明         | 类型        | 默认值   |
+| -------- | ------------ | ----------- | -------- |
+| value    | 下拉唯一值   | `React.Key` | -        |
+| label    | 下拉显示值   | `string`    | `void 0` |
+| children | 下拉框受控值 | `Option[]`  | `void 0` |

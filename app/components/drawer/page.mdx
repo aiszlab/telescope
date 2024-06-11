@@ -25,10 +25,14 @@ import Usage from '@/components/usage'
 
 ## API
 
-| 参数      | 说明                     | 类型         | 默认值   |
-| --------- | ------------------------ | ------------ | -------- |
-| title     | 对话框的标题             | `ReactNode`  | `void 0` |
-| children  | 对话框的内容             | `ReactNode`  | `void 0` |
-| open      | 控制对话框是否打开       | `boolean`    | `false`  |
-| onConfirm | 对话框点击确认的回调函数 | `() => void` | -        |
-| onClose   | 对话框点击关闭的回调函数 | `() => void` | -        |
+### Drawer Props
+
+| 参数        | 说明                   | 类型                                           | 默认值   |
+| ----------- | ---------------------- | ---------------------------------------------- | -------- |
+| children    | 抽屉的内容             | `React.ReactNode`                              | `void 0` |
+| open        | 控制抽屉是否打开       | `boolean`                                      | -        |
+| title       | 抽屉的标题             | `React.ReactNode`                              | `void 0` |
+| placement   | 抽屉的位置             | `"right" \| "left" \| "top" \| "bottom"`       | `void 0` |
+| dismissable | 抽屉的关闭方式         | `boolean \| ("esc" \| "overlay" \| "close")[]` | `true`   |
+| size        | 抽屉大小               | `number`                                       | `400`    |
+| onClose     | 抽屉点击关闭的回调函数 | `() => void`                                   | `void 0` |

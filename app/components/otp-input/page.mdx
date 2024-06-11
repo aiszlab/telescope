@@ -1,13 +1,8 @@
 import Usage from '@/components/usage'
 
-# OtpInput OTP 输入框
+# OtpInput One-time Password
 
-采用分页的形式分隔长列表，每次只加载一个页面。
-
-## 何时使用
-
-- 当加载/渲染所有数据将花费很多时间时；
-- 可切换页码浏览数据。
+一次性密码输入框。
 
 ## 代码演示
 
@@ -23,9 +18,8 @@ import Usage from '@/components/usage'
 
 ## API
 
-| 参数     | 说明                   | 类型     | 默认值 |
-| -------- | ---------------------- | -------- | ------ |
-| total    | 总数                   | `number` | `0`    |
-| pageSize | 页码大小               | `number` | `10`   |
-| siblings | 页数过多时前置显示个数 | `number` | `1`    |
-| total    | 总数                   | `number` | `1`    |
+| 参数     | 说明       | 类型                      | 默认值   |
+| -------- | ---------- | ------------------------- | -------- |
+| length   | 输入位数   | `number`                  | `6`      |
+| value    | 输入内容   | `string`                  | `void 0` |
+| onChange | 变更的回调 | `(value: string) => void` | `void 0` |
