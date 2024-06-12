@@ -3005,10 +3005,10 @@ ms@^2.1.1:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musae@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/musae/-/musae-0.2.0.tgz#ccf6c1f30668744b8d9fd6f7d63635525d45d485"
-  integrity sha512-OdvVZkVOrCBMpkwRZwaLBrK3GuKKZQYDOSuNqaEYbxDc/WTPU4BbhqvsCkFQEPQYcmE53MzStExlkAWYcmKflw==
+musae@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/musae/-/musae-0.2.1.tgz#e461b1f11b227ac79dbdc4717b1d4931ee5fd219"
+  integrity sha512-VuO/kzCrcDexpXKL7z4RtOJM0WMXZ32rKmxHeSZotYwof9EFuT0KOMto8irmoqhiZH5mHoO0XmlHx0voVtiNfg==
   dependencies:
     "@aiszlab/relax" "^1.2.50"
     "@floating-ui/dom" "^1.6.5"
