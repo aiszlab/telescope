@@ -22,6 +22,11 @@ import Usage from '@/components/usage'
       src: '/components/table/bordered.tsx',
       title: '边框',
       description: '快速让表格显示边框。'
+    },
+    {
+      src: '/components/table/sortable.tsx',
+      title: '列排序',
+      description: '用户操作列排序，控制表格数据的渲染顺序。'
     }
   ]}
 />
@@ -30,8 +35,33 @@ import Usage from '@/components/usage'
 
 ### Table Props
 
-| 参数       | 说明           | 类型                                               | 默认值   |
-| ---------- | -------------- | -------------------------------------------------- | -------- |
-| dataSource | 数据列表       | `T[]`                                              | `[]`     |
-| columns    | 表格列定义回调 | `(helper: ColumnHelper<T>) => ColumnDef<T, any>[]` | `void 0` |
-| bordered   | 是否展示边框   | `boolean`                                          | `false`  |
+| 参数           | 说明           | 类型                                         | 默认值   |
+| -------------- | -------------- | -------------------------------------------- | -------- |
+| dataSource     | 数据列表       | `T[]`                                        | `[]`     |
+| columns        | 表格列定义回调 | `Column[]`                                   | `void 0` |
+| bordered       | 是否展示边框   | `boolean`                                    | `false`  |
+| sortDescriptor | 排序内容       | `SortDescriptor`                             | `void 0` |
+| onSortChange   | 排序改变回调   | `(sortDescriptor: SortDescriptor) => void 0` | `void 0` |
+
+### Column
+
+| 参数           | 说明                 | 类型                                                           | 默认值                        |
+| -------------- | -------------------- | -------------------------------------------------------------- | ----------------------------- |
+| key            | 列的唯一键           | `React.Key`                                                    | -                             |
+| title          | 列标题               | `React.ReactNode`                                              | -                             |
+| render         | 自定义单元格渲染函数 | `(value: V, record: T, index: number) => ReactNode \| unknown` | `void 0`                      |
+| sortable       | 当前列是否支持排序   | `boolean`                                                      | `false`                       |
+| sortDirections | 可排序方向           | `SortDirection[]`                                              | `["ascending", "descending"]` |
+
+### SortDirection
+
+```ts
+type SortDirection = 'ascending' | 'descending' | null
+```
+
+### SortDescriptor
+
+| 参数      | 说明          | 类型            | 默认值 |
+| --------- | ------------- | --------------- | ------ |
+| key       | 列对应的`key` | `React.Key`     | -      |
+| direction | 排序顺序      | `SortDirection` | -      |

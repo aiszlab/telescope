@@ -41,16 +41,17 @@ const DATA_SOURCE: Person[] = [
 const App = () => {
   return (
     <Table
-      bordered
       dataSource={DATA_SOURCE}
       columns={[
         {
           key: 'firstName',
-          title: 'firstName'
+          title: 'firstName',
+          sortable: true
         },
         {
           key: 'lastName',
-          title: () => <span>Last Name</span>
+          title: () => <span>Last Name</span>,
+          sortable: true
         },
         {
           key: 'age',

@@ -42,37 +42,23 @@ const App = () => {
   return (
     <Table
       dataSource={DATA_SOURCE}
-      columns={(helper) => {
-        return [
-          helper.accessor('firstName', {
-            cell: (info) => info.getValue(),
-            footer: (info) => info.column.id
-          }),
-          helper.accessor((row) => row.lastName, {
-            id: 'lastName',
-            cell: (info) => <i>{info.getValue()}</i>,
-            header: () => <span>Last Name</span>,
-            footer: (info) => info.column.id
-          }),
-          helper.accessor('age', {
-            header: () => 'Age',
-            cell: (info) => info.renderValue(),
-            footer: (info) => info.column.id
-          }),
-          helper.accessor('visits', {
-            header: () => <span>Visits</span>,
-            footer: (info) => info.column.id
-          }),
-          helper.accessor('status', {
-            header: 'Status',
-            footer: (info) => info.column.id
-          }),
-          helper.accessor('progress', {
-            header: 'Profile Progress',
-            footer: (info) => info.column.id
-          })
-        ]
-      }}
+      columns={[
+        {
+          key: 'firstName',
+          title: 'firstName'
+        },
+        {
+          key: 'lastName',
+          title: () => <span>Last Name</span>
+        },
+        {
+          key: 'age',
+          render: (value) => {
+            return `${value}+`
+          },
+          title: 'age'
+        }
+      ]}
     />
   )
 }
