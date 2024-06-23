@@ -43,6 +43,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/space',
               label: 'Space 间距容器'
+            },
+            {
+              key: '/components/collapse',
+              label: 'Collapse 折叠面板'
             }
           ]
         },

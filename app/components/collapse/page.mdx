@@ -1,0 +1,47 @@
+import Usage from '@/components/usage'
+
+# Collapse 折叠面板
+
+可以折叠的面板
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/collapse/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    },
+    {
+      src: '/components/collapse/default-active.tsx',
+      title: '默认展开',
+      description: '使用参数控制折叠面板的默认展开。'
+    },
+    {
+      src: '/components/collapse/controlled.tsx',
+      title: '受控面板',
+      description: '在组件内部使用受控状态控制面板。'
+    }
+  ]}
+/>
+
+## API
+
+### Clock Props
+
+| 参数             | 说明               | 类型                           | 默认值   |
+| ---------------- | ------------------ | ------------------------------ | -------- |
+| defaultActiveKey | 默认打开的面板     | `React.Key \| React.Key[]`     | `void 0` |
+| activeKey        | 受控打开的面板     | `React.Key \| React.Key[]`     | `void 0` |
+| items            | 面板列表           | `CollapseItem[]`               | -        |
+| accordion        | 手风琴模式         | `boolean`                      | `false`  |
+| onChange         | 面板展开的回调函数 | `(value: React.Key[]) => void` | `void 0` |
+
+### CollapseItem
+
+| 参数     | 说明             | 类型              | 默认值 |
+| -------- | ---------------- | ----------------- | ------ |
+| key      | 面板对应的唯一值 | `React.Key`       | -      |
+| label    | 面板的标题       | `string`          | -      |
+| children | 面板的主体内容   | `React.ReactNode` | -      |
