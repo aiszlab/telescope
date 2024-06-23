@@ -33,7 +33,7 @@
     "@types/node": "^20.12.7",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint-config-next": "^14.1.0",
+    "eslint-config-next": "^14.2.4",
     "rehype-highlight": "^7.0.0",
     "remark-gfm": "^4.0.0",
     "typescript": "^5.5.2"
