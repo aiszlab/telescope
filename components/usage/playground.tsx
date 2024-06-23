@@ -10,7 +10,7 @@ interface Props {
 
 const Playground = ({ sources, small }: Props) => {
   return (
-    <Waterfall columns={small ? 2 : 1} gutter={12}>
+    <Waterfall columns={small ? 2 : 1} gutter={12} sequential>
       {sources.map((source, index) => {
         return <Playable key={index} {...source} />
       })}
