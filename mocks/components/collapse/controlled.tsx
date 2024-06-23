@@ -4,13 +4,13 @@ import { useState, type Key } from 'react'
 
 const App = () => {
   const [collapseActive, setCollapseActive] = useState<Key[]>(['1'])
-  const [accordionActive, setAccordionActive] = useState<Key>('1')
+  const [accordionActive, setAccordionActive] = useState<Key>()
 
   const changeCollapse = (value: Key[]) => {
     setCollapseActive(value)
   }
-  const changeAccordion = (value: Key) => {
-    setAccordionActive(value)
+  const changeAccordion = (value: Key[]) => {
+    setAccordionActive(value.at(0))
   }
 
   return (
