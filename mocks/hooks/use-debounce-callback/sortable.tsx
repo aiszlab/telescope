@@ -24,7 +24,7 @@ const Sortable = () => {
       callback: async (count: number) => {
         setOrderedSearched(`第${count.toString()}搜索结果有效`)
       },
-      pipeable: async () => {
+      pipe: async () => {
         orderedCount.current = orderedCount.current + 1
         const _count = orderedCount.current
         // 第一次请求 10s 后返回，后续请求更快的返回
