@@ -1,8 +1,7 @@
 'use client'
-
 import { Radio } from 'musae'
 
-const Group = () => {
+const App = () => {
   return (
     <Radio.Group>
       <Radio value='A'>A</Radio>
@@ -12,4 +11,4 @@ const Group = () => {
   )
 }
 
-export default Group
+export default App

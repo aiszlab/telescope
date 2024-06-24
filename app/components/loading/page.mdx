@@ -26,6 +26,11 @@ import Usage from '@/components/usage'
       src: '/components/loading/sizes.tsx',
       title: '尺寸',
       description: '不同尺寸的加载动效。'
+    },
+    {
+      src: '/components/loading/overlay.tsx',
+      title: '遮盖层',
+      description: '手动控制遮盖层的显影。'
     }
   ]}
 />
@@ -34,6 +39,8 @@ import Usage from '@/components/usage'
 
 ### Loading Props
 
-| 参数 | 说明 | 类型                             | 默认值     |
-| ---- | ---- | -------------------------------- | ---------- |
-| size | 尺寸 | `"small" \| "medium" \| "large"` | `"medium"` |
+| 参数     | 说明           | 类型                             | 默认值     |
+| -------- | -------------- | -------------------------------- | ---------- |
+| size     | 尺寸           | `"small" \| "medium" \| "large"` | `"medium"` |
+| overlay  | 是否显示遮盖层 | `boolean`                        | `true`     |
+| children | 子组件         | `React.ReactNode`                | `void 0`   |

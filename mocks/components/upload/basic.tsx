@@ -3,7 +3,7 @@ import { Upload, Button } from 'musae'
 
 const App = () => {
   return (
-    <Upload onClick={() => {}} uploader={async () => 'test'}>
+    <Upload>
       <Button>Upload</Button>
     </Upload>
   )
