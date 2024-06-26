@@ -14,8 +14,9 @@
     "@docsearch/react": "^3.6.0",
     "autoprefixer": "10.4.19",
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.11",
     "eslint": "8.57.0",
-    "musae": "^0.2.3",
+    "musae": "^0.2.5",
     "next": "^14.2.4",
     "postcss": "8.4.35",
     "react": "18.3.1",
@@ -36,6 +37,8 @@
     "eslint-config-next": "^14.2.4",
     "rehype-highlight": "^7.0.0",
     "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
     "typescript": "^5.5.2"
   }
 }
