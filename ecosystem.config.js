@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'telescope',
-      script: 'yarn',
+      script: 'pnpm',
       args: 'start'
     }
   ]
