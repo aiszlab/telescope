@@ -2,20 +2,15 @@
 
 import { Tabs } from 'musae'
 
-const ITEMS = [
-  {
-    key: '1',
-    label: 'test'
-  },
-  {
-    key: '2',
-    label: 'kankan'
-  },
-  {
-    key: '3',
-    label: '测试2'
-  }
-]
+const ITEMS = Array.from({ length: 10 })
+  .fill(0)
+  .map((item, index) => {
+    return {
+      key: index,
+      label: `tab ${index}`,
+      children: `body panel ${index}`
+    }
+  })
 
 const App = () => {
   return <Tabs items={ITEMS} />
