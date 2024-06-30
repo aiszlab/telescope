@@ -9,11 +9,32 @@ import Usage from '@/components/usage'
 ## 代码演示
 
 <Usage
+  small
   sources={[
     {
       src: '/components/timeline/basic.tsx',
       title: '基本',
       description: '最简单的用法。'
+    },
+    {
+      src: '/components/timeline/left.tsx',
+      title: '左边显示',
+      description: '可以将内容显示在时间节点左侧。'
+    },
+    {
+      src: '/components/timeline/dot.tsx',
+      title: '自定义时间轴节点',
+      description: '可以设置为图标或其他自定义元素。'
+    },
+    {
+      src: '/components/timeline/labeled.tsx',
+      title: '使用label显示时间',
+      description: '可以针对每一项设置label，展示对应内容。'
+    },
+    {
+      src: '/components/timeline/alternate.tsx',
+      title: '错峰显示',
+      description: '每个时间项与上一个产生视觉上的差异。'
     }
   ]}
 />
@@ -29,7 +50,8 @@ import Usage from '@/components/usage'
 
 ### TimelineItem
 
-| 参数        | 说明         | 类型              | 默认值   |
-| ----------- | ------------ | ----------------- | -------- |
-| label       | 节点展示标签 | `React.ReactNode` | `void 0` |
-| description | 节点展示描述 | `React.ReactNode` | -        |
+| 参数        | 说明           | 类型              | 默认值   |
+| ----------- | -------------- | ----------------- | -------- |
+| label       | 节点展示标签   | `React.ReactNode` | `void 0` |
+| description | 节点展示描述   | `React.ReactNode` | -        |
+| dot         | 自定义节点标识 | `React.ReactNode` | `void 0` |

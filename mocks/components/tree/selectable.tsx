@@ -1,5 +1,6 @@
 'use client'
-import { Tree, type TreeNode } from 'musae'
+import { Tree, Switch, type TreeNode, Space } from 'musae'
+import { useState } from 'react'
 
 const NODES: TreeNode[] = [
   {
@@ -25,7 +26,14 @@ const NODES: TreeNode[] = [
 ]
 
 const App = () => {
-  return <Tree nodes={NODES} className='w-64' />
+  const [isSelectable, setIsSelectable] = useState(false)
+
+  return (
+    <Space type='vertical'>
+      <Switch checkedChildren='可选' uncheckedChildren='不可选' onChange={setIsSelectable} value={isSelectable} />
+      <Tree nodes={NODES} selectable={isSelectable} />
+    </Space>
+  )
 }
 
 export default App

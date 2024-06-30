@@ -16,6 +16,11 @@ import Usage from '@/components/usage'
       src: '/components/tree/basic.tsx',
       title: '基本',
       description: '最简单的用法。'
+    },
+    {
+      src: '/components/tree/selectable.tsx',
+      title: '节点可选',
+      description: '控制节点是否可以被高亮选中。'
     }
   ]}
 />
@@ -24,11 +29,13 @@ import Usage from '@/components/usage'
 
 ### Tree Props
 
-| 参数         | 说明            | 类型                          | 默认值   |
-| ------------ | --------------- | ----------------------------- | -------- |
-| nodes        | 节点列表        | `TreeNode[]`                  | `[]`     |
-| expandedKeys | 展开的节点`key` | `React.Key[]`                 | `void 0` |
-| onExpand     | 展开的回调事件  | `(keys: React.Key[]) => void` | `void 0` |
+| 参数         | 说明                       | 类型                          | 默认值   |
+| ------------ | -------------------------- | ----------------------------- | -------- |
+| nodes        | 节点列表                   | `TreeNode[]`                  | `[]`     |
+| expandedKeys | 展开的节点`key`            | `React.Key[]`                 | `void 0` |
+| onExpand     | 展开的回调事件             | `(keys: React.Key[]) => void` | `void 0` |
+| selectable   | 树节点是否支持高亮选中功能 | `boolean`                     | `true`   |
+| selectedKeys | 被选中高亮的`Key`列表      | `React.Key[]`                 | `void 0` |
 
 ### TreeNode
 

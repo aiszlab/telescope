@@ -27,14 +27,18 @@ import Usage from '@/components/usage'
 
 ### Tabs
 
-| 参数      | 说明                   | 类型        | 默认值   |
-| --------- | ---------------------- | ----------- | -------- |
-| items     | 对应的明细项，用于切换 | `TabItem[]` | `[]`     |
-| activeKey | 受控的选中值           | `string`    | `void 0` |
+| 参数             | 说明                                | 类型        | 默认值   |
+| ---------------- | ----------------------------------- | ----------- | -------- |
+| items            | 对应的明细项，用于切换              | `TabItem[]` | `[]`     |
+| activeKey        | 受控的选中值                        | `React.Key` | `void 0` |
+| defaultActiveKey | 默认的选中值，优先级低于`activeKey` | `React.Key` | `void 0` |
+| forceRender      | 在初始化渲染时强制渲染所有面板      | `boolean`   | `false`  |
+| destroyable      | 面板在隐藏时是否直接卸载            | `boolean`   | `false`  |
 
 ### TabItem
 
-| 参数  | 说明       | 类型     | 默认值 |
-| ----- | ---------- | -------- | ------ |
-| key   | 项目唯一键 | `string` | -      |
-| label | 项目展示值 | `string` | -      |
+| 参数     | 说明                   | 类型              | 默认值   |
+| -------- | ---------------------- | ----------------- | -------- |
+| key      | 当前子项唯一键         | `React.Key`       | -        |
+| label    | 当前子项展示内容       | `string`          | -        |
+| children | 当前子项渲染的面板内容 | `React.ReactNode` | `void 0` |
