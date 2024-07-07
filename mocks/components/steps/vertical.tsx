@@ -19,7 +19,6 @@ const App = () => {
           description: 'Step 2 description'
         },
         {
-          leading: <Done size={40} />,
           title: 'Step 3',
           description: 'Step 3 description'
         }

@@ -28,7 +28,7 @@ importers:
         version: 8.57.0
       musae:
         specifier: ^0.2.6
-        version: 0.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: link:../musae
       next:
         specifier: ^14.2.4
         version: 14.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -209,15 +209,6 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@floating-ui/core@1.6.3':
-    resolution: {integrity: sha512-1ZpCvYf788/ZXOhRQGFxnYQOVgeU+pi0i+d0Ow34La7qjIXETi6RNswGVKkA6KcDO8/+Ysu2E/CeUmmeEBDvTg==}
-
-  '@floating-ui/dom@1.6.6':
-    resolution: {integrity: sha512-qiTYajAnh3P+38kECeffMSQgbvXty2VB6rS+42iWR4FPIlZjLK84E9qtLnMTLIpPz2znD/TaFqaiavMUrS+Hcw==}
-
-  '@floating-ui/utils@0.2.3':
-    resolution: {integrity: sha512-XGndio0l5/Gvd6CLIABvsav9HHezgDFFhDfHk1bvLfr9ni8dojqLSvBbotJEjmIwNHL7vK4QzBJTdBRoB+c1ww==}
-
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
@@ -365,17 +356,6 @@ packages:
 
   '@swc/helpers@0.5.5':
     resolution: {integrity: sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==}
-
-  '@tanstack/react-table@8.19.1':
-    resolution: {integrity: sha512-2jWJ2mhaXtBZ2h4k6azADFFrAPOGHw/fy/obIXwfCMFf63BKW/tHLp87oWDotFN/aKUo5Vj2cGBDRXfwTgiYPg==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-
-  '@tanstack/table-core@8.19.1':
-    resolution: {integrity: sha512-HePba/tRC6MCSHi8o9LktxpOfkV8u2hjGHllHNl5E6+/8mgtSuOSRr5VempH33qsYeIfgk42SiiayP777LZ9kQ==}
-    engines: {node: '>=12'}
 
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -799,10 +779,6 @@ packages:
   deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
 
-  deepmerge@4.3.1:
-    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
-    engines: {node: '>=0.10.0'}
-
   define-data-property@1.1.4:
     resolution: {integrity: sha512-rBMvIzlpA8v6E+SJZoo++HAYqsLrkg7MSfIinMPFhmkorw7X+dOXVJQs+QT69zGkzMyfDnIMN2Wid1+NbL3T+A==}
     engines: {node: '>= 0.4'}
@@ -1083,20 +1059,6 @@ packages:
 
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
-
-  framer-motion@11.2.12:
-    resolution: {integrity: sha512-lCjkV4nA9rWOy2bhR4RZzkp2xpB++kFmUZ6D44V9VQaxk+JDmbDd5lq+u58DjJIIllE8AZEXp9OG/TyDN4FB/w==}
-    peerDependencies:
-      '@emotion/is-prop-valid': '*'
-      react: ^18.0.0
-      react-dom: ^18.0.0
-    peerDependenciesMeta:
-      '@emotion/is-prop-valid':
-        optional: true
-      react:
-        optional: true
-      react-dom:
-        optional: true
 
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
@@ -1708,12 +1670,6 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  musae@0.2.6:
-    resolution: {integrity: sha512-3dPCT+sFn8L1yhmNcMF7avaNTqTPPNMDGm7oEiX4IIrtdMTgOt63XfU3n/7WubCUz+HZZwWyhIoqDW7PllPYSg==}
-    peerDependencies:
-      react: ^18
-      react-dom: ^18
-
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
@@ -1943,12 +1899,6 @@ packages:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
       react: ^18.3.1
-
-  react-hook-form@7.52.0:
-    resolution: {integrity: sha512-mJX506Xc6mirzLsmXUJyqlAI3Kj9Ph2RhplYhUVffeOQSnubK2uVqBFOBJmvKikvbFV91pxVXmDiR+QMF19x6A==}
-    engines: {node: '>=12.22.0'}
-    peerDependencies:
-      react: ^16.8.0 || ^17 || ^18 || ^19
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -2567,17 +2517,6 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@floating-ui/core@1.6.3':
-    dependencies:
-      '@floating-ui/utils': 0.2.3
-
-  '@floating-ui/dom@1.6.6':
-    dependencies:
-      '@floating-ui/core': 1.6.3
-      '@floating-ui/utils': 0.2.3
-
-  '@floating-ui/utils@0.2.3': {}
-
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
@@ -2726,14 +2665,6 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
       tslib: 2.6.3
-
-  '@tanstack/react-table@8.19.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@tanstack/table-core': 8.19.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@tanstack/table-core@8.19.1': {}
 
   '@types/acorn@4.0.6':
     dependencies:
@@ -3240,8 +3171,6 @@ snapshots:
 
   deep-is@0.1.4: {}
 
-  deepmerge@4.3.1: {}
-
   define-data-property@1.1.4:
     dependencies:
       es-define-property: 1.0.0
@@ -3686,13 +3615,6 @@ snapshots:
       signal-exit: 4.1.0
 
   fraction.js@4.3.7: {}
-
-  framer-motion@11.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      tslib: 2.6.3
-    optionalDependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
 
   fs.realpath@1.0.0: {}
 
@@ -4652,22 +4574,6 @@ snapshots:
 
   ms@2.1.3: {}
 
-  musae@0.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      '@aiszlab/relax': 1.2.56(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@floating-ui/dom': 1.6.6
-      '@tanstack/react-table': 8.19.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      clsx: 2.1.1
-      dayjs: 1.11.11
-      deepmerge: 4.3.1
-      framer-motion: 11.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-hook-form: 7.52.0(react@18.3.1)
-      rxjs: 7.8.1
-    transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
-
   mz@2.7.0:
     dependencies:
       any-promise: 1.3.0
@@ -4901,10 +4807,6 @@ snapshots:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
-
-  react-hook-form@7.52.0(react@18.3.1):
-    dependencies:
-      react: 18.3.1
 
   react-is@16.13.1: {}
 
