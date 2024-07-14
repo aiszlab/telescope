@@ -139,6 +139,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/upload',
               label: 'Upload 上传'
+            },
+            {
+              key: '/components/transfer',
+              label: 'Transfer 穿梭框'
             }
           ]
         },

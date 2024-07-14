@@ -1,5 +1,4 @@
 'use client'
-
 import { Checkbox } from 'musae'
 
 const App = () => {

@@ -1,0 +1,38 @@
+import Usage from '@/components/usage'
+
+# Transfer 穿梭框
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/transfer/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    },
+    {
+      src: '/components/transfer/disabled.tsx',
+      title: '禁用',
+      description: '禁用穿梭框。'
+    }
+  ]}
+/>
+
+## API
+
+### Transfer
+
+| 参数     | 说明                 | 类型                                 | 默认值         |
+| -------- | -------------------- | ------------------------------------ | -------------- |
+| options  | 穿梭框的选项列表     | `TransferOption[]`                   | -              |
+| value    | 选中值列表           | `React.Key[]`                        | `void 0`       |
+| titles   | 标题列表，按顺序展示 | `[React.ReactNode, React.ReactNode]` | `[null, null]` |
+| disabled | 是否禁用             | `boolean`                            | `false`        |
+
+### TransferOption
+
+| 参数  | 说明             | 类型              | 默认值   |
+| ----- | ---------------- | ----------------- | -------- |
+| value | 选项的唯一键值   | `React.Key`       | -        |
+| label | 选项对应的显示值 | `React.ReactNode` | `void 0` |

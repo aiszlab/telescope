@@ -12,6 +12,7 @@ import Usage from '@/components/usage'
 ## 代码演示
 
 <Usage
+  small
   sources={[
     {
       src: '/components/checkbox/basic.tsx',
@@ -22,6 +23,11 @@ import Usage from '@/components/usage'
       src: '/components/checkbox/group.tsx',
       title: 'Checkbox 组',
       description: '方便的从数组生成 Checkbox 组。'
+    },
+    {
+      src: '/components/checkbox/disabled.tsx',
+      title: '禁用',
+      description: '将整个 Checkbox 禁选。'
     }
   ]}
 />
@@ -36,10 +42,13 @@ import Usage from '@/components/usage'
 | checked  | 是否选中         | `boolean`                                              | `void 0` |
 | children | 子组件           | `React.ReactNode`                                      | -        |
 | onChange | 变化时的回调函数 | `(event: React.ChangeEvent<HTMLInputElement>) => void` | `void 0` |
+| disabled | 是否禁用         | `boolean`                                              | `false`  |
 
 ### Group
 
-| 参数     | 说明     | 类型              | 默认值   |
-| -------- | -------- | ----------------- | -------- |
-| value    | 选中的值 | `React.Key[]`     | `void 0` |
-| children | 子组件   | `React.ReactNode` | -        |
+| 参数     | 说明                     | 类型                     | 默认值   |
+| -------- | ------------------------ | ------------------------ | -------- |
+| value    | 选中的值                 | `React.Key[]`            | `void 0` |
+| children | 子组件                   | `React.ReactNode`        | -        |
+| onChange | 选中值发生改变的回调事件 | `(value: Key[]) => void` | `void 0` |
+| disabled | 是否禁用                 | `boolean`                | `false`  |
