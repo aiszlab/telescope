@@ -1,5 +1,4 @@
 'use client'
-
 import { Avatar } from 'musae'
 
 const App = () => {

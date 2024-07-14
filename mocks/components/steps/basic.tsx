@@ -1,6 +1,5 @@
 'use client'
 import { Steps } from 'musae'
-import { CheckCircle, Close, Done } from 'musae/icons'
 
 const App = () => {
   return (

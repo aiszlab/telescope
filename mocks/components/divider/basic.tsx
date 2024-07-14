@@ -1,5 +1,4 @@
 'use client'
-
 import { Divider } from 'musae'
 
 const App = () => {

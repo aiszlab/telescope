@@ -1,5 +1,4 @@
 'use client'
-
 import { useMessage, Button } from 'musae'
 
 const App = () => {

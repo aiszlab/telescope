@@ -1,5 +1,4 @@
 'use client'
-
 import { Tooltip } from 'musae'
 
 const App = () => {

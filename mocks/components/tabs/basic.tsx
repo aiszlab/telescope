@@ -1,5 +1,4 @@
 'use client'
-
 import { Tabs } from 'musae'
 
 const ITEMS = Array.from({ length: 10 })
