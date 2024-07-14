@@ -16,15 +16,11 @@ const OPTIONS: Option[] = [
 const Controlled = () => {
   const [value, setValue] = useState<string>()
 
-  return (
-    <Select
-      value={value}
-      onChange={(selected) => {
-        setValue(selected as string)
-      }}
-      options={OPTIONS}
-    />
-  )
+  const onChange = (selectedValue: string) => {
+    setValue(selectedValue)
+  }
+
+  return <Select value={value} onChange={onChange} options={OPTIONS} />
 }
 
 export default Controlled
