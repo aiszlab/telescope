@@ -163,6 +163,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Tag 标签'
             },
             {
+              key: '/components/badge',
+              label: 'Badge 徽标'
+            },
+            {
               key: '/components/loading',
               label: 'Loading 加载中'
             },

@@ -1,0 +1,37 @@
+import Usage from '@/components/usage'
+
+# Badge 徽标
+
+## 代码演示
+
+<Usage
+  small
+  sources={[
+    {
+      src: '/components/badge/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    },
+    {
+      src: '/components/badge/placement.tsx',
+      title: '改变徽标定位',
+      description: '借助 placement 属性可以简单改变徽标的定位。'
+    },
+    {
+      src: '/components/badge/dot.tsx',
+      title: '点状徽标',
+      description: '不传递 content 时，徽标显示为点状。'
+    }
+  ]}
+/>
+
+## API
+
+### Badge
+
+| 参数      | 说明                       | 类型                                                           | 默认值        |
+| --------- | -------------------------- | -------------------------------------------------------------- | ------------- |
+| children  | 徽标挂在的元素             | `React.ReactNode`                                              | -             |
+| content   | 徽标的内容，为空时显示为点 | `React.ReactNode`                                              | `void 0`      |
+| invisible | 徽标是否隐藏               | `boolean`                                                      | `false`       |
+| placement | 徽标定位                   | `"top-right" \| "top-left" \| "bottom-right" \| "bottom-left"` | `"top-right"` |
