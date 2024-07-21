@@ -11,6 +11,7 @@ import Usage from '@/components/usage'
 ## 代码演示
 
 <Usage
+  small
   sources={[
     {
       src: '/components/tree/basic.tsx',
@@ -21,6 +22,11 @@ import Usage from '@/components/usage'
       src: '/components/tree/selectable.tsx',
       title: '节点可选',
       description: '控制节点是否可以被高亮选中。'
+    },
+    {
+      src: '/components/tree/uncontrolled.tsx',
+      title: '不受控',
+      description: '使用默认参数保持组件的不受控状态。'
     }
   ]}
 />

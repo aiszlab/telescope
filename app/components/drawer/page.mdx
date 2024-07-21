@@ -14,11 +14,17 @@ import Usage from '@/components/usage'
 ## 代码演示
 
 <Usage
+  small
   sources={[
     {
       src: '/components/drawer/basic.tsx',
       title: '基本',
       description: '最简单的用法。'
+    },
+    {
+      src: '/components/drawer/closable.tsx',
+      title: '自定义关闭方式',
+      description: '控制抽屉的关闭方式。'
     }
   ]}
 />
@@ -27,12 +33,12 @@ import Usage from '@/components/usage'
 
 ### Drawer Props
 
-| 参数        | 说明                   | 类型                                           | 默认值   |
-| ----------- | ---------------------- | ---------------------------------------------- | -------- |
-| children    | 抽屉的内容             | `React.ReactNode`                              | `void 0` |
-| open        | 控制抽屉是否打开       | `boolean`                                      | -        |
-| title       | 抽屉的标题             | `React.ReactNode`                              | `void 0` |
-| placement   | 抽屉的位置             | `"right" \| "left" \| "top" \| "bottom"`       | `void 0` |
-| dismissable | 抽屉的关闭方式         | `boolean \| ("esc" \| "overlay" \| "close")[]` | `true`   |
-| size        | 抽屉大小               | `number`                                       | `400`    |
-| onClose     | 抽屉点击关闭的回调函数 | `() => void`                                   | `void 0` |
+| 参数      | 说明                   | 类型                                           | 默认值   |
+| --------- | ---------------------- | ---------------------------------------------- | -------- |
+| children  | 抽屉的内容             | `React.ReactNode`                              | `void 0` |
+| open      | 控制抽屉是否打开       | `boolean`                                      | -        |
+| title     | 抽屉的标题             | `React.ReactNode`                              | `void 0` |
+| placement | 抽屉的位置             | `"right" \| "left" \| "top" \| "bottom"`       | `void 0` |
+| closable  | 抽屉的关闭方式         | `boolean \| ("esc" \| "overlay" \| "close")[]` | `true`   |
+| size      | 抽屉大小               | `number`                                       | `400`    |
+| onClose   | 抽屉点击关闭的回调函数 | `() => void`                                   | `void 0` |

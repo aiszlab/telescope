@@ -5,12 +5,12 @@ import Playable, { Props as PlayableProps } from './playable'
 
 interface Props {
   sources: PlayableProps[]
-  small: boolean
+  columns: 1 | 2
 }
 
-const Playground = ({ sources, small }: Props) => {
+const Playground = ({ sources, columns }: Props) => {
   return (
-    <Waterfall columns={small ? 2 : 1} gutter={12} sequential>
+    <Waterfall columns={columns} gutter={12} sequential>
       {sources.map((source, index) => {
         return <Playable key={index} {...source} />
       })}

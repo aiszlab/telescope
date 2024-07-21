@@ -18,6 +18,11 @@ import Usage from '@/components/usage'
       src: '/components/dialog/basic.tsx',
       title: '基本',
       description: '最简单的用法。'
+    },
+    {
+      src: '/components/dialog/closable.tsx',
+      title: '自定义关闭方式',
+      description: '控制弹窗的关闭方式。'
     }
   ]}
 />
@@ -26,16 +31,16 @@ import Usage from '@/components/usage'
 
 ### Dialog Props
 
-| 参数        | 说明                     | 类型                                           | 默认值   |
-| ----------- | ------------------------ | ---------------------------------------------- | -------- |
-| title       | 对话框的标题             | `React.ReactNode`                              | `void 0` |
-| children    | 对话框的内容             | `React.ReactNode`                              | `void 0` |
-| open        | 控制对话框是否打开       | `boolean`                                      | -        |
-| footer      | 对话框底部的定制内容     | `React.ReactNode`                              | `void 0` |
-| dismissable | 对话框的关闭方式         | `boolean \| ("esc" \| "overlay" \| "close")[]` | `true`   |
-| styles      | 不同区块的样式表         | `DialogStyles`                                 | `void 0` |
-| onConfirm   | 对话框点击确认的回调函数 | `() => void`                                   | `void 0` |
-| onClose     | 对话框点击关闭的回调函数 | `() => void`                                   | `void 0` |
+| 参数      | 说明                     | 类型                                           | 默认值   |
+| --------- | ------------------------ | ---------------------------------------------- | -------- |
+| title     | 对话框的标题             | `React.ReactNode`                              | `void 0` |
+| children  | 对话框的内容             | `React.ReactNode`                              | `void 0` |
+| open      | 控制对话框是否打开       | `boolean`                                      | -        |
+| footer    | 对话框底部的定制内容     | `React.ReactNode`                              | `void 0` |
+| closable  | 对话框的关闭方式         | `boolean \| ("esc" \| "overlay" \| "close")[]` | `true`   |
+| styles    | 不同区块的样式表         | `DialogStyles`                                 | `void 0` |
+| onConfirm | 对话框点击确认的回调函数 | `() => void`                                   | `void 0` |
+| onClose   | 对话框点击关闭的回调函数 | `() => void`                                   | `void 0` |
 
 ### DialogStyles
 

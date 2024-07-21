@@ -57,7 +57,7 @@ const Usage = async ({ sources, small = false }: Props) => {
     })
   )
 
-  return <Playground sources={_sources} small={small} />
+  return <Playground sources={_sources} columns={small ? 2 : 1} />
 }
 
 export default Usage
