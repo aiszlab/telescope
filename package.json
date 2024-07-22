@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@aiszlab/relax": "^1.2.59",
-    "@docsearch/react": "^3.6.0",
+    "@docsearch/react": "^3.6.1",
     "autoprefixer": "10.4.19",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
