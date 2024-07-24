@@ -39,7 +39,7 @@ const Playable = ({ title, render, source, description }: Props) => {
         id={title}
       >
         {/* 渲染 */}
-        <div className='p-6'>{createElement(render)}</div>
+        <div className='p-6 overflow-x-auto'>{createElement(render)}</div>
 
         <Divider />
 

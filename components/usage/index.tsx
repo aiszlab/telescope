@@ -19,10 +19,10 @@ interface Source {
 
 interface Props {
   sources: Source[]
-  small?: boolean
+  columns?: 1 | 2
 }
 
-const Usage = async ({ sources, small = false }: Props) => {
+const Usage = async ({ sources, columns = 1 }: Props) => {
   const _sources = await Promise.all(
     sources.map<Promise<PlayableProps>>(async ({ src, description, title }) => {
       // get src ext
@@ -57,7 +57,7 @@ const Usage = async ({ sources, small = false }: Props) => {
     })
   )
 
-  return <Playground sources={_sources} columns={small ? 2 : 1} />
+  return <Playground sources={_sources} columns={columns} />
 }
 
 export default Usage

@@ -1,23 +1,23 @@
 'use client'
-import { Popover, Space } from 'musae'
+import { Popover, Space, Button } from 'musae'
 
 const App = () => {
   return (
     <Space>
       <Popover title='Hover' description='hover 显示' triggerBy='hover'>
-        <span>hover</span>
+        <Button>hover</Button>
       </Popover>
 
       <Popover title='Click' description='click 显示' triggerBy='click'>
-        <span>click</span>
+        <Button>click</Button>
       </Popover>
 
       <Popover title='Focus' description='focus 显示' triggerBy='focus'>
-        <span>focus</span>
+        <Button>focus</Button>
       </Popover>
 
       <Popover title='ContextMenu' description='contextMenu 显示' triggerBy='contextMenu'>
-        <span>contextMenu</span>
+        <Button>contextMenu</Button>
       </Popover>
     </Space>
   )
