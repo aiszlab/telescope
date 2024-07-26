@@ -85,8 +85,8 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Button 按钮'
             },
             {
-              key: '/components/countable',
-              label: 'Countable 可计数'
+              key: '/components/countdown',
+              label: 'Countdown 倒计数'
             },
             {
               key: '/components/input',
@@ -150,6 +150,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
           key: '/components/data-display',
           label: '数据展示',
           children: [
+            {
+              key: '/components/skeleton',
+              label: 'Skeleton 骨架屏'
+            },
             {
               key: '/components/avatar',
               label: 'Avatar 头像'
