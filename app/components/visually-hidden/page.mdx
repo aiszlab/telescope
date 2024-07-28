@@ -1,0 +1,24 @@
+import Usage from '@/components/usage'
+
+# VisuallyHidden
+
+VisuallyHidden is a common technique used in web accessibility to hide content from the visual client, but keep it readable for screen readers.
+
+## 代码演示
+
+<Usage
+  columns={2}
+  sources={[
+    {
+      src: '/components/visually-hidden/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    }
+  ]}
+/>
+
+## API
+
+| 参数     | 说明             | 类型              | 默认值 |
+| -------- | ---------------- | ----------------- | ------ |
+| children | readable content | `React.ReactNode` | -      |

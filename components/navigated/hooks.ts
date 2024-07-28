@@ -73,6 +73,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/steps',
               label: 'Steps 步骤条'
+            },
+            {
+              key: '/components/visually-hidden',
+              label: 'VisuallyHidden'
             }
           ]
         },
@@ -91,6 +95,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/input',
               label: 'Input 输入框'
+            },
+            {
+              key: '/components/number-input',
+              label: 'NumberInput 数字输入框'
             },
             {
               key: '/components/otp-input',

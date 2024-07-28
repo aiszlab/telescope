@@ -12,11 +12,22 @@ import Usage from '@/components/usage'
 ## 代码演示
 
 <Usage
+  columns={2}
   sources={[
     {
       src: '/components/message/basic.tsx',
       title: '基本',
       description: '最简单的用法。'
+    },
+    {
+      src: '/components/message/static.tsx',
+      title: '静态方法',
+      description: '可使用全局静态方法展示消息，但不能消费上下文和主题。'
+    },
+    {
+      src: '/components/message/type.tsx',
+      title: '不同的提示类型',
+      description: '调用不同的方法触发消息的不同类型。'
     }
   ]}
 />

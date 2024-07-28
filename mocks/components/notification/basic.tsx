@@ -4,7 +4,7 @@ import { Button, useNotification, Grid } from 'musae'
 const { Col, Row } = Grid
 type Placement = Exclude<Parameters<ReturnType<typeof useNotification>[0]['info']>[0]['placement'], undefined>
 
-const PLACEMENTS: Placement[] = ['topLeft', 'top', 'topRight', 'bottomLeft', 'bottom', 'bottomRight']
+const PLACEMENTS: Placement[] = ['top-left', 'top', 'top-right', 'bottom-left', 'bottom', 'bottom-right']
 
 const App = () => {
   const [notifier, holder] = useNotification()

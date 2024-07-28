@@ -7,6 +7,7 @@ const App = () => {
     <Steps
       value={1}
       type='vertical'
+      size={40}
       items={[
         {
           leading: <CheckCircle size={40} />,

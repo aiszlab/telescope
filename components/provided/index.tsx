@@ -20,8 +20,8 @@ const Provided = (props: Props) => {
   }
 
   return (
-    <ConfigProvider>
-      <ThemeProvider>
+    <ThemeProvider>
+      <ConfigProvider>
         <_Layout className='min-h-screen'>
           <_Layout.Header className='flex items-center gap-x-4 shadow-sm'>
             <Link href='/'>
@@ -58,8 +58,8 @@ const Provided = (props: Props) => {
 
           <_Layout.Main className='flex-1 flex flex-col'>{props.children}</_Layout.Main>
         </_Layout>
-      </ThemeProvider>
-    </ConfigProvider>
+      </ConfigProvider>
+    </ThemeProvider>
   )
 }
 
