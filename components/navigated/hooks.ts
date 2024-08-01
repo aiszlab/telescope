@@ -191,6 +191,14 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Notification 通知消息框'
             },
             {
+              key: '/components/tooltip',
+              label: 'Tooltip 消息提示'
+            },
+            {
+              key: '/components/popover',
+              label: 'Popover 气泡卡片'
+            },
+            {
               key: '/components/calendar',
               label: 'Calendar 日历'
             },
@@ -229,12 +237,8 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
               label: 'Progress 进度条'
             },
             {
-              key: '/components/popover',
-              label: 'Popover 气泡卡片'
-            },
-            {
-              key: '/components/tooltip',
-              label: 'Tooltip 消息提示'
+              key: '/components/popconfirm',
+              label: 'Popconfirm 气泡确认框'
             },
             {
               key: '/components/tour',
@@ -266,6 +270,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/hooks/use-mounted',
               label: 'useMounted'
+            },
+            {
+              key: '/hooks/use-unmount',
+              label: 'useUnmount'
             },
             {
               key: '/hooks/use-update-effect',

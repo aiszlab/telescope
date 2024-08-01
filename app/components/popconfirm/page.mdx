@@ -1,0 +1,34 @@
+import Usage from '@/components/usage'
+
+# Popover 气泡卡片
+
+## 代码演示
+
+<Usage
+  columns={2}
+  sources={[
+    {
+      src: '/components/popconfirm/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    }
+  ]}
+/>
+
+## API
+
+### Popover Props
+
+| 参数        | 说明               | 类型                                   | 默认值     |
+| ----------- | ------------------ | -------------------------------------- | ---------- |
+| title       | 标题               | `React.ReactNode`                      | `void 0`   |
+| description | 内容               | `React.ReactNode`                      | `void 0`   |
+| children    | 需要展示气泡的组件 | `React.ReactElement<P>`                | -          |
+| triggerBy   | 气泡的触发方式     | `TriggerBy \| TriggerBy[]`             | -          |
+| placement   | 气泡展示位置       | `import("@floating-ui/dom").Placement` | `"bottom"` |
+
+### TriggerBy
+
+```ts
+type TriggerBy = 'hover' | 'focus' | 'click' | 'contextMenu'
+```
