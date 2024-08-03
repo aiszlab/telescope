@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, type Key, useMemo } from 'react'
-import { Menu, Layout as _Layout, Button } from 'musae'
+import { Menu, Layout as _Layout } from 'musae'
 import { useRouter, usePathname } from 'next/navigation'
 import { Context, useFloatNav } from '@/hooks/use-float-nav'
 import FloatNav from '@/components/float-nav'

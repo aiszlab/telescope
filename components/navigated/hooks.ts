@@ -292,6 +292,14 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/hooks/use-focus',
               label: 'useFocus'
+            },
+            {
+              key: '/hooks/use-click-away',
+              label: 'useClickAway'
+            },
+            {
+              key: '/hooks/use-scroll-locker',
+              label: 'useScrollLocker'
             }
           ]
         },
@@ -340,6 +348,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/hooks/use-refs',
               label: 'useRefs'
+            },
+            {
+              key: '/hooks/use-identity',
+              label: 'useIdentity'
             }
           ]
         }

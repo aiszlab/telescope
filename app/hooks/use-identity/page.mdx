@@ -1,0 +1,26 @@
+import Usage from '@/components/usage'
+
+# useIdentify
+
+在`react`组件中使用动态生成的唯一 id。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-identity/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    }
+  ]}
+/>
+
+## Return
+
+### UsedIdentify
+
+| 参数     | 说明                            | 类型           |
+| -------- | ------------------------------- | -------------- |
+| id       | 当前组件`id`，参考`React.useId` | `string`       |
+| uniqueId | 创建组件范围内的唯一`id`        | `() => string` |
