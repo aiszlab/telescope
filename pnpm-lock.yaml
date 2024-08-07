@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@aiszlab/relax':
-        specifier: ^1.2.68
-        version: 1.2.68(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.2.71
+        version: 1.2.71(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@docsearch/react':
         specifier: ^3.6.1
         version: 3.6.1(@algolia/client-search@4.23.3)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.14.0)
@@ -95,12 +95,6 @@ importers:
         version: 5.5.3
 
 packages:
-
-  '@aiszlab/relax@1.2.68':
-    resolution: {integrity: sha512-VqEN2tRw3hzbeM+SPB39LF0EnL1ZoTyvE2gOIb5DgV9wkn+M8wJ3rgu8QPmqh95mmjOvs1h8UP5VHyUGxMzsZw==}
-    peerDependencies:
-      react: '18'
-      react-dom: '18'
 
   '@aiszlab/relax@1.2.71':
     resolution: {integrity: sha512-jvj1CbcLX9KURDPsVv9nE61lCZu4nI2Br4CjYkf8Ly2PZSNQnAqgfzn6JhIAFPT94f4FscNmY/gNdwyUhtz/6A==}
@@ -2488,14 +2482,6 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
 snapshots:
-
-  '@aiszlab/relax@1.2.68(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@babel/runtime': 7.25.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-is: 18.3.1
-      rxjs: 7.8.1
 
   '@aiszlab/relax@1.2.71(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
