@@ -76,7 +76,7 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             },
             {
               key: '/components/visually-hidden',
-              label: 'VisuallyHidden'
+              label: 'VisuallyHidden 可见性隐藏'
             }
           ]
         },
@@ -217,6 +217,10 @@ export const useNavigationItems = ({ type }: { type: NavigationType }) => {
             {
               key: '/components/timeline',
               label: 'Timeline 时间轴'
+            },
+            {
+              key: '/components/highlight',
+              label: 'Highlight 高亮'
             }
           ]
         },

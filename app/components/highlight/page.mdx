@@ -1,0 +1,29 @@
+import Usage from '@/components/usage'
+
+# Highlight 高亮
+
+## 代码演示
+
+<Usage
+  columns={2}
+  sources={[
+    {
+      src: '/components/highlight/basic.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    },
+    {
+      src: '/components/highlight/regular-expression.tsx',
+      title: '正则匹配',
+      description: '使用正则表达式匹配文案并且高亮'
+    }
+  ]}
+/>
+
+## API
+
+### Highlight Props
+
+| 参数    | 说明       | 类型                 | 默认值 |
+| ------- | ---------- | -------------------- | ------ |
+| capture | 匹配字符串 | `string` \| `RegExp` | -      |
