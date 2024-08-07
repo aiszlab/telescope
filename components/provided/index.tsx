@@ -28,7 +28,7 @@ const Provided = (props: Props) => {
               <span className='text-3xl font-medium'>aisz.dev</span>
             </Link>
 
-            <DocSearch appId='9BSY98YGAX' indexName='aisz' apiKey='a551ed2db3f040c9b309d3c53afab838' />
+            <DocSearch appId='9BSY98YGAX' indexName='aisz' apiKey='9179f8ab82e675e97e552de847289030' />
 
             <Menu
               mode='horizontal'
