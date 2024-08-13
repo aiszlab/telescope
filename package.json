@@ -10,14 +10,14 @@
     "deploy": "git pull origin main && pnpm i && pnpm build && pm2 restart telescope"
   },
   "dependencies": {
-    "@aiszlab/relax": "^1.2.68",
+    "@aiszlab/relax": "^1.2.71",
     "@docsearch/react": "^3.6.1",
     "autoprefixer": "10.4.19",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.12",
     "eslint": "8.57.0",
     "musae": "^0.2.15",
-    "next": "^14.2.4",
+    "next": "^14.2.5",
     "postcss": "8.4.40",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -31,14 +31,14 @@
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.5",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^22.0.0",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/node": "^22.2.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "eslint-config-next": "^14.2.5",
     "rehype-highlight": "^7.0.0",
     "remark-gfm": "^4.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   }
 }
