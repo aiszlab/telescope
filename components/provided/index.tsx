@@ -1,9 +1,9 @@
 'use client'
 
-import { Layout as _Layout, ThemeProvider, ConfigProvider, Bench } from 'musae'
+import { ThemeProvider, ConfigProvider, Bench } from 'musae'
 import Link from 'next/link'
-import { Key, type ReactNode } from 'react'
-import { useRouter } from 'next/navigation'
+import { type Key, useMemo, type ReactNode } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import Toolbar from './toolbar'
 import { DocSearch } from '@docsearch/react'
 import { NAVIGATIONS } from './navigation'
@@ -16,17 +16,21 @@ interface Props {
 
 const Provided = (props: Props) => {
   const router = useRouter()
+  const pathname = usePathname()
 
   const toDocs = (href: string) => {
     router.push(href)
   }
+
+  const defaultExpandedKeys = useMemo(() => {
+    return NAVIGATIONS.reduce<Key[]>((prev, item) => prev.concat(item.children?.map((child) => child.path) ?? []), [])
+  }, [])
 
   return (
     <ThemeProvider>
       <ConfigProvider>
         <Bench
           title={<Link href='/'>aisz.dev</Link>}
-          className='min-h-screen'
           navigations={NAVIGATIONS}
           trailing={
             <>
@@ -35,6 +39,8 @@ const Provided = (props: Props) => {
             </>
           }
           onNavigate={toDocs}
+          location={pathname}
+          defaultExpandedKeys={defaultExpandedKeys}
         >
           {props.children}
         </Bench>
