@@ -13,7 +13,7 @@ const FloatNav = (props: Props) => {
 
   return (
     <nav className={clsx('h-fit sticky top-24', props.className)}>
-      <Menu variant='text' items={items} defaultExpandedKeys={items.map((item) => item.key)} size='small' />
+      <Menu items={items} defaultExpandedKeys={items.map((item) => item.key)} size='small' />
     </nav>
   )
 }
