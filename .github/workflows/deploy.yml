@@ -1,8 +1,4 @@
-# Sample workflow for building and deploying a Next.js site to GitHub Pages
-#
-# To get started with Next.js see: https://nextjs.org/docs/getting-started
-#
-name: Deploy Next.js site to Pages
+name: Deploy Online
 
 on:
   # Only allows you to run this workflow manually from the Actions tab
@@ -17,7 +13,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "telescope"
+  group: 'telescope'
   cancel-in-progress: false
 
 jobs:
@@ -30,7 +26,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: '22'
       - name: Install package manager
         run: npm i -g pnpm
       - name: Install dependencies
@@ -54,5 +50,4 @@ jobs:
           name: telescope
       - name: SSH Deploy
         run: |
-          scp -r -P ${{ secrets.SSH_PORT }} ./path/to/local/files ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/path/to/remote/directory 
-        
+          scp -r -P ${{ secrets.SSH_PORT }} ./next ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2/.next
