@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: .next
-          path: .next
+          path: telescope
 
   # Deployment job
   deploy:
@@ -47,7 +47,8 @@ jobs:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v4
         with:
-          name: .next
+          name: telescope
+          path: .next
 
       - name: Use private key
         run: |
@@ -62,4 +63,4 @@ jobs:
       - name: SSH Deploy
         run: |
           ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "mkdir -p /root/workspace/telescope2"
-          scp -r $GITHUB_WORKSPACE/.next ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2
+          scp -r .next ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2
