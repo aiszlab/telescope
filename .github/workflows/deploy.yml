@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: telescope
+          name: .next
           path: .next
 
   # Deployment job
@@ -47,7 +47,7 @@ jobs:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v4
         with:
-          name: telescope
+          name: .next
 
       - name: Use private key
         run: |
