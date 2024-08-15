@@ -36,8 +36,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: .next
-          path: telescope
+          name: telescope
+          path: .next
 
   # Deployment job
   deploy:
