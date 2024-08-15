@@ -50,4 +50,4 @@ jobs:
           name: telescope
       - name: SSH Deploy
         run: |
-          scp -r -P ${{ secrets.SSH_PORT }} .next ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2/.next
+          scp -r .next ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2/.next
