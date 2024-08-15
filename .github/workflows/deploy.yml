@@ -48,6 +48,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: telescope
+      - name: Install sshpass
+        run: |
+          apt-get install sshpass
+      - name: SSH Login
+        run: |
+          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}
       - name: SSH Deploy
         run: |
           scp -r .next ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2/.next
