@@ -48,12 +48,17 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: telescope
-      - name: Install sshpass
+
+      - name: Use private key
         run: |
-          apt-get install sshpass
-      - name: SSH Login
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Add SSH Key to known_hosts
         run: |
-          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
       - name: SSH Deploy
         run: |
           scp -r .next ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2/.next
