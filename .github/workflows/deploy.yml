@@ -62,4 +62,6 @@ jobs:
       - name: SSH Deploy
         run: |
           ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "mkdir -p /root/workspace/telescope2"
+          pwd
+          ls -la
           scp -r .next ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2
