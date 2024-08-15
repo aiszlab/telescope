@@ -60,7 +60,12 @@ jobs:
         run: |
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-      - name: SSH Deploy
+      - name: Pack Build
         run: |
           tar -czvf build.tar.gz .next/
+
+      - name: SSH Deploy
+        run: |
           scp -r build.tar.gz ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2
+          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "tar -xzvf build.tar.gz | xargs chmod 0644"
+          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "rm -rf build.tar.gz"
