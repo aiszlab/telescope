@@ -17,39 +17,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Install package manager
-        run: npm i -g pnpm
-      - name: Install dependencies
-        run: pnpm i
-      - name: Build with Next.js
-        run: pnpm build
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: telescope
-          path: .next
-
   # Deployment job
   deploy:
     runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Download a Build Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: telescope
-          path: .next
-
       - name: Use private key
         run: |
           mkdir -p ~/.ssh
@@ -60,12 +31,18 @@ jobs:
         run: |
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Pack Build
-        run: |
-          tar -czvf build.tar.gz .next/
+      - name: Executing remote ssh commands
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd ~/workspace/telescope
+            npm run deploy
 
-      - name: SSH Deploy
-        run: |
-          scp build.tar.gz ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2
-          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "tar -xzvf /root/workspace/telescope2/build.tar.gz | xargs chmod 0644"
-          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "rm -rf /root/workspace/telescope2/build.tar.gz"
+      # - name: SSH Deploy
+      #   run: |
+      #     scp build.tar.gz ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2
+      #     ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "tar -xzvf /root/workspace/telescope2/build.tar.gz | xargs chmod 0644"
+      #     ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "rm -rf /root/workspace/telescope2/build.tar.gz"
