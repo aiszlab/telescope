@@ -66,6 +66,6 @@ jobs:
 
       - name: SSH Deploy
         run: |
-          scp -r build.tar.gz ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2
+          scp build.tar.gz ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}://root/workspace/telescope2
           ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "tar -xzvf /root/workspace/telescope2/build.tar.gz | xargs chmod 0644"
           ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "rm -rf /root/workspace/telescope2/build.tar.gz"
