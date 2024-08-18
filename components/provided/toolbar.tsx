@@ -1,11 +1,18 @@
 import { Bedtime, Github, WbSunny } from 'musae/icons'
-import { Button, useTheme } from 'musae'
+import { Button, useTheme, I18nButton, Locale } from 'musae'
 
-const Toolbar = () => {
+interface Props {
+  onLocaleChange: (locale?: Locale) => void
+}
+
+const Toolbar = ({ onLocaleChange }: Props) => {
   const { mode, toggle } = useTheme()
 
   return (
     <ul className='flex items-center justify-end gap-x-2'>
+      <li>
+        <I18nButton onChange={onLocaleChange} variant='text' />
+      </li>
       <li>
         <Button shape='circular' variant='text' onClick={toggle}>
           {mode === 'dark' ? <WbSunny /> : <Bedtime />}

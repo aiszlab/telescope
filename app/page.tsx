@@ -4,6 +4,7 @@ import { Button, useTheme } from 'musae'
 import { useRouter } from 'next/navigation'
 import { useCallback } from 'react'
 import dayjs from 'dayjs'
+import Link from 'next/link'
 
 const CURRENT_AT = dayjs()
 
@@ -17,7 +18,7 @@ const App = () => {
   const theme = useTheme()
 
   return (
-    <>
+    <section style={{ minHeight: 'calc(100vh - 96px)' }} className='flex flex-col'>
       <main className='flex-1 flex flex-col items-center content-center flex-nowrap'>
         <div className='p-32'>
           <h1 className='text-5xl font-bold'>
@@ -53,19 +54,26 @@ const App = () => {
           <div className='flex-1 px-2'>
             <h6 className='font-bold text-lg mb-5'>Learn</h6>
             <ul>
-              <li>Introduction</li>
+              <li>
+                <Link href='/about-us'>Introduction</Link>
+              </li>
             </ul>
           </div>
           <div className='flex-1 px-2'>
             <h6 className='font-bold text-lg mb-5'>More</h6>
             <ul>
-              <li>relax</li>
+              <li>
+                <Link href='/components'>musae</Link>
+              </li>
+              <li>
+                <Link href='/hooks'>relax</Link>
+              </li>
             </ul>
           </div>
         </div>
         <p>Copyright © {CURRENT_AT.get('y')} fantufantu</p>
       </footer>
-    </>
+    </section>
   )
 }
 
