@@ -29,7 +29,7 @@ const App = () => {
   const [isSelectable, setIsSelectable] = useState(false)
 
   return (
-    <Space type='vertical'>
+    <Space orientation='vertical'>
       <Switch checkedChildren='可选' uncheckedChildren='不可选' onChange={setIsSelectable} value={isSelectable} />
       <Tree nodes={NODES} selectable={isSelectable} />
     </Space>

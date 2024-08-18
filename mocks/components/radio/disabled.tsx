@@ -3,7 +3,7 @@ import { Radio, Space } from 'musae'
 
 const App = () => {
   return (
-    <Space gutter={8} type='vertical'>
+    <Space gutter={8} orientation='vertical'>
       <span>禁用单个</span>
       <Radio value='demo' disabled checked>
         Demo

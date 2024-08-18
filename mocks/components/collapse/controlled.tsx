@@ -14,7 +14,7 @@ const App = () => {
   }
 
   return (
-    <Space type='vertical'>
+    <Space orientation='vertical'>
       <Collapse
         activeKey={collapseActive}
         onChange={changeCollapse}
