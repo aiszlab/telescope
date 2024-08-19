@@ -27,8 +27,8 @@ importers:
         specifier: 8.57.0
         version: 8.57.0
       musae:
-        specifier: ^0.2.18
-        version: 0.2.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^0.2.19
+        version: 0.2.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next:
         specifier: ^14.2.5
         version: 14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -98,6 +98,12 @@ packages:
 
   '@aiszlab/relax@1.2.72':
     resolution: {integrity: sha512-KxiCBA1etM1w4g6ApXQdxVFG4DmMxwwGY3VzoSP3IlEWZObMv6LgD5Fm8WTRpSskNsRQeRPeuyW7KQVnxao1Sw==}
+    peerDependencies:
+      react: '18'
+      react-dom: '18'
+
+  '@aiszlab/relax@1.2.73':
+    resolution: {integrity: sha512-ohkVohYYj7I+8kn5BZoN5/UqfoHt5EyBGuTWcLFWE4Yn9i5PWUP7AM29D8WGKGKD+ckRgoZgu4kR0lDPAIsEmg==}
     peerDependencies:
       react: '18'
       react-dom: '18'
@@ -445,6 +451,9 @@ packages:
 
   '@types/node@22.4.0':
     resolution: {integrity: sha512-49AbMDwYUz7EXxKU/r7mXOsxwFr4BYbvB7tWYxVuLdb2ibd30ijjXINSMAHiEEZk5PCRBmW1gUeisn2VMKt3cQ==}
+
+  '@types/node@22.4.1':
+    resolution: {integrity: sha512-1tbpb9325+gPnKK0dMm+/LMriX0vKxf6RnB0SZUqfyVkQ4fMgUSySqhxE/y8Jvs4NyF1yHzTfG9KlnkIODxPKg==}
 
   '@types/prop-types@15.7.12':
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
@@ -1732,8 +1741,8 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  musae@0.2.18:
-    resolution: {integrity: sha512-RDFmoL9AjUtctuXq4KwdGLbswiw4FuTqg6ireMASc8acbN2BBN97HYRDx75/lMEJ24Eb4d1LSe6xkhvnMd7S3A==}
+  musae@0.2.19:
+    resolution: {integrity: sha512-pt7/vWD0EHkQER4OBK3YHA6cAHDRjzILZD5SUCUk6PLxgFAy1nvhIosVrmB5XRR7ivDXR0zBClDhS/pZn2q7+g==}
     engines: {node: '>=18.0.0', pnpm: '>=9'}
     peerDependencies:
       react: ^18
@@ -2450,6 +2459,14 @@ snapshots:
       react-is: 18.3.1
       rxjs: 7.8.1
 
+  '@aiszlab/relax@1.2.73(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.25.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-is: 18.3.1
+      rxjs: 7.8.1
+
   '@algolia/autocomplete-core@1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.24.0)(search-insights@2.14.0)':
     dependencies:
       '@algolia/autocomplete-plugin-algolia-insights': 1.9.3(@algolia/client-search@4.24.0)(algoliasearch@4.24.0)(search-insights@2.14.0)
@@ -2833,6 +2850,10 @@ snapshots:
   '@types/ms@0.7.34': {}
 
   '@types/node@22.4.0':
+    dependencies:
+      undici-types: 6.19.6
+
+  '@types/node@22.4.1':
     dependencies:
       undici-types: 6.19.6
 
@@ -4162,7 +4183,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.4.0
+      '@types/node': 22.4.1
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -4702,9 +4723,9 @@ snapshots:
 
   ms@2.1.3: {}
 
-  musae@0.2.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  musae@0.2.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@aiszlab/relax': 1.2.72(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@aiszlab/relax': 1.2.73(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@babel/runtime': 7.25.0
       '@dnd-kit/core': 6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@dnd-kit/modifiers': 7.0.0(@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
