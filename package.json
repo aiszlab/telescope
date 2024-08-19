@@ -10,7 +10,7 @@
     "deploy": "git pull origin main && pnpm i && pnpm build && pm2 restart telescope"
   },
   "dependencies": {
-    "@aiszlab/relax": "^1.2.72",
+    "@aiszlab/relax": "^1.2.73",
     "@docsearch/react": "^3.6.1",
     "autoprefixer": "10.4.20",
     "clsx": "^2.1.1",
