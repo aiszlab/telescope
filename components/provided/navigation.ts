@@ -154,6 +154,10 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/transfer',
             label: 'Transfer 穿梭框'
+          },
+          {
+            path: '/components/rich-text-editor',
+            label: 'RichTextEditor 富文本编辑器'
           }
         ]
       },
