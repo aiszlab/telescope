@@ -1,5 +1,12 @@
 'use client'
-import { action, alert, content, hardware, image, navigation, mock } from 'musae/icons'
+import * as action from 'musae/icons/action'
+import * as alert from 'musae/icons/alert'
+import * as content from 'musae/icons/content'
+import * as hardware from 'musae/icons/hardware'
+import * as image from 'musae/icons/image'
+import * as navigation from 'musae/icons/navigation'
+import * as mock from 'musae/icons/mock'
+
 import { Grid } from 'musae'
 
 const ICON_GROUPS = [action, alert, content, hardware, image, navigation, mock]
