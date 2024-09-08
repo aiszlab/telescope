@@ -228,6 +228,10 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/highlight',
             label: 'Highlight 高亮'
+          },
+          {
+            path: '/components/quote',
+            label: 'Quote 引用'
           }
         ]
       },
