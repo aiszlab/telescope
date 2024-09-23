@@ -1,6 +1,7 @@
 'use client'
-import { Tree, Switch, type TreeNode, Space } from 'musae'
+import { Tree, Switch, Space } from 'musae'
 import { useState } from 'react'
+import type { TreeNode } from 'musae/types/tree'
 
 const NODES: TreeNode[] = [
   {

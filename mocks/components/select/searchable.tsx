@@ -1,5 +1,6 @@
 'use client'
-import { Select, type Option } from 'musae'
+import { Select } from 'musae'
+import type { Option } from 'musae/types/option'
 
 const OPTIONS: Option[] = [
   {

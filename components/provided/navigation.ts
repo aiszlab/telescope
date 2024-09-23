@@ -1,4 +1,4 @@
-import type { NavigationItem } from 'musae'
+import type { NavigationItem } from 'musae/types/bench'
 
 export const NAVIGATIONS: NavigationItem[] = [
   {

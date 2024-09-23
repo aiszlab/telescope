@@ -1,6 +1,7 @@
 'use client'
-import { Tour, Button, Divider, Space, type TourStep } from 'musae'
+import { Tour, Button, Divider, Space } from 'musae'
 import { useRef, useState } from 'react'
+import type { TourStep } from 'musae/types/tour'
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false)

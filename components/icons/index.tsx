@@ -19,6 +19,8 @@ const Icons = () => {
         return (
           <Row key={y} align='center' justify='center' gutter={20}>
             {Object.entries(group).map(([key, Icon]) => {
+              if (key === 'default') return null
+
               return (
                 <Col key={key} span={3} className='flex flex-col items-center'>
                   <Icon size={48} />

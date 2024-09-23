@@ -1,7 +1,7 @@
 import { useEvent, useUpdateEffect } from '@aiszlab/relax'
-import { MenuItem } from 'musae'
 import { usePathname } from 'next/navigation'
 import { createContext, useMemo, useRef, useState } from 'react'
+import { MenuItem } from 'musae/types/menu'
 
 type ContextValue = {
   register: (key: string, type?: 'parent' | 'child') => void

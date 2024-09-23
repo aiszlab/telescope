@@ -1,5 +1,6 @@
 'use client'
-import { Tree, type TreeNode } from 'musae'
+import { Tree } from 'musae'
+import type { TreeNode } from 'musae/types/tree'
 
 const DEFAULT_EXPANDED_KEYS = ['node-1']
 const DEFAULT_SELECTED_KEYS = ['node-1']

@@ -1,5 +1,6 @@
 import { Bedtime, Github, WbSunny } from 'musae/icons'
-import { Button, useTheme, I18nButton, Locale } from 'musae'
+import { Button, useTheme, I18nButton } from 'musae'
+import type { Locale } from 'musae/types/locale'
 
 interface Props {
   onLocaleChange: (locale?: Locale) => void
