@@ -27,14 +27,14 @@ import Usage from '@/components/usage'
 
 ## API
 
-### Menu
+### Menu Props
 
 | 参数                | 说明                                           | 类型                                         | 默认值     |
 | ------------------- | ---------------------------------------------- | -------------------------------------------- | ---------- |
 | items               | 菜单项                                         | `MenuItem[]`                                 | `[]`       |
 | mode                | 菜单模式                                       | `"vertical"` \| `"horizontal"` \| `"inline"` | `"inline"` |
 | size                | 菜单大小                                       | `"small"` \| `"medium"` \| `"large"`         | `"medium"` |
-| selectedKeys        | 当前选中的菜单项数组                           | `React.Key[]`                                | `void 0`   |
+| selectedKeys        | 当前选中的菜单项数组                           | `React.Key \| React.Key[]`                   | `void 0`   |
 | defaultSelectedKeys | 默认选中的菜单项数组，优先级低于`selectedKeys` | `React.Key[]`                                | `void 0`   |
 | expandedKeys        | 当前展开的菜单项                               | `React.Key[]`                                | `void 0`   |
 | defaultExpandedKeys | 默认展开的菜单项                               | `React.Key[]`                                | `void 0`   |
@@ -42,9 +42,10 @@ import Usage from '@/components/usage'
 
 ### MenuItem
 
-| 参数     | 说明         | 类型              | 默认值   |
-| -------- | ------------ | ----------------- | -------- |
-| key      | 菜单主键     | `React.Key`       | -        |
-| label    | 菜单标题     | `React.ReactNode` | `void 0` |
-| prefix   | 菜单前置内容 | `React.ReactNode` | `void 0` |
-| children | 子菜单       | `MenuItem[]`      | `void 0` |
+| 参数     | 说明                   | 类型                                      | 默认值   |
+| -------- | ---------------------- | ----------------------------------------- | -------- |
+| key      | 菜单主键               | `React.Key`                               | -        |
+| label    | 菜单标题               | `React.ReactNode`                         | `void 0` |
+| prefix   | 菜单前置内容           | `React.ReactNode`                         | `void 0` |
+| children | 子菜单                 | `MenuItem[]`                              | `void 0` |
+| onClick  | 菜单条目点击的回调事件 | `React.MouseEventHandler<HTMLDivElement>` | `void 0` |

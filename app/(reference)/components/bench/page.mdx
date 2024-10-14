@@ -18,5 +18,30 @@ import Usage from '@/components/usage'
 
 ### Bench Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| ---- | ---- | ---- | ------ |
+| 参数                | 说明                                                       | 类型                                                               | 默认值   |
+| ------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------ | -------- |
+| logo                | logo 图片地址                                              | `string \| Logo`                                                   | `void 0` |
+| title               | 标题                                                       | `React.ReactNode`                                                  | `void 0` |
+| children            | 页面主体内容                                               | `React.ReactNode`                                                  | `void 0` |
+| navigations         | 导航列表                                                   | `NavigationItem[]`                                                 | `[]`     |
+| trailing            | 布局头部尾缀内容                                           | `React.ReactNode`                                                  | `void 0` |
+| elevation           | 布局头部悬浮高度                                           | `"none" \| "xsmall" \| "small" \| "medium" \| "large" \| "xlarge"` | `xsmall` |
+| onNavigate          | 点击导航的回调事件                                         | `(path: string) => void`                                           | `void 0` |
+| location            | 当前页面对应的地址（与导航条目`path`一直时会自动选中导航） | `string`                                                           | `void 0` |
+| defaultExpandedKeys | 默认展开的导航条目（与导航条目`path`值一致）               | `string[]`                                                         | `void 0` |
+| classNames          | 样式名对象，可以配置内部元素样式名                         | `Partial<Record<"main", string>>`                                  | `{}`     |
+| layout              | 工作台整体布局样式类型                                     | `"side" \| "top" \| "mix"`                                         | `"mix"`  |
+
+### Logo
+
+| 参数 | 说明     | 类型   | 默认值 |
+| ---- | -------- | ------ | ------ |
+| url  | 图片地址 | string | -      |
+
+### NavigationItem
+
+| 参数     | 说明         | 类型               | 默认值   |
+| -------- | ------------ | ------------------ | -------- |
+| path     | 路由地址     | `string`           | -        |
+| label    | 导航文本     | `React.ReactNode`  | -        |
+| children | 嵌套导航列表 | `NavigationItem[]` | `void 0` |
