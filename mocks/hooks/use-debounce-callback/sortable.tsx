@@ -29,7 +29,7 @@ const Sortable = () => {
         const _count = orderedCount.current
         // 第一次请求 10s 后返回，后续请求更快的返回
         await wait(_count === 1 ? 10000 : 1000)
-        return [_count] satisfies [number]
+        return _count
       }
     },
     1000

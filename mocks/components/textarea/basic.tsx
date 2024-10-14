@@ -1,8 +1,8 @@
 'use client'
-import { Textarea } from 'musae'
+import { Input } from 'musae'
 
 const App = () => {
-  return <Textarea />
+  return <Input />
 }
 
 export default App
