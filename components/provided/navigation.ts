@@ -104,6 +104,10 @@ export const NAVIGATIONS: NavigationItem[] = [
             label: 'NumberInput 数字输入框'
           },
           {
+            path: '/components/textarea',
+            label: 'Textarea 多行输入框'
+          },
+          {
             path: '/components/otp-input',
             label: 'OtpInput OTP 输入框'
           },
