@@ -26,7 +26,10 @@ const Provided = (props: Props) => {
   }
 
   const defaultExpandedKeys = useMemo(() => {
-    return NAVIGATIONS.reduce<Key[]>((prev, item) => prev.concat(item.children?.map((child) => child.path) ?? []), [])
+    return NAVIGATIONS.reduce<string[]>(
+      (prev, item) => prev.concat(item.children?.map((child) => child.path) ?? []),
+      []
+    )
   }, [])
 
   const changeLocale = (locale?: Locale) => {

@@ -23,14 +23,15 @@ import Usage from '@/components/usage'
 
 ### Upload Props
 
-| 参数     | 说明                       | 类型                              | 默认值     |
-| -------- | -------------------------- | --------------------------------- | ---------- |
-| onClick  | 点击的回调事件             | `() => void`                      | `void 0`   |
-| disabled | 是否禁用                   | `boolean`                         | `false`    |
-| multiple | 是否允许上传多个附件       | `boolean`                         | `false`    |
-| children | 子组件                     | `React.ReactNode`                 | `void 0`   |
-| uploader | 自定义上传函数（请求）     | `(file: File) => Promise<string>` | `void 0`   |
-| onError  | 上传出现异常的回调函数     | `(error: unknown) => void`        | `void 0`   |
-| value    | 文件列表                   | `Value[]`                         | `void 0`   |
-| onChange | 文件列表发生该表的回调事件 | `(value: Value[]) => void`        | `void 0`   |
-| limit    | 限制的上传数量             | `number`                          | `Infinity` |
+| 参数       | 说明                       | 类型                                           | 默认值     |
+| ---------- | -------------------------- | ---------------------------------------------- | ---------- |
+| onClick    | 点击的回调事件             | `() => void`                                   | `void 0`   |
+| disabled   | 是否禁用                   | `boolean`                                      | `false`    |
+| multiple   | 是否允许上传多个附件       | `boolean`                                      | `false`    |
+| children   | 子组件                     | `React.ReactNode`                              | `void 0`   |
+| uploader   | 自定义上传函数（请求）     | `(file: File) => Promise<string>`              | `void 0`   |
+| onError    | 上传出现异常的回调函数     | `(error: unknown) => void`                     | `void 0`   |
+| value      | 文件列表                   | `Value[]`                                      | `void 0`   |
+| onChange   | 文件列表发生该表的回调事件 | `(value: Value[]) => void`                     | `void 0`   |
+| limit      | 限制的上传数量             | `number`                                       | `Infinity` |
+| renderItem | 上传条目的自定义渲染函数   | `"picture" \| ((item: FileItem) => ReactNode)` | `void 0`   |
