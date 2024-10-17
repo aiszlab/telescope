@@ -1,19 +1,62 @@
-import { Context } from '@/hooks/use-float-nav'
-import { useContext } from 'react'
+'use client'
+
+import { type Key, useEffect, useRef, useState } from 'react'
 import { Menu } from 'musae'
 import clsx from 'clsx'
+import type { MenuItem } from 'musae/types/menu'
+import { isHTMLElement } from '@aiszlab/relax'
+import { usePathname } from 'next/navigation'
 
 interface Props {
-  className: string
+  className?: string
 }
 
 const FloatNav = (props: Props) => {
-  const items = useContext(Context)?.items ?? []
-  if (items.length === 0) return
+  const [items, setItems] = useState<MenuItem[]>([])
+  const navRef = useRef<HTMLElement>(null)
+  const pathname = usePathname()
+
+  const navigate = (key: Key) => {
+    window.location.hash = key.toString()
+  }
+
+  useEffect(() => {
+    setItems([])
+
+    const contentNode = navRef.current?.nextSibling
+    if (!contentNode) return
+
+    const _menuItems =
+      contentNode?.childNodes.values().reduce<MenuItem[]>((prev, child) => {
+        if (!isHTMLElement(child)) return prev
+        if (child.tagName !== 'H2') return prev
+
+        // h2 标签代表需要分组
+        prev.push({
+          key: child.id,
+          label: child.id,
+          children: Array.from(
+            child.nextElementSibling
+              ?.querySelectorAll('[id]')
+              .values()
+              .map<MenuItem>((item) => {
+                return {
+                  key: item.id,
+                  label: item.id
+                }
+              }) ?? []
+          )
+        })
+
+        return prev
+      }, []) ?? []
+
+    setItems(_menuItems)
+  }, [pathname])
 
   return (
-    <nav className={clsx('h-fit sticky top-24', props.className)}>
-      <Menu items={items} defaultExpandedKeys={items.map((item) => item.key)} size='small' />
+    <nav className={clsx('h-fit sticky top-24 min-w-40', props.className)} ref={navRef}>
+      <Menu items={items} size='small' onClick={navigate} />
     </nav>
   )
 }
