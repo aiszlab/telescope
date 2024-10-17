@@ -1,35 +1,24 @@
 import Usage from '@/components/usage'
 
-# Input 输入框
+# Password 密码输入框
 
-通过鼠标或键盘输入内容，是最基础的表单域的包装。
-
-## 何时使用
-
-- 需要用户输入表单域内容时。
-- 提供组合型输入框，带搜索的输入框，还可以进行大小选择。
+密码输入框。
 
 ## 代码演示
 
 <Usage
-  columns={2}
   sources={[
     {
-      src: '/components/input/basic.tsx',
+      src: '/components/password-input/basic.tsx',
       title: '基本',
       description: '最简单的用法。'
-    },
-    {
-      src: '/components/input/addon-all.tsx',
-      title: '前缀和后缀',
-      description: '在输入框上添加前缀或后缀图标。'
     }
   ]}
 />
 
 ## API
 
-### Input Props
+### PasswordInput Props
 
 | 参数        | 说明                   | 类型                                   | 默认值       |
 | ----------- | ---------------------- | -------------------------------------- | ------------ |
@@ -37,7 +26,5 @@ import Usage from '@/components/usage'
 | placeholder | 空值显示文案           | `string`                               | `void 0`     |
 | variant     | 样式                   | `"outlined" \| "filled" \| "standard"` | `"outlined"` |
 | leading     | 输入框前缀             | `ReactNode`                            | `void 0`     |
-| trailing    | 输入框后缀             | `ReactNode`                            | `void 0`     |
-| type        | 输入框类型             | `"text" \| "password" \| "number"`     | `"text"`     |
 | invalid     | 错误类型               | `boolean`                              | `false`      |
 | onChange    | 输入框内容变化时的回调 | `(value: string) => void`              | `void 0`     |

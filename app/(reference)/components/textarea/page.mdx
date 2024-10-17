@@ -1,8 +1,8 @@
 import Usage from '@/components/usage'
 
-# Tag 标签
+# Textarea 多行输入框
 
-标签形式的文本
+多行文本输入区域。
 
 ## 代码演示
 
@@ -20,5 +20,8 @@ import Usage from '@/components/usage'
 
 ### Textarea Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| ---- | ---- | ---- | ------ |
+| 参数     | 说明                   | 类型                      | 默认值   |
+| -------- | ---------------------- | ------------------------- | -------- |
+| value    | 文本内容               | `string`                  | `void 0` |
+| invalid  | 不符合规则             | `boolean`                 | `void 0` |
+| onChange | 内容发生改变的回调函数 | `(value: string) => void` | `void 0` |

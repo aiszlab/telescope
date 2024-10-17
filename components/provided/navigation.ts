@@ -100,6 +100,10 @@ export const NAVIGATIONS: NavigationItem[] = [
             label: 'Input 输入框'
           },
           {
+            path: '/components/password-input',
+            label: 'PasswordInput 密码输入框'
+          },
+          {
             path: '/components/number-input',
             label: 'NumberInput 数字输入框'
           },
