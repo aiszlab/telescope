@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
-import clsx from 'clsx'
 import Provided from '@/components/provided'
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -27,9 +26,12 @@ export default function Layout(props: Props) {
           // https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css
         />
       </head>
+
       <body className={inter.className}>
         <Provided>{props.children}</Provided>
       </body>
+
+      <GoogleAnalytics gaId='G-4S32MV4L55' />
     </html>
   )
 }

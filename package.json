@@ -12,11 +12,12 @@
   "dependencies": {
     "@aiszlab/relax": "^1.4.6",
     "@docsearch/react": "^3.6.2",
+    "@next/third-parties": "^14.2.15",
     "autoprefixer": "10.4.20",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "eslint": "8.57.0",
-    "musae": "^0.3.12",
+    "musae": "0.3.14-beta.4",
     "next": "^14.2.15",
     "postcss": "8.4.41",
     "react": "18.3.1",
