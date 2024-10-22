@@ -14,7 +14,7 @@ export const NAVIGATIONS: NavigationItem[] = [
         label: 'Getting Started'
       },
       {
-        path: '/tailwindcss',
+        path: '/components/tailwindcss',
         label: '与 tailwindcss 结合使用'
       },
       {

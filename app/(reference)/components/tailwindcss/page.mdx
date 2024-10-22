@@ -1,9 +1,10 @@
-## 在 musae 中，本身已经提供了成套的 CSS
+## 使用 musae
 
 在`musae`中，本身已经提供了一套完整的`CSS`样式，包括按钮、表单、表格等组件。
 开发者本身是不需要关心任何`CSS`，也不需要手动引入任何 CSS 文件。
+但是样式定制是永远避免不了，这里我们以继承`tailwindcss`为例。
 
-## 与 tailwindcss 的集成
+## 配置 tailwindcss
 
 在使用`tailwindcss`时，通常会创建一个根目录`css`，这里我们统称`globals.css`，在其中引入`tailwindcss`
 
@@ -20,7 +21,7 @@
 1. [关闭`tailwindcss`的`preflight`特性](https://tailwindcss.com/docs/preflight#disabling-preflight)
 2. 手动调整`tailwindcss`和`musae`样式的优先级
 
-## 手动调整`tailwindcss`和`musae`样式的优先级
+## 调整样式优先级
 
 1. 修改`globals.css`
 
