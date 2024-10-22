@@ -14,6 +14,10 @@ export const NAVIGATIONS: NavigationItem[] = [
         label: 'Getting Started'
       },
       {
+        path: '/tailwindcss',
+        label: '与 tailwindcss 结合使用'
+      },
+      {
         path: '/components/common-group',
         label: '通用',
         children: [
@@ -370,12 +374,28 @@ export const NAVIGATIONS: NavigationItem[] = [
             label: 'useForceUpdate'
           },
           {
-            path: '/hooks/use-refs',
-            label: 'useRefs'
+            path: '/hooks/use-composed-ref',
+            label: 'useComposedRef'
           },
           {
             path: '/hooks/use-identity',
             label: 'useIdentity'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: '/utils',
+    label: '工具',
+    children: [
+      {
+        path: '/utils/labs',
+        label: '试验性能力',
+        children: [
+          {
+            path: '/utils/using',
+            label: '全局状态管理'
           }
         ]
       }

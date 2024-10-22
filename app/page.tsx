@@ -31,7 +31,7 @@ const App = () => {
         </div>
 
         <div
-          className='bg-slate-600 w-full py-20 flex-1'
+          className='w-full py-20 flex-1'
           style={{
             backgroundColor: theme.colors['secondary-container']
           }}
@@ -49,11 +49,17 @@ const App = () => {
         </div>
       </main>
 
-      <footer className='bg-slate-800 text-white p-10 flex flex-col items-center'>
+      <footer
+        className='p-10 flex flex-col items-center'
+        style={{
+          backgroundColor: theme.colors['on-secondary-container'],
+          color: theme.colors['on-primary']
+        }}
+      >
         <div className='flex w-full mb-6'>
           <div className='flex-1 px-2'>
             <h6 className='font-bold text-lg mb-5'>Learn</h6>
-            <ul>
+            <ul className='list-none p-0 m-0 flex flex-col gap-2'>
               <li>
                 <Link href='/about-us'>Introduction</Link>
               </li>
@@ -61,7 +67,7 @@ const App = () => {
           </div>
           <div className='flex-1 px-2'>
             <h6 className='font-bold text-lg mb-5'>More</h6>
-            <ul>
+            <ul className='list-none p-0 m-0 flex flex-col gap-2'>
               <li>
                 <Link href='/components'>musae</Link>
               </li>

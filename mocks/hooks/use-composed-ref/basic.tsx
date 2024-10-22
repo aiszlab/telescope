@@ -1,12 +1,12 @@
 'use client'
-import { useRefs } from '@aiszlab/relax'
+import { useComposedRef } from '@aiszlab/relax'
 import { useRef } from 'react'
 
 const App = () => {
   const colorRef = useRef<HTMLDivElement | null>(null)
   const heightRef = useRef<HTMLDivElement | null>(null)
 
-  const ref = useRefs(colorRef, heightRef)
+  const ref = useComposedRef(colorRef, heightRef)
 
   const changeColor = () => {
     colorRef.current?.attributeStyleMap.set('color', 'red')

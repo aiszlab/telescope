@@ -10,14 +10,14 @@
     "deploy": "git pull origin main && pnpm i && pnpm build && pm2 restart telescope"
   },
   "dependencies": {
-    "@aiszlab/relax": "^1.4.6",
+    "@aiszlab/relax": "^1.5.1",
     "@docsearch/react": "^3.6.2",
     "@next/third-parties": "^14.2.15",
     "autoprefixer": "10.4.20",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "eslint": "8.57.0",
-    "musae": "0.4.0",
+    "musae": "^0.4.2",
     "next": "^14.2.15",
     "postcss": "8.4.41",
     "react": "18.3.1",
@@ -28,11 +28,11 @@
     "unified": "^11.0.5"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^3.0.1",
-    "@mdx-js/react": "^3.0.1",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^14.2.15",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^22.7.6",
+    "@types/node": "^22.7.8",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "eslint-config-next": "^14.2.15",

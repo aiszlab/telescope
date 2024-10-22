@@ -1,0 +1,43 @@
+## 在 musae 中，本身已经提供了成套的 CSS
+
+在`musae`中，本身已经提供了一套完整的`CSS`样式，包括按钮、表单、表格等组件。
+开发者本身是不需要关心任何`CSS`，也不需要手动引入任何 CSS 文件。
+
+## 与 tailwindcss 的集成
+
+在使用`tailwindcss`时，通常会创建一个根目录`css`，这里我们统称`globals.css`，在其中引入`tailwindcss`
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+如果直接使用`musae`与`globals.css`，那么会造成预期之外的破坏。
+原因是在`musae`中，为了保证样式能被简单的覆盖，使用`@layer`特性。
+导致`tailwindcss`的`preflight`样式覆盖了`musae`的样式。通常解决方案有两种：
+
+1. [关闭`tailwindcss`的`preflight`特性](https://tailwindcss.com/docs/preflight#disabling-preflight)
+2. 手动调整`tailwindcss`和`musae`样式的优先级
+
+## 手动调整`tailwindcss`和`musae`样式的优先级
+
+1. 修改`globals.css`
+
+```css
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@tailwind components;
+@tailwind utilities;
+```
+
+2. 手动引入`musae/styles.css`，且保证引入顺序在`globals.css`之后
+
+```ts
+import './globals.css'
+import 'musae/styles.css'
+```
+
+以上两步就可以完美集成`tailwindcss`与`musae`了 🎉🎉🎉。

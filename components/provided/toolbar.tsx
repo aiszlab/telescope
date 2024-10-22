@@ -10,7 +10,7 @@ const Toolbar = ({ onLocaleChange }: Props) => {
   const { mode, toggle } = useTheme()
 
   return (
-    <ul className='flex items-center justify-end gap-x-2 list-none'>
+    <ul className='flex items-center justify-end gap-x-2 list-none m-0 p-0'>
       <li>
         <I18nButton onChange={onLocaleChange} variant='text' />
       </li>

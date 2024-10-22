@@ -4,6 +4,7 @@ import { ReactNode } from 'react'
 import Provided from '@/components/provided'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
+import 'musae/styles.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
