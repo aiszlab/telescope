@@ -7,7 +7,7 @@ interface Props {
 const Table: FC<Props> = ({ children }) => {
   return (
     <div className='w-full overflow-auto'>
-      <table className='min-w-full table-auto'>{children}</table>
+      <table className='min-w-full table-auto border-collapse'>{children}</table>
     </div>
   )
 }

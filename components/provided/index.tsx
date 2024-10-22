@@ -41,7 +41,11 @@ const Provided = (props: Props) => {
     <ThemeProvider>
       <ConfigProvider locale={locale}>
         <Bench
-          title={<Link href='/'>aisz.dev</Link>}
+          title={
+            <Link href='/' className='text-inherit no-underline'>
+              aisz.dev
+            </Link>
+          }
           navigations={NAVIGATIONS}
           trailing={
             <>
