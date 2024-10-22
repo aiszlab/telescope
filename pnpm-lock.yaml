@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@aiszlab/relax':
-        specifier: ^1.4.6
-        version: 1.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.4.7
+        version: 1.4.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@docsearch/react':
         specifier: ^3.6.2
         version: 3.6.2(@algolia/client-search@5.10.0)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(search-insights@2.17.2)
@@ -101,12 +101,6 @@ packages:
 
   '@aiszlab/fuzzy@1.4.7':
     resolution: {integrity: sha512-cqIVyH2D4kwluk/jpsTKoluNyoWestzJ+R7vehiTsHXpkNM2gRUamk+gAHEFybiD7FcWaYfjFfPaw2s1IBrRpg==}
-
-  '@aiszlab/relax@1.4.6':
-    resolution: {integrity: sha512-B2212uoG0Ika7WQch9V5pcSFlu+Kg8IMltowKn/4KUNievFHJOWZ2ypc7/xbFMdHHxbxYwjVCPDX1W+P8DpPjw==}
-    peerDependencies:
-      react: '18'
-      react-dom: '18'
 
   '@aiszlab/relax@1.4.7':
     resolution: {integrity: sha512-ODBKSXcYaWJ26ZOg1UPP+iVyFkLJfzFOr/TqKvI3Zi5zinCWAlYmT8YJ/Qcai/2lh066oDb+6quRgm5xTk8Ajg==}
@@ -2576,19 +2570,11 @@ snapshots:
 
   '@aiszlab/fuzzy@1.4.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@aiszlab/relax': 1.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@aiszlab/relax': 1.4.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@babel/runtime': 7.25.7
     transitivePeerDependencies:
       - react
       - react-dom
-
-  '@aiszlab/relax@1.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@babel/runtime': 7.25.7
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-is: 18.3.1
-      rxjs: 7.8.1
 
   '@aiszlab/relax@1.4.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
