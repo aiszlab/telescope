@@ -1,5 +1,6 @@
 'use client'
 import { using } from '@aiszlab/relax/react'
+import { Button } from 'musae'
 
 const useCount = using<{
   count: number
@@ -13,9 +14,13 @@ const useCount = using<{
 
 const Counter = () => {
   const { add, count } = useCount()
+
   return (
-    <div onClick={add}>
-      点击了{count}次<button>点击</button>
+    <div>
+      <div>点击了{count}次</div>
+      <Button variant='text' onClick={add}>
+        点击
+      </Button>
     </div>
   )
 }

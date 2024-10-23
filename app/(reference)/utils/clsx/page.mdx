@@ -1,0 +1,25 @@
+import Usage from '@/components/usage'
+
+## clsx 合并类名
+
+## 使用场景
+
+在组件开发过程中，通常`className`可能来自很多地方：
+
+1. `props.className`
+2. `CSS Module`
+3. 根据判断是否展现
+
+`clsx`能够快速兼容和处理上述场景
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/utils/clsx/merge.tsx',
+      title: '基本',
+      description: '最简单的用法。'
+    }
+  ]}
+/>

@@ -390,12 +390,36 @@ export const NAVIGATIONS: NavigationItem[] = [
     label: '工具',
     children: [
       {
+        path: '/utils/array',
+        label: '数组',
+        children: [
+          {
+            path: '/utils/first',
+            label: 'first 第一个元素'
+          },
+          {
+            path: '/utils/last',
+            label: 'last 最后一个元素'
+          }
+        ]
+      },
+      {
+        path: '/utils/class-names',
+        label: '类名处理',
+        children: [
+          {
+            path: '/utils/clsx',
+            label: 'clsx 合并类名'
+          }
+        ]
+      },
+      {
         path: '/utils/labs',
         label: '试验性能力',
         children: [
           {
             path: '/utils/using',
-            label: '全局状态管理'
+            label: 'using 全局状态管理'
           }
         ]
       }
