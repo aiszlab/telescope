@@ -390,6 +390,26 @@ export const NAVIGATIONS: NavigationItem[] = [
     label: '工具',
     children: [
       {
+        path: '/utils/number',
+        label: '数字',
+        children: [
+          {
+            path: '/utils/clamp',
+            label: 'clamp 取中间值'
+          }
+        ]
+      },
+      {
+        path: '/utils/function',
+        label: '函数',
+        children: [
+          {
+            path: '/utils/chain',
+            label: 'chain 连续调用'
+          }
+        ]
+      },
+      {
         path: '/utils/array',
         label: '数组',
         children: [

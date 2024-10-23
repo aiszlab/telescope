@@ -1,0 +1,19 @@
+## chain 连续调用
+
+将多个函数收集后连续调用
+
+## 代码演示
+
+```ts
+import { chain } from '@aiszlab/relax'
+
+const result = chain(
+  (a: number) => console.log('first: ', a),
+  (a: number) => console.log('second: ', a),
+  (a: number) => console.log('third: ', a)
+)(1)
+
+// first: 1
+// second: 1
+// third: 1
+```

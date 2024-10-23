@@ -1,5 +1,3 @@
-import Usage from '@/components/usage'
-
 ## first 第一个元素
 
 ## 使用场景
@@ -8,12 +6,8 @@ import Usage from '@/components/usage'
 
 ## 代码演示
 
-<Usage
-  sources={[
-    {
-      src: '/utils/first/first.tsx',
-      title: '基本',
-      description: '最简单的用法。'
-    }
-  ]}
-/>
+```ts
+import { first } from '@aiszlab/relax'
+
+first([1, 2, 3]) // => 1
+```

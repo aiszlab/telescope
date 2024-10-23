@@ -5,7 +5,7 @@ type Props = DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnch
 
 const Anchor = ({ children, className, ...props }: Props) => {
   return (
-    <a className={clsx(className, 'text-blue-400 cursor-pointer mx-1')} {...props} target='_blank'>
+    <a className={clsx(className, 'text-blue-400 cursor-pointer mx-1 text-sm')} {...props} target='_blank'>
       {children}
     </a>
   )

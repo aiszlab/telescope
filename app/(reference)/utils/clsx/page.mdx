@@ -1,5 +1,3 @@
-import Usage from '@/components/usage'
-
 ## clsx 合并类名
 
 ## 使用场景
@@ -14,12 +12,19 @@ import Usage from '@/components/usage'
 
 ## 代码演示
 
-<Usage
-  sources={[
-    {
-      src: '/utils/clsx/merge.tsx',
-      title: '基本',
-      description: '最简单的用法。'
-    }
-  ]}
-/>
+```ts
+import { clsx } from '@aiszlab/relax'
+
+const CLASS_NAMES = [
+  'test-1',
+  false && 'test-2',
+  true && 'test-3',
+  ['test-array-item-1', 'test-array-item-2'],
+  {
+    'test-object-item-1': true,
+    'test-object-item-2': false
+  }
+]
+
+clsx(CLASS_NAMES) // => "test-1 test-3 test-array-item-1 test-array-item-2 test-object-item-1"
+```

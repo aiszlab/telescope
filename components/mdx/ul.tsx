@@ -1,11 +1,9 @@
+import { clsx } from '@aiszlab/relax'
 import type { ReactNode } from 'react'
+import type { HTMLAttributes } from 'react'
 
-interface Props {
-  children?: ReactNode
-}
-
-const Ul = (props: Props) => {
-  return <ul className='list-disc pl-4'>{props.children}</ul>
+const Ul = ({ className, ...props }: HTMLAttributes<HTMLUListElement>) => {
+  return <ul {...props} className={clsx(className, 'list-disc pl-4')} />
 }
 
 export default Ul
