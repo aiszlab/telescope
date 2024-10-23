@@ -2,9 +2,8 @@
 
 import { type Key, useEffect, useRef, useState } from 'react'
 import { Menu } from 'musae'
-import clsx from 'clsx'
 import type { MenuItem } from 'musae/types/menu'
-import { isHTMLElement } from '@aiszlab/relax'
+import { isHTMLElement, clsx } from '@aiszlab/relax'
 import { usePathname } from 'next/navigation'
 
 interface Props {

@@ -1,8 +1,8 @@
 'use client'
-import clsx from 'clsx'
 import { useTheme } from 'musae'
 import { ReactNode } from 'react'
 import styles from './styles.module.css'
+import { clsx } from '@aiszlab/relax'
 
 interface Props {
   children?: ReactNode

@@ -1,5 +1,5 @@
-import clsx from 'clsx'
 import type { AnchorHTMLAttributes, DetailedHTMLProps } from 'react'
+import { clsx } from '@aiszlab/relax'
 
 type Props = DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>
 

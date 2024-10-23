@@ -1,9 +1,8 @@
 'use client'
 
-import { FC, createElement, useContext } from 'react'
+import { FC, createElement } from 'react'
 import { useTheme, Button, Divider } from 'musae'
-import { useBoolean, useMount } from '@aiszlab/relax'
-import clsx from 'clsx'
+import { useBoolean, clsx } from '@aiszlab/relax'
 import H4 from '@/components/mdx/h4'
 import P from '@/components/mdx/p'
 import styles from './styles.module.css'

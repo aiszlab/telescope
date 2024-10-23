@@ -9,6 +9,7 @@ import Pre from '@/components/mdx/pre'
 import P from '@/components/mdx/p'
 import H4 from '@/components/mdx/h4'
 import Ul from '@/components/mdx/ul'
+import Ol from '@/components/mdx/ol'
 import Thead from '@/components/mdx/thead'
 import Anchor from '@/components/mdx/anchor'
 
@@ -33,6 +34,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     p: P,
     ul: Ul,
     thead: Thead,
-    a: Anchor
+    a: Anchor,
+    ol: Ol
   }
 }
