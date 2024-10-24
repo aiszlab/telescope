@@ -2,7 +2,7 @@
 
 import { useCounter } from '@aiszlab/relax'
 import { KeyboardArrowLeft, KeyboardArrowRight } from 'musae/icons'
-import { Button } from 'musae'
+import { IconButton } from 'musae'
 
 const App = () => {
   const [count, { add, subtract }] = useCounter(0)
@@ -12,9 +12,15 @@ const App = () => {
 
   return (
     <div className='flex gap-x-2 items-center'>
-      <Button prefix={<KeyboardArrowLeft />} onClick={_subtract} shape='circular' />
+      <IconButton onClick={_subtract}>
+        <KeyboardArrowLeft />
+      </IconButton>
+
       <span>{count}</span>
-      <Button prefix={<KeyboardArrowRight />} onClick={_add} shape='circular' />
+
+      <IconButton onClick={_add}>
+        <KeyboardArrowRight />
+      </IconButton>
     </div>
   )
 }
