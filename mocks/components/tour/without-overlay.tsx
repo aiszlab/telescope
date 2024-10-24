@@ -31,11 +31,11 @@ const App = () => {
 
   return (
     <div>
-      <Button onClick={open}>开始</Button>
-      <Divider />
+      <Button onClick={open}>开始引导</Button>
+      <Divider margin={12} />
       <Space>
-        <Button ref={first}>第一步</Button>
-        <Button ref={second}>第二步</Button>
+        <Button ref={first}>查看Demo</Button>
+        <Button ref={second}>阅读文档</Button>
         <Button ref={last}>...</Button>
       </Space>
       <Tour open={isOpen} steps={steps} onClose={close} overlay={false} />

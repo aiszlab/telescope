@@ -15,13 +15,13 @@ const Toolbar = ({ onLocaleChange }: Props) => {
         <I18nButton onChange={onLocaleChange} variant='text' />
       </li>
       <li>
-        <Button shape='circular' variant='text' onClick={toggle}>
+        <Button shape='circular' variant='text' onClick={toggle} size='small'>
           {mode === 'dark' ? <WbSunny /> : <Bedtime />}
         </Button>
       </li>
       <li>
         <a target='_blank' href='https://github.com/aiszlab/musae'>
-          <Button shape='circular' variant='text'>
+          <Button shape='circular' variant='text' size='small'>
             <Github />
           </Button>
         </a>
