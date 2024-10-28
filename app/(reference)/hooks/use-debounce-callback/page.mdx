@@ -23,12 +23,14 @@ import Usage from '@/components/usage'
 
 ## API
 
+### Parameters
+
 | 参数      | 说明     | 类型                   | 默认值 |
 | --------- | -------- | ---------------------- | ------ |
 | debouncer | 执行函数 | `T \| Debouncer<T, R>` | -      |
 | wait      | 等待时间 | `number`               | 1000   |
 
-### Debouncer
+#### Debouncer
 
 ```ts
 type Debouncer<T extends Callable, R extends Array<unknown> = Parameters<T>> = {
@@ -37,7 +39,7 @@ type Debouncer<T extends Callable, R extends Array<unknown> = Parameters<T>> = {
 }
 ```
 
-## Return
+### Return
 
 | 参数  | 说明             | 类型                               |
 | ----- | ---------------- | ---------------------------------- |

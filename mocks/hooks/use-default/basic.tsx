@@ -11,7 +11,8 @@ const App = () => {
   return (
     <div>
       <Input value={value} onChange={setValue} />
-      {defaultValue}
+      <div>联动值：{value}</div>
+      <div>不变值：{defaultValue}</div>
     </div>
   )
 }

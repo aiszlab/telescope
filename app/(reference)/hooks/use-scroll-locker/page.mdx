@@ -4,6 +4,10 @@ import Usage from '@/components/usage'
 
 限制`body`的滚动行为
 
+## 何时使用
+
+常用语模态窗展示时，滚动行为仅发生在模态窗内，而不影响到原页面
+
 ## 代码演示
 
 <Usage
@@ -15,3 +19,11 @@ import Usage from '@/components/usage'
     }
   ]}
 />
+
+## API
+
+### Parameters
+
+| 参数     | 说明           | 类型      | 默认值 |
+| -------- | -------------- | --------- | ------ |
+| isLocked | 是否锁定滚动条 | `boolean` | -      |

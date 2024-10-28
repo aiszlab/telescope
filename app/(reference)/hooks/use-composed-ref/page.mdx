@@ -18,6 +18,14 @@ import Usage from '@/components/usage'
 
 ## API
 
-| 参数     | 说明     | 类型       |
-| -------- | -------- | ---------- |
-| callback | 回调函数 | `Function` |
+### Parameters
+
+| 参数 | 说明                 | 类型                               |
+| ---- | -------------------- | ---------------------------------- |
+| refs | 需要被组合的挂载对象 | `Voidable<Refable<Nullable<T>>>[]` |
+
+#### Refable
+
+```ts
+type Refable<T> = React.RefCallback<T> | React.MutableRefObject<T> | string
+```

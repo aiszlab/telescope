@@ -2,7 +2,11 @@ import Usage from '@/components/usage'
 
 # useClickAway
 
-点击外侧的回调事件
+点击外侧触发的回调事件
+
+## 何时使用
+
+在页面开发过程中，希望点击外侧内容隐藏元素时
 
 ## 代码演示
 
@@ -15,3 +19,12 @@ import Usage from '@/components/usage'
     }
   ]}
 />
+
+## API
+
+### Parameters
+
+| 参数         | 说明                       | 类型                             | 默认值 |
+| ------------ | -------------------------- | -------------------------------- | ------ |
+| callback     | 点击指定元素以外的回调事件 | `Function`                       | -      |
+| dependencies | 希望包含在内的元素列表     | `React.RefObject<HTMLElement>[]` | -      |

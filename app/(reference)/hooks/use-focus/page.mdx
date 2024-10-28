@@ -16,16 +16,26 @@ import Usage from '@/components/usage'
   ]}
 />
 
-## Return
+## API
 
-### UsedFocus
+### Parameters
+
+| 参数          | 说明                             | 类型                                             | 默认值   |
+| ------------- | -------------------------------- | ------------------------------------------------ | -------- |
+| onFocus       | 元素聚焦时触发的回调函数         | `(event: React.FocusEvent<HTMLElement>) => void` | `void 0` |
+| onBlur        | 元素失焦时触发的回调函数         | `(event: React.FocusEvent<HTMLElement>) => void` | `void 0` |
+| onFocusChange | 元素焦点发生改变时触发的回调函数 | `(isFocused: boolean) => void`                   | `void 0` |
+
+### Return
+
+#### UsedFocus
 
 | 参数       | 说明                  | 类型         |
 | ---------- | --------------------- | ------------ |
 | isFocused  | 当前元素是否被`focus` | `boolean`    |
 | focusProps | 元素`focus`相关的属性 | `FocusProps` |
 
-### FocusProps
+#### FocusProps
 
 | 出参    | 说明                   | 类型         |
 | ------- | ---------------------- | ------------ |

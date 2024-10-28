@@ -9,7 +9,10 @@ const App = () => {
 
   return (
     <div>
-      <Button onClick={toggle}>{isLocked ? 'Unlock' : 'Lock'}</Button>
+      <div className='h-screen bg-slate-500 text-white flex items-center justify-center'>使用内容填充</div>
+      <Button className='mt-3' onClick={toggle}>
+        {isLocked ? 'Unlock' : 'Lock'}
+      </Button>
     </div>
   )
 }

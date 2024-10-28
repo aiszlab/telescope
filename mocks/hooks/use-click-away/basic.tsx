@@ -4,7 +4,7 @@ import { Button, Message } from 'musae'
 import { useRef } from 'react'
 
 const App = () => {
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLButtonElement>(null)
 
   useClickAway(() => {
     Message.error({
@@ -19,8 +19,10 @@ const App = () => {
   }
 
   return (
-    <div ref={ref}>
-      <Button onClick={click}>click in</Button>
+    <div>
+      <Button ref={ref} onClick={click}>
+        click in
+      </Button>
     </div>
   )
 }
