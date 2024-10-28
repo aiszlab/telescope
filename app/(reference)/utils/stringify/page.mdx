@@ -1,4 +1,4 @@
-## clsx 合并类名
+## stringify 合并类名
 
 ## 使用场景
 
@@ -8,12 +8,12 @@
 2. `CSS Module`
 3. 根据判断是否展现
 
-`clsx`能够快速兼容和处理上述场景
+`stringify`能够快速兼容和处理上述场景
 
 ## 代码演示
 
 ```ts
-import { clsx } from '@aiszlab/relax'
+import { stringify } from '@aiszlab/relax/class-name'
 
 const CLASS_NAMES = [
   'test-1',
@@ -26,5 +26,5 @@ const CLASS_NAMES = [
   }
 ]
 
-clsx(CLASS_NAMES) // => "test-1 test-3 test-array-item-1 test-array-item-2 test-object-item-1"
+stringify(CLASS_NAMES) // => "test-1 test-3 test-array-item-1 test-array-item-2 test-object-item-1"
 ```

@@ -3,8 +3,9 @@
 import { type Key, useEffect, useRef, useState } from 'react'
 import { Menu } from 'musae'
 import type { MenuItem } from 'musae/types/menu'
-import { isHTMLElement, clsx } from '@aiszlab/relax'
+import { stringify } from '@aiszlab/relax/class-name'
 import { usePathname } from 'next/navigation'
+import { isHTMLElement } from '@aiszlab/relax'
 
 interface Props {
   className?: string
@@ -54,7 +55,7 @@ const FloatNav = (props: Props) => {
   }, [pathname])
 
   return (
-    <nav className={clsx('h-fit sticky top-24 min-w-40', props.className)} ref={navRef}>
+    <nav className={stringify('h-fit sticky top-24 min-w-40', props.className)} ref={navRef}>
       <Menu items={items} size='small' onClick={navigate} />
     </nav>
   )

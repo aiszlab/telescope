@@ -424,12 +424,12 @@ export const NAVIGATIONS: NavigationItem[] = [
         ]
       },
       {
-        path: '/utils/class-names',
+        path: '/utils/class-name',
         label: '类名处理',
         children: [
           {
-            path: '/utils/clsx',
-            label: 'clsx 合并类名'
+            path: '/utils/stringify',
+            label: 'stringify 合并类名'
           }
         ]
       },

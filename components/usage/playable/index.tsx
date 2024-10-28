@@ -2,10 +2,11 @@
 
 import { FC, createElement } from 'react'
 import { useTheme, Button, Divider } from 'musae'
-import { useBoolean, clsx } from '@aiszlab/relax'
+import { stringify } from '@aiszlab/relax/class-name'
 import H4 from '@/components/mdx/h4'
 import P from '@/components/mdx/p'
 import styles from './styles.module.css'
+import { useBoolean } from '@aiszlab/relax'
 
 export interface Props {
   title: string
@@ -45,7 +46,7 @@ const Playable = ({ title, render, source, description }: Props) => {
 
         {/* 代码块 */}
         <div
-          className={clsx({ 'h-0': isCollapsed }, 'overflow-hidden rounded-lg', styles.playable)}
+          className={stringify({ 'h-0': isCollapsed }, 'overflow-hidden rounded-lg', styles.playable)}
           style={{
             // @ts-ignore
             '--text-color': theme.colors['on-surface']

@@ -2,7 +2,7 @@
 import { useTheme } from 'musae'
 import { ReactNode } from 'react'
 import styles from './styles.module.css'
-import { clsx } from '@aiszlab/relax'
+import { stringify } from '@aiszlab/relax/class-name'
 
 interface Props {
   children?: ReactNode
@@ -13,7 +13,7 @@ const Thead = (props: Props) => {
 
   return (
     <thead
-      className={clsx(
+      className={stringify(
         '[&>tr]:h-12',
         '[&>tr>th]:py-0 [&>tr>th]:align-middle [&>tr>th]:text-default-600 [&>tr>th]:text-xs [&>tr>th]:text-left [&>tr>th]:pl-4',
         '[&>tr>th:first-child]:rounded-l-lg [&>tr>th:last-child]:rounded-r-lg',
