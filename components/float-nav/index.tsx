@@ -21,37 +21,32 @@ const FloatNav = (props: Props) => {
   }
 
   useEffect(() => {
-    setItems([])
-
     const contentNode = navRef.current?.nextSibling
-    if (!contentNode) return
+    const _menuItems = contentNode?.childNodes.values().reduce<MenuItem[]>((prev, child) => {
+      if (!isHTMLElement(child)) return prev
+      if (child.tagName !== 'H2') return prev
 
-    const _menuItems =
-      contentNode?.childNodes.values().reduce<MenuItem[]>((prev, child) => {
-        if (!isHTMLElement(child)) return prev
-        if (child.tagName !== 'H2') return prev
+      // h2 标签代表需要分组
+      prev.push({
+        key: child.id,
+        label: child.id,
+        children: Array.from(
+          child.nextElementSibling
+            ?.querySelectorAll('[id]')
+            .values()
+            .map<MenuItem>((item) => {
+              return {
+                key: item.id,
+                label: item.id
+              }
+            }) ?? []
+        )
+      })
 
-        // h2 标签代表需要分组
-        prev.push({
-          key: child.id,
-          label: child.id,
-          children: Array.from(
-            child.nextElementSibling
-              ?.querySelectorAll('[id]')
-              .values()
-              .map<MenuItem>((item) => {
-                return {
-                  key: item.id,
-                  label: item.id
-                }
-              }) ?? []
-          )
-        })
+      return prev
+    }, [])
 
-        return prev
-      }, []) ?? []
-
-    setItems(_menuItems)
+    setItems(_menuItems ?? [])
   }, [pathname])
 
   return (

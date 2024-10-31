@@ -50,10 +50,6 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/collapse',
             label: 'Collapse 折叠面板'
-          },
-          {
-            path: '/components/bench',
-            label: 'Bench 工作台'
           }
         ]
       },
@@ -166,10 +162,6 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/transfer',
             label: 'Transfer 穿梭框'
-          },
-          {
-            path: '/components/rich-text-editor',
-            label: 'RichTextEditor 富文本编辑器'
           }
         ]
       },
@@ -274,6 +266,24 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/watermark',
             label: 'Watermark 水印'
+          }
+        ]
+      },
+      {
+        path: '/components/compound',
+        label: '复合型',
+        children: [
+          {
+            path: '/components/compound-getting-started',
+            label: 'Getting Started'
+          },
+          {
+            path: '/components/bench',
+            label: 'Bench 工作台'
+          },
+          {
+            path: '/components/rich-text-editor',
+            label: 'RichTextEditor 富文本编辑器'
           }
         ]
       }
