@@ -32,6 +32,7 @@ const Icons = ({
   return (
     <>
       {_icons.map(([key, Icon]) => {
+        // in cjs mode, exports = default, exclude it
         if (key === 'default') return null
 
         return (

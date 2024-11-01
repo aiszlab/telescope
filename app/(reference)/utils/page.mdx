@@ -4,20 +4,12 @@
 pnpm i @aiszlab/relax
 ```
 
-hooks or utils for building your react project quickly
+您可以使用`relax`内任何`utils`来打造`vanilla`项目
 
 ## 如何使用
 
-```tsx
-import { useEvent } from '@aiszlab/relax'
+```ts
+import { first } from '@aiszlab/relax'
 
-const App = () => {
-  const click = useEvent(() => {
-    // do something
-  })
-
-  return <Button onClick={click}>使用 relax</Button>
-}
-
-export default App
+first([1, 2, 3]) // => 1
 ```

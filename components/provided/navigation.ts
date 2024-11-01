@@ -298,6 +298,16 @@ export const NAVIGATIONS: NavigationItem[] = [
         label: 'Getting Started'
       },
       {
+        path: '/utils/labs',
+        label: 'API',
+        children: [
+          {
+            path: '/utils/using',
+            label: 'using 全局状态管理'
+          }
+        ]
+      },
+      {
         path: '/hooks/life-cycle',
         label: 'LifeCycle',
         children: [
@@ -430,6 +440,18 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/utils/last',
             label: 'last 最后一个元素'
+          },
+          {
+            path: '/utils/unique',
+            label: 'unique 去重元素'
+          },
+          {
+            path: '/utils/unique-by',
+            label: 'uniqueBy 按条件去重元素'
+          },
+          {
+            path: '/utils/range',
+            label: 'range 创建连续数组'
           }
         ]
       },
@@ -440,16 +462,6 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/utils/stringify',
             label: 'stringify 合并类名'
-          }
-        ]
-      },
-      {
-        path: '/utils/labs',
-        label: '试验性能力',
-        children: [
-          {
-            path: '/utils/using',
-            label: 'using 全局状态管理'
           }
         ]
       }

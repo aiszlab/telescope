@@ -50,7 +50,7 @@ const ICON_GROUPS: IconGroup[] = [
 ].map(({ key, icons }) => {
   return {
     key,
-    icons: lazy(() => icons.then(({ default: _, ..._icons }) => ({ default: () => <Icons icons={_icons} /> })))
+    icons: lazy(() => icons.then((_icons) => ({ default: () => <Icons icons={_icons} /> })))
   }
 })
 

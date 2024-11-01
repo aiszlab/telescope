@@ -1,0 +1,25 @@
+## uniqueBy 按条件去重元素
+
+## 使用场景
+
+在您需要按条件去除重复元素时
+
+## 代码演示
+
+```ts
+import { unique } from '@aiszlab/relax'
+
+unique(
+  [
+    { key: 1, label: 'test1' },
+    { key: 2, label: 'test2' },
+    { key: 1, label: 'test100' }
+  ],
+  ({ key }) => key
+)
+// =>
+// [
+//   { key: 1, label: 'test1' },
+//   { key: 2, label: 'test2' },
+// ]
+```
