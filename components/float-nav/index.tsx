@@ -34,6 +34,7 @@ const FloatNav = (props: Props) => {
           child.nextElementSibling
             ?.querySelectorAll('[id]')
             .values()
+            .filter((item) => item.tagName !== 'clipPath')
             .map<MenuItem>((item) => {
               return {
                 key: item.id,
