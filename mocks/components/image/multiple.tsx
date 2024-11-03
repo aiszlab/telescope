@@ -16,7 +16,7 @@ const Multiple = () => {
   return (
     <Image.Group items={IMAGES.map((item) => item.src)}>
       {IMAGES.map((item) => {
-        return <Image src={item.src} alt={item.alt} key={item.alt} width={200} />
+        return <Image src={item.src} alt={item.alt} key={item.alt} width={200} height={120} />
       })}
     </Image.Group>
   )

@@ -7,6 +7,7 @@ const App = () => {
       src='https://mui.com/static/material-ui/react-components/autocomplete-light.png'
       alt='autocomplete-light'
       width={200}
+      height={120}
     />
   )
 }

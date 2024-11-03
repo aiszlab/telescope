@@ -2,7 +2,7 @@
 import { Skeleton } from 'musae'
 
 const App = () => {
-  return <Skeleton animation className='w-10 h-4' />
+  return <Skeleton animation className='w-40 h-10' />
 }
 
 export default App

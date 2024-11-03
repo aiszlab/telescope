@@ -113,7 +113,7 @@ export const NAVIGATIONS: NavigationItem[] = [
           },
           {
             path: '/components/otp-input',
-            label: 'OtpInput OTP 输入框'
+            label: 'OtpInput OTP输入框'
           },
           {
             path: '/components/checkbox',

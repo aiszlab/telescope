@@ -17,5 +17,12 @@ import Usage from '@/components/usage'
 
 ## API
 
-| 参数 | 说明 | 类型 | 默认值 |
-| ---- | ---- | ---- | ------ |
+### RichTextEditor Props
+
+| 参数         | 说明                        | 类型                                                              | 默认值       |
+| ------------ | --------------------------- | ----------------------------------------------------------------- | ------------ |
+| placeholder  | 缺省文本                    | `JSX.Element` \| `((isEditable: boolean) => null \| JSX.Element)` | -            |
+| disabled     | 是否禁用                    | `boolean`                                                         | `false`      |
+| defaultValue | 默认内容                    | `string`                                                          | -            |
+| value        | 编辑器值的格式              | `"markdown" \| "serialized"`                                      | `serialized` |
+| onChange     | 内容改变的回调，与`use`联动 | `(value: string) => void`                                         | -            |
