@@ -3,63 +3,68 @@
 import Icons from './icons'
 import { Grid, useTheme } from 'musae'
 import H2 from '@/components/mdx/h2'
-import { Fragment, lazy, Suspense, type LazyExoticComponent } from 'react'
+import { Fragment, lazy, ReactElement, Suspense, type LazyExoticComponent } from 'react'
+import * as action from 'musae/icons/action'
+import * as alert from 'musae/icons/alert'
+import * as content from 'musae/icons/content'
+import * as editor from 'musae/icons/editor'
+import * as hardware from 'musae/icons/hardware'
+import * as image from 'musae/icons/image'
+import * as navigation from 'musae/icons/navigation'
+import * as toggle from 'musae/icons/toggle'
+import * as mock from 'musae/icons/mock'
+import { IconProps } from 'musae/types/icon'
 
 interface IconGroup {
   key: string
-  icons: LazyExoticComponent<() => JSX.Element>
+  icons: Record<string, (props: Omit<IconProps, 'as'>) => React.FunctionComponentElement<IconProps>>
 }
 
 const ICON_GROUPS: IconGroup[] = [
   {
     key: 'action',
-    icons: import('musae/icons/action')
+    icons: action
   },
   {
     key: 'alert',
-    icons: import('musae/icons/alert')
+    icons: alert
   },
   {
     key: 'content',
-    icons: import('musae/icons/content')
+    icons: content
   },
   {
     key: 'editor',
-    icons: import('musae/icons/editor')
+    icons: editor
   },
   {
     key: 'hardware',
-    icons: import('musae/icons/hardware')
+    icons: hardware
   },
   {
     key: 'image',
-    icons: import('musae/icons/image')
+    icons: image
   },
   {
     key: 'navigation',
-    icons: import('musae/icons/navigation')
+    icons: navigation
   },
   {
     key: 'toggle',
-    icons: import('musae/icons/toggle')
+    icons: toggle
   },
   {
     key: 'mock',
-    icons: import('musae/icons/mock')
+    icons: mock
   }
-].map(({ key, icons }) => {
-  return {
-    key,
-    icons: lazy(() => icons.then((_icons) => ({ default: () => <Icons icons={_icons} /> })))
-  }
-})
+]
 
 const { Row } = Grid
 
 const IconGroups = () => {
   const theme = useTheme()
 
-  return ICON_GROUPS.map(({ icons: Icons, key: groupKey }) => {
+  return ICON_GROUPS.map(({ icons, key: groupKey }) => {
     return (
       <Fragment key={groupKey}>
         <H2 className='uppercase mb-5'>{groupKey}</H2>
@@ -74,9 +79,7 @@ const IconGroups = () => {
             '--on-primary': theme.colors['on-primary']
           }}
         >
-          <Suspense>
-            <Icons />
-          </Suspense>
+          <Icons icons={icons} />
         </Row>
       </Fragment>
     )
