@@ -11,12 +11,21 @@ import Usage from '@/components/usage'
 ## 代码演示
 
 <Usage
-  columns={2}
   sources={[
     {
       src: '/components/chat/basic.tsx',
       title: '基本',
-      description: '最简单的用法。'
+      description: '基本使用'
+    },
+    {
+      src: '/components/chat/stream.tsx',
+      title: '流式信息展示',
+      description: '使用 rxjs 模拟流式数据返回'
+    },
+    {
+      src: '/components/chat/history-messages.tsx',
+      title: '历史消息',
+      description: '展示历史消息'
     }
   ]}
 />
@@ -25,5 +34,27 @@ import Usage from '@/components/usage'
 
 ### Chat Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| ---- | ---- | ---- | ------ |
+| 参数      | 说明               | 类型                                  | 默认值   |
+| --------- | ------------------ | ------------------------------------- | -------- |
+| onMessage | 问答的消息处理函数 | [`MessageReceiver`](#MessageReceiver) | `void 0` |
+
+### MessageReceiver
+
+```ts
+interface MessageReceiver {
+  (
+    send: string,
+    receiver: {
+      next: (content: string) => void
+      complete: () => void
+      error: (error: Error) => void
+    }
+  ): void
+
+  /**
+   * @description
+   * override
+   */
+  override?: boolean
+}
+```
