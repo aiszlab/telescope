@@ -284,6 +284,10 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/rich-text-editor',
             label: 'RichTextEditor 富文本编辑器'
+          },
+          {
+            path: '/components/chat',
+            label: 'Chat 对话面板'
           }
         ]
       }
