@@ -9,15 +9,11 @@ import { DocSearch } from '@docsearch/react'
 import { NAVIGATIONS } from './navigation'
 import { zh_CN } from 'musae/locales'
 import type { Locale } from 'musae/types/locale'
-import { AddAlert } from 'musae/icons'
 
 import '@docsearch/css'
 import dynamic from 'next/dynamic'
 
-const Fab = dynamic(
-  import('musae').then(({ Fab }) => Fab),
-  { ssr: false }
-)
+const Robot = dynamic(() => import('./robot'), { ssr: false })
 
 interface Props {
   children?: ReactNode
@@ -67,9 +63,7 @@ const Provided = (props: Props) => {
           {props.children}
         </Bench>
 
-        <Fab>
-          <AddAlert />
-        </Fab>
+        <Robot />
       </ConfigProvider>
     </ThemeProvider>
   )
