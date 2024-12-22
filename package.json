@@ -17,12 +17,10 @@
     "dayjs": "^1.11.13",
     "eslint": "8.57.0",
     "musae": "^0.5.9",
-    "next": "14.2.15",
+    "next": "^14.2.21",
     "postcss": "8.4.41",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "rehype-sanitize": "^6.0.0",
-    "rehype-stringify": "^10.0.1",
     "rxjs": "^7.8.1",
     "tailwindcss": "3.4.10",
     "unified": "^11.0.5"
@@ -38,8 +36,6 @@
     "eslint-config-next": "^14.2.16",
     "rehype-highlight": "^7.0.1",
     "remark-gfm": "^4.0.0",
-    "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.1",
     "typescript": "^5.6.3"
   }
 }
