@@ -60,6 +60,7 @@ const Provided = (props: Props) => {
           location={pathname}
           defaultExpandedKeys={defaultExpandedKeys}
         >
+          {/* @ts-ignore */}
           {props.children}
         </Bench>
 
