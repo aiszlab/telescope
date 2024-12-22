@@ -288,6 +288,10 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/chat',
             label: 'Chat 对话面板'
+          },
+          {
+            path: '/components/markdown',
+            label: 'Markdown Markdown文档'
           }
         ]
       }
