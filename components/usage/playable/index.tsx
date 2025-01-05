@@ -44,7 +44,7 @@ const Playable = ({ title, render, source, description }: Props) => {
         {!isCollapsed && <Divider />}
 
         {/* 代码块 */}
-        <div className={stringify(isCollapsed && 'hidden')}>
+        <div className={stringify(isCollapsed && 'hidden', 'overflow-auto')}>
           <Markdown value={source} />
         </div>
       </div>

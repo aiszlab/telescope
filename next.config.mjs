@@ -1,5 +1,5 @@
 import remarkGfm from 'remark-gfm'
-import rehypeHighlight from 'rehype-highlight'
+import rehypeShiki from '@shikijs/rehype'
 import createMDX from '@next/mdx'
 
 /**
@@ -14,7 +14,17 @@ const withMDX = createMDX({
   options: {
     extension: /\.mdx?$/,
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeHighlight]
+    rehypePlugins: [
+      [
+        rehypeShiki,
+        {
+          themes: {
+            light: 'vitesse-light',
+            dark: 'vitesse-dark'
+          }
+        }
+      ]
+    ]
   }
 })
 

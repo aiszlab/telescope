@@ -1,4 +1,5 @@
 'use client'
+
 import { useTheme } from 'musae'
 import { type ReactNode } from 'react'
 
@@ -11,7 +12,7 @@ const Pre = (props: Props) => {
 
   return (
     <pre
-      className='relative rounded my-3 p-4 overflow-x-auto'
+      className='relative rounded my-3 py-2 overflow-x-auto'
       style={{
         backgroundColor: theme.colors['surface-container-low']
       }}

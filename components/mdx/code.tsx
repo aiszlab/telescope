@@ -1,6 +1,6 @@
 'use client'
+
 import { type ReactNode } from 'react'
-import styles from './styles.module.css'
 import { useTheme } from 'musae'
 import { stringify } from '@aiszlab/relax/class-name'
 
@@ -13,7 +13,7 @@ const Code = (props: Props) => {
   const theme = useTheme()
   return (
     <code
-      className={stringify(props.className, styles.code, 'py-0.5 rounded text-xs')}
+      className={stringify(props.className, 'py-0.5 px-1.5 mx-0.5 rounded text-xs inline-block align-text-bottom')}
       style={{
         backgroundColor: theme.colors['surface-container-low'],
         color: theme.colors['on-surface']
