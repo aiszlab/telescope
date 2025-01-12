@@ -12,12 +12,12 @@
   "dependencies": {
     "@aiszlab/relax": "^1.5.7",
     "@docsearch/react": "^3.8.2",
-    "@next/third-parties": "^14.2.22",
+    "@next/third-parties": "^14.2.23",
     "autoprefixer": "10.4.20",
     "dayjs": "^1.11.13",
     "eslint": "8.57.0",
-    "musae": "^0.5.11",
-    "next": "^14.2.22",
+    "musae": "^0.5.12",
+    "next": "^14.2.23",
     "postcss": "8.4.41",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -28,14 +28,14 @@
   "devDependencies": {
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
-    "@next/mdx": "^14.2.22",
+    "@next/mdx": "^14.2.23",
     "@shikijs/rehype": "^1.26.1",
     "@types/mdx": "^2.0.13",
     "@types/node": "^22.10.5",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
-    "eslint-config-next": "^14.2.22",
+    "eslint-config-next": "^14.2.23",
     "remark-gfm": "^4.0.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   }
 }
