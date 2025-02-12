@@ -4,7 +4,6 @@ import { ReactNode } from 'react'
 import Provided from '@/components/provided'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
-import 'musae/styles.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,15 +18,7 @@ interface Props {
 
 export default function Layout(props: Props) {
   return (
-    <html lang='zh_CN'>
-      <head>
-        <link
-          rel='stylesheet'
-          href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css'
-          // https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css
-        />
-      </head>
-
+    <html lang='zh_CN' className='scroll-smooth'>
       <body className={inter.className}>
         <Provided>{props.children}</Provided>
       </body>
