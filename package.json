@@ -12,7 +12,7 @@
   "dependencies": {
     "@aiszlab/relax": "^1.5.11",
     "@docsearch/react": "^3.8.3",
-    "@next/third-parties": "^14.2.24",
+    "@next/third-parties": "^15.2.3",
     "dayjs": "^1.11.13",
     "eslint": "8.57.0",
     "musae": "^0.5.14",
