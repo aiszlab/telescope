@@ -10,32 +10,37 @@
     "deploy": "git pull origin main && pnpm i && pnpm build && pm2 restart telescope"
   },
   "dependencies": {
-    "@aiszlab/relax": "^1.5.11",
-    "@docsearch/react": "^3.8.3",
-    "@next/third-parties": "^14.2.24",
+    "@aiszlab/relax": "^2.0.3",
+    "@docsearch/react": "^3.9.0",
+    "@next/third-parties": "^15.2.4",
     "dayjs": "^1.11.13",
-    "eslint": "8.57.0",
-    "musae": "^0.5.14",
-    "next": "^14.2.24",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "rxjs": "^7.8.1",
+    "eslint": "9.24.0",
+    "musae": "link:../musae",
+    "next": "^15.2.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "rxjs": "^7.8.2",
     "unified": "^11.0.5"
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
-    "@next/mdx": "^14.2.24",
-    "@shikijs/rehype": "^1.29.2",
-    "@tailwindcss/postcss": "^4.0.6",
+    "@next/mdx": "^15.2.4",
+    "@shikijs/rehype": "^3.2.1",
+    "@tailwindcss/postcss": "^4.1.3",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^22.13.1",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "eslint-config-next": "^14.2.24",
-    "postcss": "8.4.41",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "eslint-config-next": "^15.2.4",
+    "postcss": "8.5.3",
     "remark-gfm": "^4.0.1",
-    "tailwindcss": "^4.0.6",
-    "typescript": "^5.7.3"
+    "tailwindcss": "^4.1.3",
+    "typescript": "^5.8.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "musae": "link:../musae"
+    }
   }
 }
