@@ -1,11 +1,11 @@
-import Content from './content.mdx'
+import Content from "./content.mdx";
 
 const App = () => {
   return (
-    <section className='m-10 mt-0'>
+    <section className="p-9">
       <Content />
     </section>
-  )
-}
+  );
+};
 
-export default App
+export default App;
