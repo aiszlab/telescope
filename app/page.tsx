@@ -20,7 +20,7 @@ const App = () => {
   return (
     <section
       style={{ minHeight: "calc(100vh - 96px)" }}
-      className="flex flex-col -m-9"
+      className="flex flex-col"
     >
       <main className="flex-1 flex flex-col items-center content-center flex-nowrap">
         <div className="p-32">

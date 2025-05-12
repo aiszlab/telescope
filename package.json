@@ -15,7 +15,7 @@
     "@next/third-parties": "^15.3.2",
     "dayjs": "^1.11.13",
     "eslint": "9.24.0",
-    "musae": "link:..\\musae",
+    "musae": "^1.0.6",
     "next": "^15.3.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -39,9 +39,6 @@
     "typescript": "^5.8.3"
   },
   "pnpm": {
-    "overrides": {
-      "musae": "link:../musae"
-    },
     "onlyBuiltDependencies": [
       "sharp"
     ]

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { ReactNode } from "react";
-import Provided from "@/components/provided";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const geist = Geist({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "aisz实验室",
@@ -19,7 +20,7 @@ interface Props {
 export default function Layout(props: Props) {
   return (
     <html lang="zh_CN" className="scroll-smooth">
-      <body className={inter.className}>{props.children}</body>
+      <body className={geist.className}>{props.children}</body>
 
       <GoogleAnalytics gaId="G-4S32MV4L55" />
     </html>
