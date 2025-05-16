@@ -18,10 +18,7 @@ const App = () => {
   const theme = useTheme();
 
   return (
-    <section
-      style={{ minHeight: "calc(100vh - 96px)" }}
-      className="flex flex-col"
-    >
+    <section style={{ minHeight: "100vh" }} className="flex flex-col">
       <main className="flex-1 flex flex-col items-center content-center flex-nowrap">
         <div className="p-32">
           <h1 className="text-5xl font-bold">
