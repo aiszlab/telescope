@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url'
 import { dirname, extname, join } from 'path'
 import { type Props as PlayableProps } from './playable'
 import Playground from './playground'
+import registry from '@/mocks/registry'
 
 interface Source {
   src: string
@@ -20,9 +21,11 @@ const Usage = async ({ sources, columns = 1 }: Props) => {
     sources.map<Promise<PlayableProps>>(async ({ src, description, title }) => {
       // get src ext
       const ext = extname(src).slice(1)
+      // registry key is src without leading slash and extension
+      const registryKey = src.replace(/^\/|\.tsx$/g, '')
 
       const [render, source] = await Promise.all([
-        import(`../../mocks${src}`).then((lazy) => lazy.default),
+        registry[registryKey]?.().then((lazy) => lazy.default),
         readFile(join(dirname(fileURLToPath(import.meta.url)), '../../mocks', src))
           .catch(() => null)
           .then((file) => file?.toString())

@@ -17,7 +17,7 @@ const OPTIONS: Option[] = [
 const Controlled = () => {
   const [value, setValue] = useState<string>()
 
-  const onChange = (selectedValue: string) => {
+  const onChange = (selectedValue: string | undefined) => {
     setValue(selectedValue)
   }
 

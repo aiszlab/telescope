@@ -1,7 +1,7 @@
 'use client'
 
 import { useCounter } from '@aiszlab/relax'
-import { KeyboardArrowLeft, KeyboardArrowRight } from 'musae/icons'
+import { IconKeyboardArrowLeft, IconKeyboardArrowRight } from 'musae/icons'
 import { IconButton } from 'musae'
 
 const App = () => {
@@ -13,13 +13,13 @@ const App = () => {
   return (
     <div className='flex gap-x-2 items-center'>
       <IconButton onClick={_subtract}>
-        <KeyboardArrowLeft />
+        <IconKeyboardArrowLeft />
       </IconButton>
 
       <span>{count}</span>
 
       <IconButton onClick={_add}>
-        <KeyboardArrowRight />
+        <IconKeyboardArrowRight />
       </IconButton>
     </div>
   )

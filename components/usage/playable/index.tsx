@@ -1,6 +1,6 @@
 'use client'
 
-import { type FC, createElement } from 'react'
+import { type ComponentType, createElement } from 'react'
 import { useTheme, Button, Divider, Markdown } from 'musae'
 import H4 from '@/components/mdx/h4'
 import P from '@/components/mdx/p'
@@ -9,7 +9,7 @@ import { stringify } from '@aiszlab/relax/class-name'
 
 export interface Props {
   title: string
-  render: FC
+  render: ComponentType
   source: string
   description: string
 }

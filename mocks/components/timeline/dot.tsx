@@ -1,6 +1,6 @@
 'use client'
 import { Timeline } from 'musae'
-import { CheckCircle } from 'musae/icons'
+import { IconCheckCircle } from 'musae/icons'
 
 const App = () => {
   return (
@@ -8,7 +8,7 @@ const App = () => {
       items={[
         {
           description: 'Create a services site 2015-09-01',
-          dot: <CheckCircle />
+          dot: <IconCheckCircle />
         },
         {
           description: 'Solve initial network problems 2015-09-01'

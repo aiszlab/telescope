@@ -1,6 +1,6 @@
 'use client'
 import { Steps } from 'musae'
-import { CheckCircle, Close } from 'musae/icons'
+import { IconCheckCircle, IconClose } from 'musae/icons'
 
 const App = () => {
   return (
@@ -10,12 +10,12 @@ const App = () => {
       size={40}
       items={[
         {
-          leading: <CheckCircle size={40} />,
+          leading: <IconCheckCircle size={40} />,
           title: 'Step 1',
           description: 'Step 1 description'
         },
         {
-          leading: <Close size={40} />,
+          leading: <IconClose size={40} />,
           title: 'Step 2',
           description: 'Step 2 description'
         },

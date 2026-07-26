@@ -1,4 +1,4 @@
-import { Bedtime, Github, WbSunny } from 'musae/icons'
+import { IconBedtime, IconGithub, IconWbSunny } from 'musae/icons'
 import { Button, useTheme, I18nButton, IconButton } from 'musae'
 import type { Locale } from 'musae/types/locale'
 
@@ -15,14 +15,14 @@ const Toolbar = ({ onLocaleChange }: Props) => {
         <I18nButton onChange={onLocaleChange} variant='text' size='small' />
       </li>
       <li>
-        <IconButton variant='text' onClick={toggle} size='small'>
-          {mode === 'dark' ? <WbSunny /> : <Bedtime />}
+        <IconButton variant='text' onClick={() => { toggle() }} size='small'>
+          {mode === 'dark' ? <IconWbSunny /> : <IconBedtime />}
         </IconButton>
       </li>
       <li>
         <a target='_blank' href='https://github.com/aiszlab/musae'>
           <IconButton variant='text' size='small'>
-            <Github />
+            <IconGithub />
           </IconButton>
         </a>
       </li>

@@ -1,5 +1,3 @@
-import remarkGfm from 'remark-gfm'
-import rehypeShiki from '@shikijs/rehype'
 import createMDX from '@next/mdx'
 
 /**
@@ -7,25 +5,26 @@ import createMDX from '@next/mdx'
  */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
-  reactStrictMode: false
+  reactStrictMode: false,
+  turbopack: {
+    root: process.cwd()
+  }
 }
 
 const withMDX = createMDX({
-  options: {
-    extension: /\.mdx?$/,
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      [
-        rehypeShiki,
-        {
-          themes: {
-            light: 'vitesse-light',
-            dark: 'vitesse-dark'
-          }
+  extension: /\.mdx?$/,
+  remarkPlugins: ['remark-gfm'],
+  rehypePlugins: [
+    [
+      '@shikijs/rehype',
+      {
+        themes: {
+          light: 'vitesse-light',
+          dark: 'vitesse-dark'
         }
-      ]
+      }
     ]
-  }
+  ]
 })
 
 export default withMDX(nextConfig)
