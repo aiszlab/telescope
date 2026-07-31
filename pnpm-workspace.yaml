@@ -15,7 +15,5 @@ minimumReleaseAgeExclude:
   - '@next/swc-win32-x64-msvc@16.2.12'
   - '@next/third-parties@16.2.12'
   - eslint-config-next@16.2.12
-  - musae@1.1.0
+  - musae@1.1.0 || 1.1.1-beta.1 || 1.2.0
   - next@16.2.12
-patchedDependencies:
-  musae@1.1.0: patches/musae@1.1.0.patch
