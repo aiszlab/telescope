@@ -22,7 +22,8 @@ const withMDX = createMDX({
           themes: {
             light: 'vitesse-light',
             dark: 'vitesse-dark'
-          }
+          },
+          langs: ['ts', 'tsx', 'css', 'bash', 'js']
         }
       ]
     ]
