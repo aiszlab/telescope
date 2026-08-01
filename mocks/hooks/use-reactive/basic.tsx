@@ -10,8 +10,8 @@ const App = () => {
     <div className='flex flex-col items-center gap-y-2'>
       <span>当前值：{reactive.value}</span>
       <div className='flex gap-x-2'>
-        <Button onClick={() => (reactive.value = reactive.value + 1)}>增加</Button>
-        <Button onClick={() => (reactive.value = reactive.value - 1)}>减少</Button>
+        <Button onClick={() => { reactive.value = reactive.value + 1 }}>增加</Button>
+        <Button onClick={() => { reactive.value = reactive.value - 1 }}>减少</Button>
       </div>
     </div>
   )
