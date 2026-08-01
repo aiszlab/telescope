@@ -1,0 +1,37 @@
+import Usage from '@/components/usage'
+
+# IconButton 图标按钮
+
+纯图标的按钮组件，继承 Button 的属性（不含 prefix、suffix、shape）。
+
+## 何时使用
+
+当只需要图标而不需要文字标签的按钮场景时使用，如工具栏、操作栏等。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/icon-button/basic.tsx',
+      title: '基本',
+      description: '三种样式风格的图标按钮：filled、outlined、text。'
+    }
+  ]}
+/>
+
+## API
+
+### IconButton Props
+
+继承 `ButtonProps`，但不包含 `prefix`、`suffix`、`shape` 属性。
+
+| 参数     | 说明     | 类型                                      | 默认值      |
+| -------- | -------- | ----------------------------------------- | ----------- |
+| variant  | 样式     | `"filled" \| "outlined" \| "text"`        | `"filled"`  |
+| color    | 主调色   | `"primary" \| "secondary" \| "tertiary"`  | `"primary"` |
+| size     | 尺寸     | `"small" \| "medium"`                     | `"medium"`  |
+| disabled | 是否禁用 | `boolean`                                 | `false`     |
+| loading  | 等待状态 | `boolean`                                 | `false`     |
+| onClick  | 点击事件 | `(event: MouseEvent<HTMLButtonElement>) => void` | `void 0` |
+| children | 图标内容 | `React.ReactNode`                         | `void 0`    |

@@ -1,0 +1,39 @@
+import Usage from '@/components/usage'
+
+# ConfigProvider 全局配置
+
+全局配置提供者组件，为子组件提供统一的配置上下文，如国际化、主题等配置。
+
+## 何时使用
+
+在应用根组件中使用，为整个应用提供全局配置支持。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/config/basic.tsx',
+      title: '基本',
+      description: '使用 ConfigProvider 提供全局配置。'
+    }
+  ]}
+/>
+
+## API
+
+### ConfigProvider Props
+
+| 参数     | 说明     | 类型              | 默认值  |
+| -------- | -------- | ----------------- | ------- |
+| children | 子组件   | `React.ReactNode` | —       |
+
+### useConfiguration Hook
+
+```tsx
+import { useConfiguration } from 'musae'
+
+const config = useConfiguration()
+```
+
+用于在子组件中获取全局配置。

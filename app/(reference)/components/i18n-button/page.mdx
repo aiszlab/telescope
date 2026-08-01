@@ -1,0 +1,31 @@
+import Usage from '@/components/usage'
+
+# I18nButton 国际化切换按钮
+
+国际化语言切换按钮组件，提供便捷的语言切换功能。
+
+## 何时使用
+
+当应用需要在不同语言之间切换时使用，通常放置在导航栏或设置区域。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/i18n-button/basic.tsx',
+      title: '基本',
+      description: '基础的国际化切换按钮，通过 onChange 回调获取选中的语言。'
+    }
+  ]}
+/>
+
+## API
+
+### I18nButton Props
+
+| 参数     | 说明                       | 类型                                      | 默认值      |
+| -------- | -------------------------- | ----------------------------------------- | ----------- |
+| variant  | 按钮样式                   | `"filled" \| "outlined" \| "text"`        | `"filled"`  |
+| size     | 按钮尺寸                   | `"small" \| "medium"`                     | `"medium"`  |
+| onChange | 语言切换时的回调           | `(locale?: Locale) => void`               | `void 0`    |

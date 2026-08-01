@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 8100",
-    "build": "next build",
+    "dev": "next dev -p 8100 --webpack",
+    "build": "next build --webpack",
     "start": "next start -p 8100",
     "lint": "next lint",
     "deploy": "git pull origin main && pnpm i && pnpm build && pm2 restart telescope"

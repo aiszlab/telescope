@@ -24,6 +24,14 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/icon',
             label: 'Icon 图标'
+          },
+          {
+            path: '/components/icon-button',
+            label: 'IconButton 图标按钮'
+          },
+          {
+            path: '/components/fab',
+            label: 'Fab 浮动操作按钮'
           }
         ]
       },
@@ -34,6 +42,14 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/grid',
             label: 'Grid 布局'
+          },
+          {
+            path: '/components/layout',
+            label: 'Layout 布局'
+          },
+          {
+            path: '/components/split-panel',
+            label: 'SplitPanel 分割面板'
           },
           {
             path: '/components/divider',
@@ -162,6 +178,10 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/transfer',
             label: 'Transfer 穿梭框'
+          },
+          {
+            path: '/components/search',
+            label: 'Search 搜索'
           }
         ]
       },
@@ -236,6 +256,18 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/quote',
             label: 'Quote 引用'
+          },
+          {
+            path: '/components/card',
+            label: 'Card 卡片'
+          },
+          {
+            path: '/components/empty',
+            label: 'Empty 空状态'
+          },
+          {
+            path: '/components/ellipsis',
+            label: 'Ellipsis 文本省略'
           }
         ]
       },
@@ -266,6 +298,36 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/components/watermark',
             label: 'Watermark 水印'
+          },
+          {
+            path: '/components/action-sheet',
+            label: 'ActionSheet 操作面板'
+          },
+          {
+            path: '/components/bottom-sheet',
+            label: 'BottomSheet 底部面板'
+          }
+        ]
+      },
+      {
+        path: '/components/config-group',
+        label: '配置',
+        children: [
+          {
+            path: '/components/theme',
+            label: 'ThemeProvider 主题'
+          },
+          {
+            path: '/components/config',
+            label: 'ConfigProvider 全局配置'
+          },
+          {
+            path: '/components/i18n-button',
+            label: 'I18nButton 国际化切换'
+          },
+          {
+            path: '/components/session-storage',
+            label: 'SessionStorage 会话存储'
           }
         ]
       },

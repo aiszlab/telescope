@@ -1,0 +1,42 @@
+import Usage from '@/components/usage'
+
+# ThemeProvider 主题提供者
+
+主题提供者组件，为子组件提供主题上下文，支持明暗主题切换。
+
+## 何时使用
+
+在应用根组件中使用，为整个应用提供主题支持。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/theme/basic.tsx',
+      title: '基本',
+      description: '使用 ThemeProvider 包裹应用，启用主题切换功能。'
+    }
+  ]}
+/>
+
+## API
+
+### ThemeProvider Props
+
+| 参数     | 说明     | 类型              | 默认值  |
+| -------- | -------- | ----------------- | ------- |
+| children | 子组件   | `React.ReactNode` | —       |
+
+### useTheme Hook
+
+```tsx
+import { useTheme } from 'musae'
+
+const { theme, toggleTheme } = useTheme()
+```
+
+| 返回值      | 说明         | 类型         |
+| ----------- | ------------ | ------------ |
+| theme       | 当前主题     | `Theme`      |
+| toggleTheme | 切换主题     | `() => void` |

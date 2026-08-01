@@ -1,0 +1,60 @@
+import Usage from '@/components/usage'
+
+# ActionSheet 操作面板
+
+基于 Sheet 的移动端底部操作面板，支持操作列表和二次确认场景，同时提供声明式和指令式 API。
+
+## 何时使用
+
+适用于移动端场景，从底部弹出操作选项列表，供用户选择操作。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/action-sheet/basic.tsx',
+      title: '基本',
+      description: '使用声明式 API 从底部弹出操作面板，包含标题、描述和操作项列表。'
+    }
+  ]}
+/>
+
+## API
+
+### ActionSheet Props
+
+| 参数        | 说明                           | 类型               | 默认值    |
+| ----------- | ------------------------------ | ------------------ | --------- |
+| open        | 控制 ActionSheet 的可见状态    | `boolean`         | —         |
+| onClose     | 关闭时的回调                   | `VoidFunction`     | —         |
+| actions     | 操作项列表                     | `ActionItem[]`    | —         |
+| title       | 顶部标题                       | `React.ReactNode`  | `void 0`  |
+| description | 标题下方的描述文本             | `React.ReactNode`  | `void 0`  |
+| cancelText  | 取消按钮文本                   | `React.ReactNode`  | 使用 locale 文案 |
+| height      | 面板高度（px 或 CSS 值）       | `number \| string` | `void 0`  |
+
+### ActionItem
+
+| 参数        | 说明             | 类型              | 默认值  |
+| ----------- | ---------------- | ----------------- | ------- |
+| key         | 操作项唯一标识   | `string`          | —       |
+| text        | 操作项显示文本   | `React.ReactNode` | —       |
+| description | 操作项描述文本   | `React.ReactNode` | `void 0` |
+| onClick     | 点击操作项的回调 | `() => void`      | `void 0` |
+
+### useActionSheet Hook
+
+指令式 API，返回 `[show, holder]`，需要在组件树中渲染 `holder`，然后通过 `show` 函数调用。
+
+```tsx
+const [show, holder] = useActionSheet()
+
+// 在 JSX 中渲染 holder
+return (
+  <>
+    <Button onClick={() => show({ actions: [...] })}>打开</Button>
+    {holder}
+  </>
+)
+```

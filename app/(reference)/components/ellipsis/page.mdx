@@ -1,0 +1,33 @@
+import Usage from '@/components/usage'
+
+# Ellipsis 文本省略
+
+文本省略组件，当文本内容超出容器宽度时，自动展示省略号。
+
+## 何时使用
+
+适用于卡片标题、列表项、表格单元格等需要限制文本显示行数或宽度的场景。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/ellipsis/basic.tsx',
+      title: '基本',
+      description: '文本超出容器宽度时自动省略，默认一行截断。'
+    }
+  ]}
+/>
+
+## API
+
+### Ellipsis Props
+
+| 参数        | 说明         | 类型     | 默认值  |
+| ----------- | ------------ | -------- | ------- |
+| value       | 文本内容     | `string` | `""`    |
+| textOverflow | 省略符号    | `string` | `"..."` |
+| lineClamp   | 最大行数     | `number` | `1`     |
+| className   | 自定义类名   | `string` | `void 0` |
+| style       | 自定义样式   | `CSSProperties` | `void 0` |
