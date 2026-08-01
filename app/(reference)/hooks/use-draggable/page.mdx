@@ -1,0 +1,36 @@
+import Usage from '@/components/usage'
+
+# useDraggable
+
+使元素可拖拽的钩子，自动绑定原生拖拽事件，返回 ref 与拖拽状态。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-draggable/basic.tsx',
+      title: '基本',
+      description: '拖拽元素，查看拖拽状态。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数        | 说明         | 类型                         | 默认值 |
+| ----------- | ------------ | ---------------------------- | ------ |
+| onDragStart | 拖拽开始回调 | `(state: DragState) => void` | -      |
+| onDragMove  | 拖拽移动回调 | `(state: DragState) => void` | -      |
+| onDragEnd   | 拖拽结束回调 | `(state: DragState) => void` | -      |
+
+### Return
+
+返回一个元组 `[ref, DragState]`。
+
+| 参数      | 说明             | 类型                   |
+| --------- | ---------------- | ---------------------- |
+| ref       | 绑定到可拖拽元素 | `RefObject<T \| null>` |
+| dragState | 拖拽状态         | `DragState`            |

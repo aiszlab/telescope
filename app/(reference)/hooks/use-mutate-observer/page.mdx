@@ -1,0 +1,30 @@
+import Usage from '@/components/usage'
+
+# useMutateObserver
+
+监听 DOM 变化的钩子，基于 `MutationObserver` 实现。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-mutate-observer/basic.tsx',
+      title: '基本',
+      description: '增删子节点时触发变化回调。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数     | 说明               | 类型                                        | 默认值 |
+| -------- | ------------------ | ------------------------------------------- | ------ |
+| elements | 观察的目标元素     | `HTMLElement \| HTMLElement[] \| null`      | -      |
+| callback | 变化回调           | `MutationCallback`                          | -      |
+
+### Return
+
+无。

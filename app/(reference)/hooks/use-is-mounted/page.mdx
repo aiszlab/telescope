@@ -1,0 +1,31 @@
+import Usage from '@/components/usage'
+
+# useIsMounted
+
+判断组件是否已挂载的钩子，返回一个稳定的函数用于读取当前挂载状态。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-is-mounted/basic.tsx',
+      title: '基本',
+      description: '挂载后读取挂载状态，卸载后返回 false。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数      | 说明                       | 类型      | 默认值  |
+| --------- | -------------------------- | --------- | ------- |
+| rerender | 挂载后是否触发组件重渲染 | `boolean` | `false` |
+
+### Return
+
+| 参数      | 说明                     | 类型         |
+| --------- | ------------------------ | ------------ |
+| isMounted | 读取当前是否已挂载的函数 | `() => boolean` |

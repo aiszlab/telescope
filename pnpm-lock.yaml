@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@aiszlab/relax':
-        specifier: ^2.1.0
-        version: 2.1.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: 2.1.3-beta.10
+        version: 2.1.3-beta.10(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@docsearch/css':
         specifier: ^4.6.3
         version: 4.6.3
@@ -239,10 +239,6 @@ packages:
     resolution: {integrity: sha512-hnORnjP/1P/zFEndoeX+n+t1RwWRJiJpM/jO7FW32Kn9r5+sJB2JWOdYo4L6k78j15eCwY3Gm/7364B1EMwtNg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
-
-  '@babel/runtime@7.28.4':
-    resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/runtime@7.29.7':
     resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
@@ -2631,9 +2627,6 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react-is@19.2.0:
-    resolution: {integrity: sha512-x3Ax3kNSMIIkyVYhWPyO09bu0uttcAIoecO/um/rKGQ4EltYWVYtyiGkS/3xMynrbVQdS69Jhlv8FXUEZehlzA==}
-
   react-is@19.2.8:
     resolution: {integrity: sha512-s5un28nYxKJw5gvUHyW5PCC28CvBqLu9r3cWgzHT4Vo/5fqqkFcdRYsGcKf50WMPpjjFZS5d76fn3YCo2njKwQ==}
 
@@ -3146,10 +3139,10 @@ snapshots:
 
   '@aiszlab/relax@2.1.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
-      '@babel/runtime': 7.28.4
+      '@babel/runtime': 7.29.7
       react: 19.2.8
       react-dom: 19.2.8(react@19.2.8)
-      react-is: 19.2.0
+      react-is: 19.2.8
       rxjs: 7.8.2
 
   '@aiszlab/relax@2.1.3-beta.10(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
@@ -3350,8 +3343,6 @@ snapshots:
   '@babel/parser@7.29.7':
     dependencies:
       '@babel/types': 7.29.7
-
-  '@babel/runtime@7.28.4': {}
 
   '@babel/runtime@7.29.7': {}
 
@@ -6333,8 +6324,6 @@ snapshots:
       react: 19.2.8
 
   react-is@16.13.1: {}
-
-  react-is@19.2.0: {}
 
   react-is@19.2.8: {}
 

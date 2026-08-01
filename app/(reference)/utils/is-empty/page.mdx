@@ -1,0 +1,20 @@
+## isEmpty 判断空值
+
+## 使用场景
+
+判断值是否为空。对 `null`/`undefined` 返回 `true`，对空数组/空对象返回 `true`，对其他值使用 falsy 判断
+
+## 代码演示
+
+```ts
+import { isEmpty } from '@aiszlab/relax'
+
+isEmpty(null) // => true
+isEmpty(undefined) // => true
+isEmpty([]) // => true
+isEmpty({}) // => true
+isEmpty('') // => true
+isEmpty(0) // => true
+isEmpty([1, 2]) // => false
+isEmpty({ a: 1 }) // => false
+```

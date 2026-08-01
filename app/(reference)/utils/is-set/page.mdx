@@ -1,0 +1,15 @@
+## isSet 判断 Set
+
+## 使用场景
+
+判断值是否为 `Set` 实例
+
+## 代码演示
+
+```ts
+import { isSet } from '@aiszlab/relax'
+
+isSet(new Set()) // => true
+isSet(new Map()) // => false
+isSet([]) // => false
+```

@@ -1,0 +1,17 @@
+## taggedTemplateLiterals 模板字符串渲染
+
+## 使用场景
+
+使用变量对象渲染模板字符串，支持 `${variable}` 插值语法
+
+## 代码演示
+
+```ts
+import { taggedTemplateLiterals } from '@aiszlab/relax'
+
+const result = taggedTemplateLiterals(
+  'Hello ${name}, you have ${count} messages',
+  { name: 'John', count: 5 }
+)
+// => 'Hello John, you have 5 messages'
+```

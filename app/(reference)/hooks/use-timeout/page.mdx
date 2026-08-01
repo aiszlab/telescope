@@ -1,0 +1,33 @@
+import Usage from '@/components/usage'
+
+# useTimeout
+
+定时器钩子，在 `wait` 毫秒后执行回调，支持立即触发（`flush`）与取消（`cancel`）。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-timeout/basic.tsx',
+      title: '基本',
+      description: '3 秒后触发回调，可立即触发或取消。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数     | 说明           | 类型          | 默认值 |
+| -------- | -------------- | ------------- | ------ |
+| callback | 回调函数       | `AnyFunction` | -      |
+| wait     | 等待时间（毫秒） | `number`     | -      |
+
+### Return
+
+| 参数   | 说明         | 类型         |
+| ------ | ------------ | ------------ |
+| flush  | 立即触发回调 | `() => void` |
+| cancel | 取消定时器   | `() => void` |

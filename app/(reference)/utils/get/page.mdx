@@ -1,0 +1,25 @@
+## get 安全取值
+
+## 使用场景
+
+从对象中安全获取嵌套属性的值，支持点号和数组路径。如果值不存在可指定默认值，避开 `Cannot read properties of undefined` 错误
+
+## 代码演示
+
+```ts
+import { get } from '@aiszlab/relax'
+
+const data = { user: { profile: { name: 'John' } } }
+
+// 路径取值
+get(data, 'user.profile.name') // => 'John'
+
+// 数组路径取值
+get(data, ['user', 'profile', 'name']) // => 'John'
+
+// 不存在时返回默认值
+get(data, 'user.profile.age', 0) // => 0
+
+// 路径不存在返回 undefined
+get(data, 'user.unknown') // => undefined
+```

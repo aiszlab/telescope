@@ -1,0 +1,31 @@
+import Usage from '@/components/usage'
+
+# useScroll
+
+监听 `window` 滚动事件的钩子。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-scroll/basic.tsx',
+      title: '基本',
+      description: '滚动页面，查看滚动位置。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数     | 说明         | 类型                     | 默认值 |
+| -------- | ------------ | ------------------------ | ------ |
+| callback | 滚动回调函数 | `(event: Event) => void` | -      |
+
+### Return
+
+| 参数  | 说明           | 类型         |
+| ----- | -------------- | ------------ |
+| clean | 取消监听的函数 | `() => void` |

@@ -1,0 +1,30 @@
+import Usage from '@/components/usage'
+
+# useAsyncEffect
+
+支持 `async` 函数的 `useEffect`，可在副作用中直接使用 `await`。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-async-effect/basic.tsx',
+      title: '基本',
+      description: '挂载时异步获取数据。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数   | 说明           | 类型                  | 默认值 |
+| ------ | -------------- | --------------------- | ------ |
+| effect | 异步副作用函数 | `() => Promise<void>` | -      |
+| deps   | 依赖项         | `unknown[]`           | -      |
+
+### Return
+
+无。

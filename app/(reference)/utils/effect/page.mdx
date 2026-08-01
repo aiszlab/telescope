@@ -1,0 +1,25 @@
+## effect 副作用调用
+
+## 使用场景
+
+调用支持返回清理函数的回调（thenable effect），适合执行带清理逻辑的副作用
+
+## 代码演示
+
+```ts
+import { effect } from '@aiszlab/relax'
+
+const cleanup = effect(() => {
+  const timer = setTimeout(() => {
+    console.log('hello')
+  }, 1000)
+
+  // 返回清理函数
+  return () => {
+    clearTimeout(timer)
+  }
+})
+
+// 执行清理
+cleanup()
+```

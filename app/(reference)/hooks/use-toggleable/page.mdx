@@ -1,0 +1,49 @@
+import Usage from '@/components/usage'
+
+# useToggleable
+
+树形 key 联动勾选钩子，支持父子节点的联动勾选/取消（类似级联多选）。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-toggleable/basic.tsx',
+      title: '基本',
+      description: '父子节点联动勾选。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数           | 说明             | 类型              | 默认值 |
+| -------------- | ---------------- | ----------------- | ------ |
+| toggleableKeys | 可勾选的树形结构 | `ToggleableKey[]` | -      |
+
+#### UseToggleableOptions
+
+| 参数                | 说明             | 类型                       | 默认值 |
+| ------------------- | ---------------- | -------------------------- | ------ |
+| isDefaultToggled    | 是否默认全部勾选 | `boolean`                  | -      |
+| toggledKeys         | 受控的已勾选 key | `Key[]`                    | -      |
+| defaultToggledKeys  | 默认勾选的 key   | `Key[]`                    | -      |
+| onToggle            | 勾选状态变化回调 | `(keys: Key[]) => void`    | -      |
+
+#### ToggleableKey
+
+| 参数     | 说明     | 类型               |
+| -------- | -------- | ------------------ |
+| key      | 唯一标识 | `Key`              |
+| children | 子节点   | `ToggleableKey[]`  |
+
+### Return
+
+| 参数         | 说明              | 类型                    |
+| ------------ | ----------------- | ----------------------- |
+| toggledKeys | 已勾选的 key 集合 | `Set<Key>`              |
+| isToggled   | 判断 key 是否勾选 | `(key: Key) => boolean` |
+| toggle      | 切换某 key 的勾选 | `(key: Key) => void`    |

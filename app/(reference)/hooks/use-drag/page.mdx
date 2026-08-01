@@ -1,0 +1,52 @@
+import Usage from '@/components/usage'
+
+# useDrag
+
+处理元素拖拽的底层钩子，返回拖拽状态与事件处理函数。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-drag/basic.tsx',
+      title: '基本',
+      description: '按下并拖拽，查看拖拽状态。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数        | 说明         | 类型                         | 默认值 |
+| ----------- | ------------ | ---------------------------- | ------ |
+| onDragStart | 拖拽开始回调 | `(state: DragState) => void` | -      |
+| onDragMove  | 拖拽移动回调 | `(state: DragState) => void` | -      |
+| onDragEnd   | 拖拽结束回调 | `(state: DragState) => void` | -      |
+
+### Return
+
+返回一个元组 `[DragState, handlers]`。
+
+#### DragState
+
+| 参数       | 说明         | 类型      |
+| ---------- | ------------ | --------- |
+| x          | x 坐标       | `number`  |
+| y          | y 坐标       | `number`  |
+| movementX  | 移动 x       | `number`  |
+| movementY  | 移动 y       | `number`  |
+| offsetX    | 偏移 x       | `number`  |
+| offsetY    | 偏移 y       | `number`  |
+| isDragging | 是否正在拖拽 | `boolean` |
+| isDragged  | 是否已拖拽过 | `boolean` |
+
+#### handlers
+
+| 参数        | 说明                | 类型                       |
+| ----------- | ------------------- | -------------------------- |
+| onDragStart | 绑定到 mousedown 等 | `(event: UIEvent) => void` |
+| onDragMove  | 绑定到 mousemove 等 | `(event: UIEvent) => void` |
+| onDragEnd   | 绑定到 mouseup 等   | `(event: UIEvent) => void` |

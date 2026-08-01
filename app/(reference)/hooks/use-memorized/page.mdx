@@ -1,0 +1,32 @@
+import Usage from '@/components/usage'
+
+# useMemorized
+
+`useMemo` 的增强版本，在依赖变化重新计算时，可读取上一次的计算结果。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-memorized/basic.tsx',
+      title: '基本',
+      description: '依赖变化时读取上一次的值。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数    | 说明         | 类型                           | 默认值 |
+| ------- | ------------ | ------------------------------ | ------ |
+| factory | 计算工厂函数 | `(previous: Nullable<T>) => T` | -      |
+| deps    | 依赖项       | `readonly unknown[]`           | -      |
+
+### Return
+
+| 参数   | 说明     | 类型 |
+| ------ | -------- | ---- |
+| result | 计算结果 | `T`  |

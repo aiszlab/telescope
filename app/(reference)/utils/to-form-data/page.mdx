@@ -1,0 +1,20 @@
+## toFormData 转换为 FormData
+
+## 使用场景
+
+将普通对象转换为 `FormData` 实例，数组值会自动添加 `[]` 后缀，常用于表单提交
+
+## 代码演示
+
+```ts
+import { toFormData } from '@aiszlab/relax'
+
+const formData = toFormData({
+  name: 'John',
+  email: 'john@example.com',
+  tags: ['developer', 'designer']
+})
+
+// formData 可被 fetch 直接使用
+// await fetch('/api/user', { method: 'POST', body: formData })
+```

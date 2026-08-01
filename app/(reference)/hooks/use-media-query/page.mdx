@@ -1,0 +1,31 @@
+import Usage from '@/components/usage'
+
+# useMediaQuery
+
+监听媒体查询匹配状态的钩子，支持单个或多个查询。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-media-query/basic.tsx',
+      title: '基本',
+      description: '检测深色模式与移动端断点。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数  | 说明           | 类型                 | 默认值 |
+| ----- | -------------- | -------------------- | ------ |
+| query | 媒体查询字符串 | `string \| string[]` | -      |
+
+### Return
+
+| 参数   | 说明                 | 类型        |
+| ------ | -------------------- | ----------- |
+| result | 各查询是否匹配的数组 | `boolean[]` |

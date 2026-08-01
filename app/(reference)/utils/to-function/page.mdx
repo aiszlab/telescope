@@ -1,0 +1,18 @@
+## toFunction 转换为函数
+
+## 使用场景
+
+将任意值转换为函数。如果已经是函数则直接返回，否则包装为返回该值的函数。常用于标准化回调和懒初始化
+
+## 代码演示
+
+```ts
+import { toFunction } from '@aiszlab/relax'
+
+// 函数直接返回
+toFunction(() => 'hello')() // => 'hello'
+
+// 非函数包装为函数
+toFunction('hello')() // => 'hello'
+toFunction(42)() // => 42
+```

@@ -1,0 +1,15 @@
+## isThenable 判断 Thenable
+
+## 使用场景
+
+判断值是否为 Promise 或类 Promise（thenable）对象
+
+## 代码演示
+
+```ts
+import { isThenable } from '@aiszlab/relax'
+
+isThenable(Promise.resolve()) // => true
+isThenable({ then: () => {} }) // => true
+isThenable('hello') // => false
+```

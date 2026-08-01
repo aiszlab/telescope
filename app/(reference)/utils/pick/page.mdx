@@ -1,0 +1,16 @@
+## pick 属性筛选
+
+## 使用场景
+
+从对象中筛选出指定键的属性，返回包含所选属性的新对象
+
+## 代码演示
+
+```ts
+import { pick } from '@aiszlab/relax'
+
+const user = { id: 1, name: 'John', email: 'john@example.com', role: 'admin' }
+
+pick(user, ['id', 'name'])
+// => { id: 1, name: 'John' }
+```

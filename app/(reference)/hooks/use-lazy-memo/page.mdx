@@ -1,0 +1,32 @@
+import Usage from '@/components/usage'
+
+# useLazyMemo
+
+惰性 `useMemo`，仅当读取 `value` 时才执行计算，避免在 render 阶段同步阻塞。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-lazy-memo/basic.tsx',
+      title: '基本',
+      description: '依赖变化时重新计算。'
+    }
+  }]
+/>
+
+## API
+
+### Parameters
+
+| 参数 | 说明     | 类型         | 默认值 |
+| ---- | -------- | ------------ | ------ |
+| fn   | 计算函数 | `() => T`    | -      |
+| deps | 依赖项   | `unknown[]`  | -      |
+
+### Return
+
+| 参数 | 说明             | 类型           |
+| ---- | ---------------- | -------------- |
+| memo | 惰性计算代理对象 | `{ value: T }` |

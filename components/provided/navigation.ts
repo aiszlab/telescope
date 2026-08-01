@@ -396,6 +396,14 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/hooks/use-update-effect',
             label: 'useUpdateEffect'
+          },
+          {
+            path: '/hooks/use-is-mounted',
+            label: 'useIsMounted'
+          },
+          {
+            path: '/hooks/use-async-effect',
+            label: 'useAsyncEffect'
           }
         ]
       },
@@ -418,6 +426,26 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/hooks/use-scroll-locker',
             label: 'useScrollLocker'
+          },
+          {
+            path: '/hooks/use-drag',
+            label: 'useDrag'
+          },
+          {
+            path: '/hooks/use-draggable',
+            label: 'useDraggable'
+          },
+          {
+            path: '/hooks/use-scroll',
+            label: 'useScroll'
+          },
+          {
+            path: '/hooks/use-scrollable',
+            label: 'useScrollable'
+          },
+          {
+            path: '/hooks/use-infinite-scroll',
+            label: 'useInfiniteScroll'
           }
         ]
       },
@@ -440,6 +468,70 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/hooks/use-default',
             label: 'useDefault'
+          },
+          {
+            path: '/hooks/use-toggleable',
+            label: 'useToggleable'
+          },
+          {
+            path: '/hooks/use-reactive',
+            label: 'useReactive'
+          },
+          {
+            path: '/hooks/use-local-storage-state',
+            label: 'useLocalStorageState'
+          },
+          {
+            path: '/hooks/use-session-storage-state',
+            label: 'useSessionStorageState'
+          }
+        ]
+      },
+      {
+        path: '/hooks/network',
+        label: 'Network',
+        children: [
+          {
+            path: '/hooks/use-request',
+            label: 'useRequest'
+          },
+          {
+            path: '/hooks/use-event-source',
+            label: 'useEventSource'
+          }
+        ]
+      },
+      {
+        path: '/hooks/sensor',
+        label: 'Sensor',
+        children: [
+          {
+            path: '/hooks/use-element-size',
+            label: 'useElementSize'
+          },
+          {
+            path: '/hooks/use-screen-size',
+            label: 'useScreenSize'
+          },
+          {
+            path: '/hooks/use-device-pixel-ratio',
+            label: 'useDevicePixelRatio'
+          },
+          {
+            path: '/hooks/use-media-query',
+            label: 'useMediaQuery'
+          },
+          {
+            path: '/hooks/use-image-loader',
+            label: 'useImageLoader'
+          },
+          {
+            path: '/hooks/use-resize',
+            label: 'useResize'
+          },
+          {
+            path: '/hooks/use-mutate-observer',
+            label: 'useMutateObserver'
           }
         ]
       },
@@ -470,6 +562,34 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/hooks/use-identity',
             label: 'useIdentity'
+          },
+          {
+            path: '/hooks/use-timeout',
+            label: 'useTimeout'
+          },
+          {
+            path: '/hooks/use-timer',
+            label: 'useTimer'
+          },
+          {
+            path: '/hooks/use-raf',
+            label: 'useRaf'
+          },
+          {
+            path: '/hooks/use-memorized',
+            label: 'useMemorized'
+          },
+          {
+            path: '/hooks/use-lazy-ref',
+            label: 'useLazyRef'
+          },
+          {
+            path: '/hooks/use-lazy-memo',
+            label: 'useLazyMemo'
+          },
+          {
+            path: '/hooks/use-scale',
+            label: 'useScale'
           }
         ]
       }
@@ -486,6 +606,18 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/utils/clamp',
             label: 'clamp 取中间值'
+          },
+          {
+            path: '/utils/max',
+            label: 'max 最大值'
+          },
+          {
+            path: '/utils/min',
+            label: 'min 最小值'
+          },
+          {
+            path: '/utils/to-percentage',
+            label: 'toPercentage 百分比转换'
           }
         ]
       },
@@ -496,6 +628,22 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/utils/chain',
             label: 'chain 连续调用'
+          },
+          {
+            path: '/utils/debounce',
+            label: 'debounce 防抖'
+          },
+          {
+            path: '/utils/throttle',
+            label: 'throttle 节流'
+          },
+          {
+            path: '/utils/effect',
+            label: 'effect 副作用调用'
+          },
+          {
+            path: '/utils/to-function',
+            label: 'toFunction 转换为函数'
           }
         ]
       },
@@ -522,6 +670,174 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/utils/range',
             label: 'range 创建连续数组'
+          },
+          {
+            path: '/utils/to-array',
+            label: 'toArray 转换为数组'
+          },
+          {
+            path: '/utils/exclude',
+            label: 'exclude 数组排除'
+          },
+          {
+            path: '/utils/toggle',
+            label: 'toggle 切换数组元素'
+          },
+          {
+            path: '/utils/at',
+            label: 'at 安全索引访问'
+          }
+        ]
+      },
+      {
+        path: '/utils/object',
+        label: '对象',
+        children: [
+          {
+            path: '/utils/merge',
+            label: 'merge 深度合并'
+          },
+          {
+            path: '/utils/clone',
+            label: 'clone 深拷贝'
+          },
+          {
+            path: '/utils/pick',
+            label: 'pick 属性筛选'
+          },
+          {
+            path: '/utils/get',
+            label: 'get 安全取值'
+          },
+          {
+            path: '/utils/set',
+            label: 'set 设置属性值'
+          },
+          {
+            path: '/utils/try-parse',
+            label: 'tryParse 安全解析'
+          }
+        ]
+      },
+      {
+        path: '/utils/type-check',
+        label: '类型判断',
+        children: [
+          {
+            path: '/utils/is-refable',
+            label: 'isRefable 可引用组件'
+          },
+          {
+            path: '/utils/is-undefined',
+            label: 'isUndefined 判断 undefined'
+          },
+          {
+            path: '/utils/is-null',
+            label: 'isNull 判断 null'
+          },
+          {
+            path: '/utils/is-void',
+            label: 'isVoid 判断空值'
+          },
+          {
+            path: '/utils/is-array',
+            label: 'isArray 判断数组'
+          },
+          {
+            path: '/utils/is-number',
+            label: 'isNumber 判断数字'
+          },
+          {
+            path: '/utils/is-empty',
+            label: 'isEmpty 判断空值'
+          },
+          {
+            path: '/utils/is-dom-usable',
+            label: 'isDomUsable 判断 DOM 可用'
+          },
+          {
+            path: '/utils/is-mobile',
+            label: 'isMobile 判断移动端'
+          },
+          {
+            path: '/utils/is-overflow',
+            label: 'isOverflow 判断溢出'
+          },
+          {
+            path: '/utils/is-style-element',
+            label: 'isStyleElement 判断 Style 元素'
+          },
+          {
+            path: '/utils/is-function',
+            label: 'isFunction 判断函数'
+          },
+          {
+            path: '/utils/is-thenable',
+            label: 'isThenable 判断 Thenable'
+          },
+          {
+            path: '/utils/is-html-element',
+            label: 'isHTMLElement 判断 HTML 元素'
+          },
+          {
+            path: '/utils/is-html-input-element',
+            label: 'isHTMLInputElement 判断输入元素'
+          },
+          {
+            path: '/utils/is-object',
+            label: 'isObject 判断对象'
+          },
+          {
+            path: '/utils/is-deep-key',
+            label: 'isDeepKey 判断深度键'
+          },
+          {
+            path: '/utils/is-string',
+            label: 'isString 判断字符串'
+          },
+          {
+            path: '/utils/is-boolean',
+            label: 'isBoolean 判断布尔值'
+          },
+          {
+            path: '/utils/is-map',
+            label: 'isMap 判断 Map'
+          },
+          {
+            path: '/utils/is-set',
+            label: 'isSet 判断 Set'
+          }
+        ]
+      },
+      {
+        path: '/utils/string',
+        label: '字符串',
+        children: [
+          {
+            path: '/utils/replace',
+            label: 'replace 替换'
+          },
+          {
+            path: '/utils/replace-at',
+            label: 'replaceAt 按索引替换'
+          },
+          {
+            path: '/utils/tagged-template-literals',
+            label: 'taggedTemplateLiterals 模板渲染'
+          }
+        ]
+      },
+      {
+        path: '/utils/dom',
+        label: 'DOM',
+        children: [
+          {
+            path: '/utils/load',
+            label: 'load 动态加载资源'
+          },
+          {
+            path: '/utils/set-style',
+            label: 'setStyle 设置内联样式'
           }
         ]
       },
@@ -532,6 +848,16 @@ export const NAVIGATIONS: NavigationItem[] = [
           {
             path: '/utils/stringify',
             label: 'stringify 合并类名'
+          }
+        ]
+      },
+      {
+        path: '/utils/other',
+        label: '其他',
+        children: [
+          {
+            path: '/utils/to-form-data',
+            label: 'toFormData 转换 FormData'
           }
         ]
       }

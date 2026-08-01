@@ -1,0 +1,15 @@
+## toPercentage 百分比转换
+
+## 使用场景
+
+将比率数值（0-1）转换为百分比字符串，常用于进度展示
+
+## 代码演示
+
+```ts
+import { toPercentage } from '@aiszlab/relax'
+
+toPercentage(0.5) // => '50%'
+toPercentage(0.333, 1) // => '33.3%'
+toPercentage(1) // => '100%'
+```

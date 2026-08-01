@@ -1,0 +1,33 @@
+import Usage from '@/components/usage'
+
+# useSessionStorageState
+
+将状态持久化到 `sessionStorage` 的钩子，数据仅在当前标签页会话内有效。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-session-storage-state/basic.tsx',
+      title: '基本',
+      description: '输入内容会持久化到 sessionStorage，关闭标签页后清除。'
+    }
+  }]
+/>
+
+## API
+
+### Parameters
+
+| 参数   | 说明                     | 类型      | 默认值  |
+| ------ | ------------------------ | --------- | ------- |
+| key    | 存储键名                 | `string`  | -       |
+| listen | 是否监听存储变化         | `boolean` | `true`  |
+
+### Return
+
+| 参数     | 说明     | 类型                              |
+| -------- | -------- | --------------------------------- |
+| value    | 当前值   | `string \| null`                  |
+| setValue | 设置函数 | `(value: string \| null) => void` |
