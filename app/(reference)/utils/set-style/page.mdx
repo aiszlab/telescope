@@ -1,0 +1,23 @@
+## setStyle 设置内联样式
+
+## 使用场景
+
+批量设置 DOM 元素的内联样式，返回修改前的样式对象，便于后续恢复
+
+## 代码演示
+
+```ts
+import { setStyle } from '@aiszlab/relax'
+
+const el = document.getElementById('box')
+
+// 设置样式
+const prev = setStyle(el, {
+  color: 'red',
+  fontSize: '16px',
+  display: 'flex'
+})
+
+// 恢复之前样式
+setStyle(el, prev)
+```

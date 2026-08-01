@@ -1,0 +1,16 @@
+## isDeepKey 判断深度键
+
+## 使用场景
+
+判断一个键是否为深度路径键（包含 `.` 或 `[` `]` 字符），常用于 `get`/`set` 等路径操作
+
+## 代码演示
+
+```ts
+import { isDeepKey } from '@aiszlab/relax'
+
+isDeepKey('a.b') // => true
+isDeepKey('a[b]') // => true
+isDeepKey('a') // => false
+isDeepKey(123) // => false
+```

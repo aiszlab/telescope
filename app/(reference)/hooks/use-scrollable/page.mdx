@@ -1,0 +1,35 @@
+import Usage from '@/components/usage'
+
+# useScrollable
+
+可编程滚动钩子，提供滚动容器 ref 与按 key 滚动到指定元素的能力。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-scrollable/basic.tsx',
+      title: '基本',
+      description: '点击按钮滚动到指定区块。'
+    }
+  }]
+/>
+
+## API
+
+### Parameters
+
+| 参数        | 说明     | 类型                         | 默认值      |
+| ----------- | -------- | ---------------------------- | ----------- |
+| orientation | 滚动方向 | `'horizontal' \| 'vertical'` | `'vertical'` |
+
+### Return
+
+| 参数        | 说明                  | 类型                                   |
+| ----------- | --------------------- | -------------------------------------- |
+| targetRef   | 滚动容器 ref          | `RefObject<T \| null>`                 |
+| triggerRefs | 触发元素集合          | `RefObject<Map<Key, C \| null>>`       |
+| scrollTo    | 滚动到指定位置        | `(to: number, duration?: number) => void` |
+| to          | 获取指定 key 的偏移量 | `(key: Key) => number`                 |
+| setTrigger  | 注册触发元素          | `(key: Key, trigger: C \| null) => void` |

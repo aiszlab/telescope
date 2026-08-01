@@ -1,0 +1,37 @@
+import Usage from '@/components/usage'
+
+# SplitPanel 分割面板
+
+可拖拽调整大小的分割面板组件，支持水平和垂直方向布局。
+
+## 何时使用
+
+当需要在页面中创建可调整大小的分栏布局时使用，如代码编辑器、文件浏览器等场景。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/split-panel/basic.tsx',
+      title: '基本',
+      description: '两个面板的水平分割布局，第一个面板默认占 30% 宽度。'
+    }
+  ]}
+/>
+
+## API
+
+### SplitPanel Props
+
+| 参数        | 说明                       | 类型                           | 默认值         |
+| ----------- | -------------------------- | ------------------------------ | -------------- |
+| items       | 面板项列表                 | `[...PanelItem[], PanelItem]`  | —              |
+| orientation | 分割方向                   | `"horizontal" \| "vertical"`   | `"horizontal"` |
+
+### PanelItem
+
+| 参数        | 说明                                       | 类型              | 默认值  |
+| ----------- | ------------------------------------------ | ----------------- | ------- |
+| children    | 面板内容                                   | `React.ReactNode` | `void 0` |
+| defaultSize | 默认尺寸，0 表示 auto，1-100 表示百分比    | `number`          | `0`     |

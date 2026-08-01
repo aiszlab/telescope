@@ -1,0 +1,14 @@
+## exclude 数组排除
+
+## 使用场景
+
+从数组中排除指定的值，返回新数组。相比 `Array.filter` 使用 `Set` 实现，性能更优
+
+## 代码演示
+
+```ts
+import { exclude } from '@aiszlab/relax'
+
+exclude([1, 2, 3, 4, 5], [2, 4]) // => [1, 3, 5]
+exclude(['a', 'b', 'c'], ['b']) // => ['a', 'c']
+```

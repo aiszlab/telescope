@@ -1,0 +1,18 @@
+## clone 深拷贝
+
+## 使用场景
+
+对任意类型值进行深拷贝，支持字符串、数字、对象、数组等类型
+
+## 代码演示
+
+```ts
+import { clone } from '@aiszlab/relax'
+
+const obj = { a: 1, b: { c: 2 } }
+const cloned = clone(obj)
+
+cloned.b.c = 3
+console.log(obj.b.c) // 2 — 原对象不受影响
+console.log(cloned.b.c) // 3
+```

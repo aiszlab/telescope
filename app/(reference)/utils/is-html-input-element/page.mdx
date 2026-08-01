@@ -1,0 +1,17 @@
+## isHTMLInputElement 判断输入元素
+
+## 使用场景
+
+判断值是否为 HTML `<input>` 元素
+
+## 代码演示
+
+```ts
+import { isHTMLInputElement } from '@aiszlab/relax'
+
+const input = document.createElement('input')
+isHTMLInputElement(input) // => true
+
+const div = document.createElement('div')
+isHTMLInputElement(div) // => false
+```

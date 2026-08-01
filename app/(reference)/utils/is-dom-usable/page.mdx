@@ -1,0 +1,13 @@
+## isDomUsable 判断 DOM 可用
+
+## 使用场景
+
+判断当前环境是否存在 DOM（浏览器环境），用于 SSR 兼容判断
+
+## 代码演示
+
+```ts
+import { isDomUsable } from '@aiszlab/relax'
+
+isDomUsable() // => true（浏览器）/ false（Node.js）
+```

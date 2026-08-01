@@ -1,0 +1,15 @@
+## tryParse 安全解析
+
+## 使用场景
+
+安全地执行 `JSON.parse`，解析失败时返回原始值而不是抛出异常
+
+## 代码演示
+
+```ts
+import { tryParse } from '@aiszlab/relax'
+
+tryParse('{"name":"John"}') // => { name: 'John' }
+tryParse('invalid json') // => 'invalid json' — 解析失败返回原值
+tryParse(42) // => 42 — 非字符串直接返回
+```

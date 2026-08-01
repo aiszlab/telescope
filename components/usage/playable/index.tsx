@@ -25,7 +25,7 @@ const Playable = ({ title, render, source, description }: Props) => {
       <P>{description}</P>
 
       <div
-        className='border-[1px] rounded-lg my-4 border-solid'
+        className='border rounded-lg my-4 border-solid'
         style={{
           borderColor: theme.colors['outline-variant']
         }}

@@ -1,0 +1,22 @@
+## set 设置属性值
+
+## 使用场景
+
+在对象的指定路径上设置值，路径中不存在的属性会自动创建。支持点号和数组路径
+
+## 代码演示
+
+```ts
+import { set } from '@aiszlab/relax'
+
+const obj = { a: { b: { c: 3 } } }
+
+// 设置已有路径的值
+set(obj, 'a.b.c', 4)
+console.log(obj.a.b.c) // 4
+
+// 自动创建不存在的路径
+const empty = {}
+set(empty, 'a.b.c', 'hello')
+console.log(empty) // { a: { b: { c: 'hello' } } }
+```

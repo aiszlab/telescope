@@ -1,0 +1,26 @@
+import Usage from '@/components/usage'
+
+# useTimer
+
+定时器管理钩子，提供设置与清除定时器的能力，组件卸载时自动清理。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-timer/basic.tsx',
+      title: '基本',
+      description: '设置不同延时的任务，新任务会取代上一个。'
+    }
+  ]}
+/>
+
+## API
+
+### Return
+
+| 参数    | 说明                       | 类型                                              |
+| ------- | -------------------------- | ------------------------------------------------- |
+| timeout | 设置定时器（会清除上一个） | `(handler: VoidFunction, duration?: number) => void` |
+| clear   | 清除当前定时器             | `() => void`                                      |

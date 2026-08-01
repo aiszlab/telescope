@@ -1,0 +1,32 @@
+import Usage from '@/components/usage'
+
+# Card 卡片
+
+通用卡片容器，用于信息分组和展示。
+
+## 何时使用
+
+当需要将一组相关内容收纳在一个容器中展示时，可以使用卡片。卡片可以包含标题、内容、操作按钮等信息。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/card/basic.tsx',
+      title: '基本',
+      description: '三种卡片样式变体：outlined（边框）、elevated（阴影）、filled（填充）。'
+    }
+  ]}
+/>
+
+## API
+
+### Card Props
+
+| 参数     | 说明             | 类型                                          | 默认值       |
+| -------- | ---------------- | --------------------------------------------- | ------------ |
+| variant  | 卡片样式变体     | `"outlined" \| "elevated" \| "filled"`        | `"outlined"` |
+| children | 卡片内容         | `React.ReactNode`                             | `void 0`     |
+| onClick  | 点击事件处理函数 | `(event: MouseEvent<HTMLDivElement>) => void` | `void 0`     |
+| disabled | 禁用状态         | `boolean`                                     | `false`      |

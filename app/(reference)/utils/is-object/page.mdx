@@ -1,0 +1,17 @@
+## isObject 判断对象
+
+## 使用场景
+
+判断值是否为对象类型（包括普通对象、数组、函数等，不包括 `null`）
+
+## 代码演示
+
+```ts
+import { isObject } from '@aiszlab/relax'
+
+isObject({}) // => true
+isObject([1, 2, 3]) // => true
+isObject(() => {}) // => true
+isObject(null) // => false
+isObject('hello') // => false
+```

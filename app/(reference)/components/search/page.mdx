@@ -1,0 +1,45 @@
+import Usage from '@/components/usage'
+
+# Search 搜索
+
+搜索组件，基于 Material 3 设计规范，提供搜索输入和搜索触发功能。
+
+## 何时使用
+
+当需要用户输入关键字进行搜索时使用，适用于工具栏、列表页等场景。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/search/basic.tsx',
+      title: '基本',
+      description: '基础的搜索组件，支持受控值、清除按钮和搜索回调。'
+    }
+  ]}
+/>
+
+## API
+
+### Search Props
+
+| 参数         | 说明                           | 类型                        | 默认值    |
+| ------------ | ------------------------------ | --------------------------- | --------- |
+| value        | 受控值                         | `string`                    | `void 0`  |
+| defaultValue | 非受控默认值                   | `string`                    | `""`      |
+| onChange     | 值变化时的回调                 | `(value: string) => void`   | `void 0`  |
+| placeholder  | 输入框占位文本                 | `string`                    | `void 0`  |
+| disabled     | 是否禁用                       | `boolean`                   | `false`   |
+| clearable    | 是否显示清除按钮               | `boolean`                   | `true`    |
+| searchButton | 定制搜索按钮内容               | `React.ReactNode`           | `void 0`  |
+| onSearch     | 触发搜索时的回调               | `(keyword?: string) => void` | `void 0` |
+
+### Search Ref
+
+| 方法     | 说明         | 类型         |
+| -------- | ------------ | ------------ |
+| focus()  | 聚焦输入框   | `() => void` |
+| blur()   | 失去焦点     | `() => void` |
+| clear()  | 清空输入值   | `() => void` |
+| getValue() | 获取当前值 | `() => string` |

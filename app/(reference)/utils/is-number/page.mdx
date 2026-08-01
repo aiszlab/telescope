@@ -1,0 +1,16 @@
+## isNumber 判断数字
+
+## 使用场景
+
+判断值是否为 `number` 类型
+
+## 代码演示
+
+```ts
+import { isNumber } from '@aiszlab/relax'
+
+isNumber(42) // => true
+isNumber(3.14) // => true
+isNumber(NaN) // => true — NaN 也是 number 类型
+isNumber('42') // => false
+```

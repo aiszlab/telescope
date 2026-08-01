@@ -1,0 +1,53 @@
+import Usage from '@/components/usage'
+
+# Layout 布局
+
+类型化的布局组件，提供 Header、Sidebar、Main、Footer 等子组件，用于构建页面整体布局结构。
+
+## 何时使用
+
+当需要构建具有顶部导航栏、侧边栏、主内容区和底部栏的页面布局时使用。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/layout/basic.tsx',
+      title: '基本',
+      description: '包含 Header、Sidebar、Main、Footer 的完整布局结构。'
+    }
+  ]}
+/>
+
+## API
+
+### Layout Props
+
+| 参数     | 说明     | 类型              | 默认值  |
+| -------- | -------- | ----------------- | ------- |
+| children | 子组件   | `React.ReactNode` | —       |
+
+### Layout.Header Props
+
+| 参数     | 说明     | 类型              | 默认值  |
+| -------- | -------- | ----------------- | ------- |
+| children | 头部内容 | `React.ReactNode` | —       |
+
+### Layout.Sidebar Props
+
+| 参数     | 说明         | 类型              | 默认值  |
+| -------- | ------------ | ----------------- | ------- |
+| children | 侧边栏内容   | `React.ReactNode` | —       |
+
+### Layout.Main Props
+
+| 参数     | 说明         | 类型              | 默认值  |
+| -------- | ------------ | ----------------- | ------- |
+| children | 主内容区内容 | `React.ReactNode` | —       |
+
+### Layout.Footer Props
+
+| 参数     | 说明     | 类型              | 默认值  |
+| -------- | -------- | ----------------- | ------- |
+| children | 底部内容 | `React.ReactNode` | —       |

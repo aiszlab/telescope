@@ -1,0 +1,17 @@
+## isStyleElement 判断 Style 元素
+
+## 使用场景
+
+判断一个 DOM 元素是否为 `<style>` 标签
+
+## 代码演示
+
+```ts
+import { isStyleElement } from '@aiszlab/relax'
+
+const style = document.createElement('style')
+isStyleElement(style) // => true
+
+const div = document.createElement('div')
+isStyleElement(div) // => false
+```

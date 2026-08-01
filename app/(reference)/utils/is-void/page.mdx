@@ -1,0 +1,16 @@
+## isVoid 判断空值
+
+## 使用场景
+
+判断值是否为 `null` 或 `undefined`
+
+## 代码演示
+
+```ts
+import { isVoid } from '@aiszlab/relax'
+
+isVoid(null) // => true
+isVoid(undefined) // => true
+isVoid(0) // => false
+isVoid('') // => false
+```

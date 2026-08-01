@@ -1,0 +1,17 @@
+## isHTMLElement 判断 HTML 元素
+
+## 使用场景
+
+判断值是否为 HTML 元素节点（nodeType === 1）
+
+## 代码演示
+
+```ts
+import { isHTMLElement } from '@aiszlab/relax'
+
+const div = document.createElement('div')
+isHTMLElement(div) // => true
+
+isHTMLElement(null) // => false
+isHTMLElement(document.createTextNode('text')) // => false
+```

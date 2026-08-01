@@ -1,0 +1,30 @@
+import Usage from '@/components/usage'
+
+# SessionStorage 会话存储
+
+SessionStorage 组件，用于在浏览器 sessionStorage 中存储键值对数据。
+
+## 何时使用
+
+当需要在浏览器会话期间临时存储数据时使用，页面关闭后数据自动清除。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/session-storage/basic.tsx',
+      title: '基本',
+      description: '在 sessionStorage 中存储键值对数据。'
+    }
+  ]}
+/>
+
+## API
+
+### SessionStorage Props
+
+| 参数  | 说明     | 类型     | 默认值 |
+| ----- | -------- | -------- | ------ |
+| key   | 存储键   | `string` | —      |
+| value | 存储值   | `string` | —      |

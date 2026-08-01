@@ -1,0 +1,26 @@
+import Usage from '@/components/usage'
+
+# useElementSize
+
+监听元素尺寸变化的钩子，基于 `ResizeObserver` 实时返回元素的宽高。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-element-size/basic.tsx',
+      title: '基本',
+      description: '拖拽右下角调整元素尺寸，实时显示宽高。'
+    }
+  ]}
+/>
+
+## API
+
+### Return
+
+| 参数 | 说明               | 类型                                  |
+| ---- | ------------------ | ------------------------------------- |
+| ref  | 绑定到目标元素的 ref | `RefObject<T \| null>`                |
+| size | 元素尺寸           | `{ width: number, height: number }`   |

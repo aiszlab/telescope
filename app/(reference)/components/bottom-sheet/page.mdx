@@ -1,0 +1,34 @@
+import Usage from '@/components/usage'
+
+# BottomSheet 底部面板
+
+从底部滑入的模态面板，带有拖拽手柄指示器，基于共享的 Sheet 基础组件构建。
+
+## 何时使用
+
+适用于移动端和桌面端需要从底部弹出内容的场景，如表单填写、详情展示、筛选选项等。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/bottom-sheet/basic.tsx',
+      title: '基本',
+      description: '从底部滑入的模态面板，支持高度自定义和关闭控制。'
+    }
+  ]}
+/>
+
+## API
+
+### BottomSheet Props
+
+| 参数     | 说明                                   | 类型                        | 默认值    |
+| -------- | -------------------------------------- | --------------------------- | --------- |
+| open     | 控制面板的可见状态                     | `boolean`                   | —         |
+| onClose  | 面板请求关闭时的回调                   | `VoidFunction`              | —         |
+| children | 面板内容（渲染在拖拽手柄下方）         | `React.ReactNode`           | `void 0`  |
+| height   | 面板高度，接受数字（px）或 CSS 高度值  | `number \| string`          | `"50vh"`  |
+| closable | 是否可通过遮罩层或 Esc 键关闭          | `boolean \| Closable[]`     | `true`    |
+| modal    | 是否启用模态锁定（锁定 body 滚动）     | `boolean`                   | `true`    |

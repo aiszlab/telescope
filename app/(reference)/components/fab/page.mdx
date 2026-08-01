@@ -1,0 +1,32 @@
+import Usage from '@/components/usage'
+
+# Fab 浮动操作按钮
+
+浮动操作按钮（Floating Action Button），用于执行页面上的主要操作，支持拖拽定位。
+
+## 何时使用
+
+当页面需要突出一个主要操作时使用，如创建、编辑、分享等，通常固定在页面右下角。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/fab/basic.tsx',
+      title: '基本',
+      description: '最简单的浮动操作按钮用法，点击触发操作。'
+    }
+  ]}
+/>
+
+## API
+
+### Fab Props
+
+| 参数      | 说明               | 类型                                              | 默认值    |
+| --------- | ------------------ | ------------------------------------------------- | --------- |
+| children  | 按钮内容（图标）   | `React.ReactNode`                                 | `void 0`  |
+| onClick   | 点击事件           | `(event: MouseEvent<HTMLButtonElement>) => void`  | `void 0`  |
+| container | 挂载容器           | `PortalProps["container"]`                        | `void 0`  |
+| draggable | 是否可拖拽         | `boolean`                                         | `false`   |

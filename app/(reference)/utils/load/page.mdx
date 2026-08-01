@@ -1,0 +1,20 @@
+## load 动态加载资源
+
+## 使用场景
+
+动态加载远程脚本或样式资源
+
+## 代码演示
+
+```ts
+import { load } from '@aiszlab/relax'
+
+// 加载脚本
+await load('script', 'https://example.com/script.js')
+
+// 延迟加载脚本
+await load('script', 'https://example.com/script.js', { defer: true })
+
+// 加载样式
+await load('link', 'https://example.com/style.css')
+```

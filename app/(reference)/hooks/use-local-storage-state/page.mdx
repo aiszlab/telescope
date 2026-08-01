@@ -1,0 +1,33 @@
+import Usage from '@/components/usage'
+
+# useLocalStorageState
+
+将状态持久化到 `localStorage` 的钩子，支持监听跨标签页的同步变化。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-local-storage-state/basic.tsx',
+      title: '基本',
+      description: '输入内容会持久化到 localStorage，刷新页面仍保留。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数   | 说明                     | 类型      | 默认值  |
+| ------ | ------------------------ | --------- | ------- |
+| key    | 存储键名                 | `string`  | -       |
+| listen | 是否监听跨标签页变化     | `boolean` | `true`  |
+
+### Return
+
+| 参数     | 说明     | 类型                              |
+| -------- | -------- | --------------------------------- |
+| value    | 当前值   | `string \| null`                  |
+| setValue | 设置函数 | `(value: string \| null) => void` |

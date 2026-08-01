@@ -1,0 +1,18 @@
+## isOverflow 判断溢出
+
+## 使用场景
+
+判断元素内容是否溢出（内容高度大于可见高度）
+
+## 代码演示
+
+```ts
+import { isOverflow } from '@aiszlab/relax'
+
+// 判断 body 是否溢出
+isOverflow() // => true / false
+
+// 判断指定元素是否溢出
+const el = document.getElementById('container')
+isOverflow(el) // => true / false
+```

@@ -1,0 +1,31 @@
+import Usage from '@/components/usage'
+
+# useLazyRef
+
+惰性 ref 钩子，返回一个取值函数，仅在首次调用时执行 getter 并缓存结果。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-lazy-ref/basic.tsx',
+      title: '基本',
+      description: '多次重渲染后，惰性计算的值保持不变。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数   | 说明         | 类型      | 默认值 |
+| ------ | ------------ | --------- | ------ |
+| getter | 取值工厂函数 | `() => T` | -      |
+
+### Return
+
+| 参数   | 说明             | 类型      |
+| ------ | ---------------- | --------- |
+| getter | 取值函数（惰性） | `() => T` |

@@ -1,0 +1,15 @@
+## isRefable 判断可引用组件
+
+## 使用场景
+
+判断 React 元素是否可以附加 ref（类组件或原生元素可以，Fragment 和函数组件不可以）
+
+## 代码演示
+
+```tsx
+import { isRefable } from '@aiszlab/relax'
+
+isRefable(<div />) // => true
+isRefable(<></>) // => false
+isRefable(<SomeFunctionComponent />) // => false
+```

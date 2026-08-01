@@ -1,0 +1,43 @@
+## debounce 防抖
+
+## 使用场景
+
+限制函数调用频率，在连续触发时只执行最后一次，常用于搜索输入、窗口调整等场景
+
+## 代码演示
+
+```ts
+import { debounce } from '@aiszlab/relax'
+
+const debounced = debounce((value: string) => {
+  console.log('search:', value)
+}, 300)
+
+// 连续调用，只执行最后一次
+debounced.next('a')
+debounced.next('ab')
+debounced.next('abc') // 仅打印 'search: abc'
+
+// 立即执行并取消后续
+debounced.flush()
+
+// 取消等待中的调用
+debounced.abort()
+```
+
+## 高级用法
+
+通过 `pipe` 管道函数对参数进行预处理：
+
+```ts
+import { debounce } from '@aiszlab/relax'
+
+const debounced = debounce({
+  pipe: (keyword: string) => keyword.trim(),
+  callback: (keyword: string) => {
+    console.log('search:', keyword)
+  }
+}, 300)
+
+debounced.next('  hello  ') // 打印 'search: hello'
+```

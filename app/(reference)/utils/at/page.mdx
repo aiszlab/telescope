@@ -1,0 +1,16 @@
+## at 安全索引访问
+
+## 使用场景
+
+安全地通过索引访问数组或字符串元素，兼容不支持 `Array.prototype.at` 的浏览器环境
+
+## 代码演示
+
+```ts
+import { at } from '@aiszlab/relax'
+
+at([1, 2, 3], 0) // => 1
+at([1, 2, 3], -1) // => 3
+at('hello', 0) // => 'h'
+at(null, 0) // => undefined
+```

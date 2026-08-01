@@ -13,18 +13,20 @@ const nextConfig = {
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
-  remarkPlugins: ['remark-gfm'],
-  rehypePlugins: [
-    [
-      '@shikijs/rehype',
-      {
-        themes: {
-          light: 'vitesse-light',
-          dark: 'vitesse-dark'
+  options: {
+    remarkPlugins: ['remark-gfm'],
+    rehypePlugins: [
+      [
+        '@shikijs/rehype',
+        {
+          themes: {
+            light: 'vitesse-light',
+            dark: 'vitesse-dark'
+          }
         }
-      }
+      ]
     ]
-  ]
+  }
 })
 
 export default withMDX(nextConfig)

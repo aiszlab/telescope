@@ -1,0 +1,29 @@
+import Usage from '@/components/usage'
+
+# useEventSource
+
+管理 `EventSource`（SSE）连接的钩子。组件挂载时建立连接，卸载时自动关闭。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-event-source/basic.tsx',
+      title: '基本',
+      description: '挂载子组件时建立 SSE 连接，卸载时自动关闭。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数 | 说明         | 类型     | 默认值 |
+| ---- | ------------ | -------- | ------ |
+| url  | SSE 服务地址 | `string` | -      |
+
+### Return
+
+无。连接在组件挂载时建立，卸载时自动关闭。

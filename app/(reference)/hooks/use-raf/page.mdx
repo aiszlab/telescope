@@ -1,0 +1,32 @@
+import Usage from '@/components/usage'
+
+# useRaf
+
+基于 `requestAnimationFrame` 的节流钩子，将高频调用合并到下一帧执行。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-raf/basic.tsx',
+      title: '基本',
+      description: '在区域内移动鼠标，回调被 raf 节流。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数     | 说明         | 类型       | 默认值 |
+| -------- | ------------ | ---------- | ------ |
+| callback | 回调函数     | `T`        | -      |
+| timely   | 是否立即执行 | `boolean`  | -      |
+
+### Return
+
+| 参数     | 说明                 | 类型 |
+| -------- | -------------------- | ---- |
+| callback | raf 节流后的回调函数 | `T`  |

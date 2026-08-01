@@ -1,0 +1,15 @@
+## isMap 判断 Map
+
+## 使用场景
+
+判断值是否为 `Map` 实例
+
+## 代码演示
+
+```ts
+import { isMap } from '@aiszlab/relax'
+
+isMap(new Map()) // => true
+isMap(new Set()) // => false
+isMap({}) // => false
+```

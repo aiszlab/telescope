@@ -1,0 +1,16 @@
+## isFunction 判断函数
+
+## 使用场景
+
+判断值是否为函数类型
+
+## 代码演示
+
+```ts
+import { isFunction } from '@aiszlab/relax'
+
+isFunction(() => {}) // => true
+isFunction(function() {}) // => true
+isFunction(class {}) // => true
+isFunction('hello') // => false
+```

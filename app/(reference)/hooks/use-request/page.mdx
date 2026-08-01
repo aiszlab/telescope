@@ -1,0 +1,41 @@
+import Usage from '@/components/usage'
+
+# useRequest
+
+包装异步请求函数，自动管理 `loading` / `error` / `data` 状态。支持挂载自动请求、依赖变化重新请求与防抖。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/hooks/use-request/basic.tsx',
+      title: '基本',
+      description: '挂载自动请求，并支持手动触发。'
+    }
+  ]}
+/>
+
+## API
+
+### Parameters
+
+| 参数          | 说明                                          | 类型                            | 默认值  |
+| ------------- | --------------------------------------------- | ------------------------------- | ------- |
+| request       | 异步请求函数                                  | `(...args: Args) => Promise<T>` | -       |
+| auto          | 挂载时是否自动请求                            | `boolean`                       | `false` |
+| then          | 请求成功的回调                                | `(data: T) => void`             | -       |
+| catch         | 请求失败的回调                                | `(error: Error) => void`        | -       |
+| finally       | 请求完成的回调                                | `() => void`                    | -       |
+| debounceWait  | 防抖延迟（毫秒），设置后 `run` 调用会被合并 | `number`                        | -       |
+| deps          | 依赖项，变化后自动重新请求                    | `DependencyList`                | -       |
+| defaultParams | 自动执行时传入的默认参数                      | `Args \| (() => Args)`          | -       |
+
+### Return
+
+| 参数    | 说明         | 类型                              |
+| ------- | ------------ | --------------------------------- |
+| data    | 响应数据     | `T \| null`                       |
+| error   | 错误对象     | `Error \| null`                   |
+| loading | 是否请求中   | `boolean`                         |
+| run     | 手动触发请求 | `(...args: Args) => Promise<void>` |

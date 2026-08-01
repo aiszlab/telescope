@@ -6,13 +6,23 @@ import H2 from "@/components/mdx/h2";
 import { Fragment, type ReactElement } from "react";
 import * as action from "musae/icons/action";
 import * as alert from "musae/icons/alert";
+import * as av from "musae/icons/av";
+import * as communication from "musae/icons/communication";
 import * as content from "musae/icons/content";
+import * as device from "musae/icons/device";
 import * as editor from "musae/icons/editor";
+import * as file from "musae/icons/file";
 import * as hardware from "musae/icons/hardware";
+import * as home from "musae/icons/home";
 import * as image from "musae/icons/image";
-import * as navigation from "musae/icons/navigation";
-import * as toggle from "musae/icons/toggle";
+import * as maps from "musae/icons/maps";
 import * as mock from "musae/icons/mock";
+import * as navigation from "musae/icons/navigation";
+import * as notification from "musae/icons/notification";
+import * as places from "musae/icons/places";
+import * as search from "musae/icons/search";
+import * as social from "musae/icons/social";
+import * as toggle from "musae/icons/toggle";
 import type { IconProps } from "musae/types/icon";
 
 interface IconGroup {
@@ -33,32 +43,72 @@ const ICON_GROUPS: IconGroup[] = [
     icons: alert,
   },
   {
+    key: "av",
+    icons: av,
+  },
+  {
+    key: "communication",
+    icons: communication,
+  },
+  {
     key: "content",
     icons: content,
+  },
+  {
+    key: "device",
+    icons: device,
   },
   {
     key: "editor",
     icons: editor,
   },
   {
+    key: "file",
+    icons: file,
+  },
+  {
     key: "hardware",
     icons: hardware,
+  },
+  {
+    key: "home",
+    icons: home,
   },
   {
     key: "image",
     icons: image,
   },
   {
-    key: "navigation",
-    icons: navigation,
-  },
-  {
-    key: "toggle",
-    icons: toggle,
+    key: "maps",
+    icons: maps,
   },
   {
     key: "mock",
     icons: mock,
+  },
+  {
+    key: "navigation",
+    icons: navigation,
+  },
+  {
+    key: "notification",
+    icons: notification,
+  },
+  {
+    key: "places",
+    icons: places,
+  },
+  {
+    key: "search",
+    icons: search,
+  },
+  {
+    key: "social",
+    icons: social,
+  },
+  {
+    key: "toggle",
+    icons: toggle,
   },
 ];
 

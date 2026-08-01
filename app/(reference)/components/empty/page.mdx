@@ -1,0 +1,30 @@
+import Usage from '@/components/usage'
+
+# Empty 空状态
+
+空状态占位图组件，用于在数据为空时展示提示信息。
+
+## 何时使用
+
+当页面或组件中没有数据时，用于展示空状态提示，引导用户进行操作。
+
+## 代码演示
+
+<Usage
+  sources={[
+    {
+      src: '/components/empty/basic.tsx',
+      title: '基本',
+      description: '最简单的空状态用法，包含默认的图标和描述文字。'
+    }
+  ]}
+/>
+
+## API
+
+### Empty Props
+
+| 参数      | 说明     | 类型              | 默认值  |
+| --------- | -------- | ----------------- | ------- |
+| className | 自定义类名 | `string`         | `void 0` |
+| style     | 自定义样式 | `CSSProperties`  | `void 0` |
